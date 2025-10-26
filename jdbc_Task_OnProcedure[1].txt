@@ -1,0 +1,61 @@
+
+
+
+Program_01:
+==========
+Write a jdbc program according to below steps:
+step-1 : Create the following DB Tables
+StuData(stuId,stuRollNo,stuName,stuBranch)
+StuAddress(stuId,stuHno,city,pincode)
+StuContact(stuId,mid,phno)
+
+step-2 : Construct Procedure to insert student details into DB Tables.
+step-3 : Construct JDBC Application to execute Procedure.
+
+ans:
+
+  1  create or replace procedure studentdata( STUID  in NUMBER,
+  2   STUROLLNO in NUMBER,
+  3   STUNAME in  VARCHAR2,
+  4   STUBRANCH    VARCHAR2,
+  5   STUHNO  in varchar2,
+  6   CITY    in varchar2,
+  7   PINCODE in number,
+  8   MID in varchar2 ,
+  9  PHno in number)
+ 10  is begin
+ 11  insert into studata values(STUID,STUROLLNO,STUNAME,STUBRANCH);
+ 12  insert into stuaddress values(STUID,STUHNO,CITY,PINCODE);
+ 13  insert into stucontact values(STUID,MID,PHno);
+ 14* end;
+ 15  /
+
+Procedure created.
+
+
+Program_02:
+==========
+Step-1=>Create Table:Student_info
+Columns:stuId,stuName,stuRollNo,stuAddress,stuMailId,stuPhoneNumber.
+step-2 :Construct Procedure to display the complete details of student based on stuId.
+step-3 :Construct JDBC Application to execute Procedure.
+
+
+ans:
+
+  1  create or replace procedure retrivestudentdata( ID  in NUMBER,
+  2   ROLLNO out NUMBER,
+  3   NAME out  VARCHAR2,
+  4   BRANCH   out VARCHAR2,
+  5   HNO  out varchar2,
+  6   ci    out varchar2,
+  7   pi out number,
+  8   MI out varchar2 ,
+  9  PH out number)
+ 10  is
+ 11  begin
+ 12  select STUROLLNO ,STUNAME , STUBRANCH into ROLLNO,NAME,BRANCH from studata where STUID=id;
+ 13  select STUHNO ,CITY , PINCODE into HNO,ci,pi from stuaddress  where STUID=id;
+ 14  select  MID   , PHNO into MI,PH from stucontact where STUID=id;
+ 15* end;
+ 16  /

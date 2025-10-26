@@ -1,0 +1,102 @@
+Task 1: Student Information Display
+
+Create a StudentServlet that accepts student details (name, roll, course) from request body.
+
+Configure the servlet in web.xml.
+
+Use doPost() method.
+
+Display student details in plain text format.
+Test Your Application with this url:
+------------------------------------
+http://localhost:8080/StudentApp/student?name=Rahman&roll=101&course=Java
+
+Expected Output:
+
+=== Student Information ===
+Name   : Rahman
+Roll No: 101
+Course : Java
+
+
+
+Task 2: Employee Salary Calculator
+
+Create a SalaryServlet that accepts employee details (name, basic, hra, tax) from request body.
+
+Configure the servlet in web.xml.
+
+Use doPost() method.
+
+Calculate net salary = basic + hra – tax.
+
+Display salary breakdown and net salary.
+
+Test Your Application with this url:
+http://localhost:8080/EmployeeApp/salary?name=Rahman&basic=50000&hra=10000&tax=8000
+
+
+
+=== Employee Salary Details ===
+Employee : Rahman
+Basic    : 50000.0
+HRA      : 10000.0
+Tax      : 8000.0
+Net Salary: 52000.0
+
+Task 3: Multiplication Table Generator
+
+Create a TableServlet that accepts a number (num) from request body.
+
+Configure the servlet in web.xml.
+
+Use doPost() method.
+
+Generate multiplication table from 1 to 10.
+
+Test Your Application with this url:
+http://localhost:8080/TableApp/table?num=7
+
+Display result in plain text format.
+
+Input :
+
+num=7
+
+
+✅ Expected Output:
+
+=== Multiplication Table of 7 ===
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+7 x 4 = 28
+7 x 5 = 35
+7 x 6 = 42
+7 x 7 = 49
+7 x 8 = 56
+7 x 9 = 63
+7 x 10 = 70
+
+Task 4: Reverse String Servlet
+
+Create a ReverseServlet that accepts a string (text) from request body.
+
+Configure the servlet in web.xml.
+
+Use doPost() method.
+
+Reverse the string and display both original and reversed text.
+
+Test Your Application with this url:
+http://localhost:8080/TextApp/reverse?text=Servlet
+
+Input :
+
+text=Servlet
+
+
+✅ Expected Output:
+
+Original Text : Servlet
+Reversed Text : telvreS

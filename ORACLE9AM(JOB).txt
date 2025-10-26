@@ -1,0 +1,7000 @@
+				 ORACLE
+				========
+Oracle content: (2 months)
+======================
+		Topic-1 : DBMS
+		Topic-2 : ORACLE
+		Topic-3 : SQL 
+			- Introduction to SQL
+			- Sub - Languages of SQL
+			- Datatypes in oracle sql
+			- Operators in oracle sql
+			- Functions in oracle sql
+			- Clauses in oracle sql
+			- Joins
+			- Constraints
+			- Subqueries
+			- Views
+			- Sequence
+			- Indexes----------------Interview level
+		Topic-4 : Normalization
+			- What is Normalization
+			- Where we want to use Normalization
+			- Why we need Normalization
+			- Types of Normalization
+				> First normal form
+				> Second normal form
+				> Third normal form
+				> BCNF (Boyce-codd normal form)
+				> Fourth normal form
+				> Fifth normal form
+		Topic-5 : PL/SQL
+			- Introduction to PL/SQL
+			- Difference between SQL and PL/SQL
+			- Conditional & Looping statements
+			- Cursors
+			- Exception Handling
+			- Stored procedures
+			- Stored functions
+			- Triggers------------------> interview level
+===============================================================================
+	- In IT field user can interact with two types of applications.those are,
+			1.Front End Application
+			2.Back End Application
+1.Front End Application:
+====================
+	- FEA is an application where the end-users are interacting with a page directly.
+		Ex: Login form,Register form,View Profile form,Home page,.....etc
+
+	Design & Develop:
+	===============
+		- UI technologies(html,css,javascript,jquery,json,reactJS,.....etc)
+
+2.Back End Application:
+===================
+	- BEA is an application where the end-user data/information was stored.
+		Ex: Databases 
+
+	Design & Develop:
+	===============	
+		- DB technologie(Oracle,SQLServer,MySQL,DB2,........etc)
+
+Serverside Technology:
+===================
+	- To establish connection between Front end application and Back end application.
+		Ex: Java,Python,.Net,.......etc
+==============================================================================
+			Topic-1 : DBMS
+			============
+What is Data?
+===========
+	- it is a rawfact(i.e Characters,Numbers,Special characters and Symbols)
+	- it never give meaningfull statements.
+	Ex:
+
+		10001 is data	SMITH is data	11-MAY-2025 is data
+		10002 is data	ALLEN is data	12-MAY-2025 is data
+		10003 is date	MILLER is data	13-MAY-2025 is data
+
+
+What is Information?
+=================
+	- processing data is called as "information".
+	- information is always provide meaningfull statements.
+	Ex:
+		Employee_ID	Employee_Name	        Hiredate
+		===========	==============	=================
+		10001 		SMITH 		11-MAY-2025 
+		10002 		ALLEN 		12-MAY-2025 
+		10003 		MILLER 		13-MAY-2025 
+
+What is Database?
+===============
+	- it is a storage location where we store the collection of inter-related data/information
+of a particular business organization.
+	EX:
+		SBI_BANK_DB
+			> organization
+				> group of branches	> group of customers
+					> group of departments
+						> group of employees
+
+Where we use Databases?
+======================
+	- Databases are used in different applications in real time.
+		> Banking applications
+		> HR-management applications
+		> Healthcare applications
+		> Educational management system applications
+		> Transport applications
+		> Sales & Production applications,............etc
+
+Types of Database?
+================
+	- there are two types of databases in real world.
+		1. OLTP(online transaction processing)
+		2. OLAP(online analytical processing)
+
+1. OLTP:
+=======
+	- these databases are used for storing "day-to-day" transactional information.
+		Ex: Oracle,SQLserver,Mysql,Db2,Sybase,PostgreSQL,......etc
+
+2. OLAP:
+=======
+	- these databases are used for storing historical data(i.e bigdata).
+		Ex: Datawarehouse.
+
+What is DBMS?
+=============
+	- it is a software which is used to manage and maintain data / information with in the 
+database.
+	- by using DBMS s/w we will perform the following operations are,
+		> Creating Database
+		> Creating Tables
+		> Inserting data
+		> Updating data
+		> Selecting / Reading data
+		> Deleting data
+	- DBMS s/w will act as an interface between user and database.
+		User <---------> DBMS s\w <----------> Database
+
+Models of DBMS?
+==============
+	- there are three types of DBMS models.
+		1. Hierarchical Database Management System(HDBMS)
+			EX: IMS s/w (information management system)
+		2. Network Database Management System(NDBMS)
+			EX: IDBMS s/w(integrated database management system)
+
+	NOTE: 
+	======
+		HDBMS,NDBMS models are outdated in real time.
+
+3) Relational Database Management System(RDBMS):
+============================================
+	- it again classified into two modules in real time.
+		i) Object Relational DBMS (ORDBMS)
+		ii) Object Oriented DBMS (OODBMS)
+
+i) Object Relational DBMS:
+======================
+	- In these databases data can be organized in the form of "Table" format.
+		Database		: group of tables.
+		Table		: collection of rows and columns.
+		Row		: group of columns.
+	- A row can be called as "Records / Tuples".
+	- A column can be called as "Attributes / Fields"
+	- These databases are completely depends on "SQL" so that these databases are 
+	also called as "SQLdatabases".
+	Ex: Oracle,SQLServer,MySQL,DB2,Sybase,Informix,Ingrees,Teradata,MaxDB,PostgreSQL.
+
+ii) Object Oriented DBMS:
+====================
+	- In these databases data can be organized in the form of "Ojects" format.
+	- These databases are completely depends on "OOPS" concept but not "SQL" so that 
+          	these databases are also called as "NoSQL databases".
+	Ex: MongoDB,Cassandra,....etc
+==============================================================================
+			Topic-2 : ORACLE
+			===============
+Introduction to Oracle:
+===================
+	- Oracle is an RDBMS product / Backend Tool / ORDBMS module / DB software.
+	- Oracle was introduced by "oracle corporation" in 1979.
+	- Oracle is used to store data / information permanently and also providing high
+	level security to data/information.
+	- Oracle can be deployee in any platform such as Windows,Linux,Unix,Mac,Solaries,...etc.
+
+What is Platform?
+==============
+	- it is a combination of operating system and micro-processor.
+	- there are two types of platforms.
+		i) Platform Dependent:
+		===================
+			- it supports only one operating system with the combination of
+		- any micro-processor.
+		EX: Cobal,Pascal,C,C++.
+
+		ii) Platform Independent:
+		=====================
+			- it supports any operating system with the combination of 
+		- any micro-processor.
+		EX: Oracle,Java,.Net core,Python,Mysql,....etc
+NOTE:
+======
+	- Oracle is a platform independent an RDBMS product.
+
+Complete Versions of Oracle s/w:
+===========================
+	- The first version of oracle s/w is "Oracle 1.0".
+		> Oracle 1.0
+		> Oracle 2.0
+		> Oracle 3.0
+		> Oracle 4.0
+		> Oracle 5.0
+		> Oracle 6.0
+		> Oracle 7.0
+		> Oracle 8.0
+		> Oracle 8i(internet)
+		> Oracle 9i
+		> Oracle 10g(grid technology)
+		> Oracle 11g
+		> Oracle 12c(cloud technolgy)
+		> Oracle 18c
+		> Oracle 19c
+		> Oracle 21c
+		> Oracle 23c(Beta version)
+
+Oracle s/w editions:
+=================
+	- there are two editions in oracle s/w.
+		i) Oracle express edition:
+		====================	
+			- supporting oracle features partially.
+		Ex: recyclebin,flashback,purge,partition table,cluster,....etc are not allowed.
+
+		ii) Oracle enterprise edition:
+		=======================
+			- supporting all features of oracle.
+		Ex: recyclebin,flashback,purge,partition table,cluster,....etc are allowed.
+
+How to download oracle21c enterprise edition s/w:
+==========================================	
+https://www.oracle.com/in/database/technologies/oracle21c-windows-downloads.html
+
+How to install oracle21c enterprise edition s/w:
+========================================
+	- Follow the video
+
+Working with Oracle:
+=================
+	- Once we installed oracle s/w internally there are two components are installed in the
+system.
+		i) Client component		
+		ii) Server component
+i) Client:
+=======
+	- by using client tool we will perform the following three operations.
+		step1: User can connect to oracle server.
+			Enter username : SYSTEM (default username)
+			Enter password  : LION(created at installation)
+			Connected.
+
+		step2: User can send request to oracle server.
+			Request : SQL query / SQL command
+
+		step3: User can get response from orale server.
+			Response : Result / Output
+
+	EX: SQLPlus,SQLDeveloper,Toad.
+
+ii) Server:
+========
+	- it again having two more sub-components.
+		i) Instance
+		ii) Database
+
+i) Instance:
+=========
+	- It is a temporary memory which will allocate from RAM.
+	- Here data can be stored temporarlly.
+
+ii) Database:
+===========
+	- It is a permanent memory which will allocate from Harddisk.
+	- Here data can be stored permanently.
+
+NOTE:
+=====
+	- When we want to work with oracle server then we need to follow the following 
+two steps procedure.
+		step1: Connect
+		step2: Communicate
+Connect:
+=======
+	- when user want to connect to oracle server then user need a database tool is 
+known as "SQLPLUS".
+
+Communicate:
+============
+	- when user want to communicate with database then user required a database 
+language is "SQL".
+
+SQLPLUS vs SQL:
+===============
+	SQLPLUS					SQL
+	========				====
+1. it is a DB tool.which was introduced		1. it is DB language.which was introduced  	
+by " oracle corporation".			by " IBM " company.
+
+2. it is used to connect to oracle server.	2. it is used to communicate with database.
+
+3. it will act as an editor for writting and 	3. it contains the following five sub-languages
+executing SQL queries & PL/SQL programms.	are(DDL,DML,DQL/DRL,TCL,DCL) used to perform
+					some operations over database.
+
+How to connect to oracle server:
+===========================
+> go to all programs
+	> open Oracle-OraDB21Home1 folder
+		> clieck on SQLPLUS icon
+			Enter username : SYSTEM
+			Enter Password  : LION
+			connected.
+NOTE:
+=====
+	- Here username is not a case-sensitive but password is a case-sensitive.
+
+How to create a new username and password in oracle:
+==============================================
+syntax:
+======
+create user <username> identified by <password>;
+
+EX:
+SQL> CONNECT
+Enter user-name: SYSTEM/LION
+Connected.
+
+SQL> CREATE USER MYDB9AM IDENTIFIED BY 123;
+ERROR at line 1:
+ORA-65096: invalid common user or role name
+
+To activate oracle session(user) script as a TRUE:
+=========================================
+SQL> ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
+
+SQL> CREATE USER MYDB9AM IDENTIFIED BY 123;
+user created.
+
+NOTE:
+=====
+	- In oracle every new user is called as "Dummy user" i.e there is no permission
+to connect and to do operations over oracle database.
+	- In oracle every user is called as "database / schema".whereas a schema(DB)
+is nothing but collection of objects sunch as tables,views,sequecnes,Index,.....etc
+
+SQL> CONN
+Enter user-name: MYDB9AM
+Enter password : 123
+ERROR:
+ORA-01045: user MYDB9AM lacks CREATE SESSION privilege; logon denied.
+
+How to grant all permissions to user(MYDB9AM):
+=========================================
+syntax:
+=======
+grant <privilege name> to <username>;
+
+EX:
+Enter user-name: SYSTEM/LION
+Connected.
+
+SQL> GRANT DBA TO MYDB9AM;
+Grant succeeded.
+
+SQL> CONN
+Enter user-name: MYDB9AM/123
+Connected.
+
+How to cancel all permissions of user(MYDB9AM):
+=========================================
+syntax:
+=======
+revoke <privilege name> from <username>;
+
+EX:
+SQL> CONN
+Enter user-name: SYSTEM/LION
+Connected.
+
+SQL> REVOKE DBA FROM MYDB9AM;
+Revoke succeeded.
+
+SQL> CONN
+Enter user-name: MYDB9AM/123
+Error : Not Connected.
+
+How to change password for USER(MYDB9AM):
+=======================================
+syntax:
+======
+password;
+
+EX:
+SQL> CONN
+Enter user-name: MYDB9AM/123
+Connected.
+
+SQL> PASSWORD;
+Changing password for MYDB9AM
+Old password:123
+New password:ABC
+Retype new password:ABC
+Password changed
+
+SQL> CONN
+Enter user-name: MYDB9AM/ABC
+Connected.
+
+How to re-create a new password for user if we forgot it: (MYDB9AM)
+==========================================================
+syntax:
+======
+alter user <username> identified by <new password>;
+
+EX:
+SQL> CONN
+Enter user-name: SYSTEM/LION
+Connected.
+
+SQL> ALTER USER MYDB9AM IDENTIFIED MYDB9AM;
+
+SQL> CONN
+Enter user-name: MYDB9AM/MYDB9AM
+Connected.
+
+How to re-create a new password for SYSTEM if we forgot it:
+==================================================
+EX:
+SQL> CONN
+Enter user-name	: \SYS AS SYSDBA (Default username)
+Enter password	: SYS (Default password)
+Connected.
+
+SQL> ALTER USER SYSTEM IDENTIFIED BY TIGER;
+User altered.
+
+SQL> CONN
+Enter user-name: SYSTEM/TIGER
+Connected.
+
+How to view all users in oracle database:(if we forgot it)
+===============================================
+syntax:
+======
+select username from all_users;
+
+EX:
+SQL> CONN
+Enter user-name: SYSTEM/TIGER
+Connected.
+
+SQL> SELECT USERNAME FROM ALL_USERS;
+
+How to drop / delete a user from oracle server:
+=======================================
+syntax:
+======
+drop user <username> cascade;
+
+EX:
+SQL> CONN
+Enter user-name: SYSTEM/TIGER
+Connected.
+
+SQL> DROP USER MYDB9AM CASCADE;
+
+To clear the screen of SQLPLUS editor:
+=================================
+syntax:
+=======
+CL SCR;
+
+EX:
+SQL> CL SCR;
+
+To disconnect from oracle server:
+============================
+syntax:
+=======
+EXIT;
+
+EX:
+SQL> EXIT;
+==========================================================================
+			Topic-3 : SQL
+			============
+Introduction to SQL:
+=================
+	- SQL stands for structure query language which was introduced by IBM.
+	- SQL is used to communicate with database.
+	- The initial name is "SEQUEL" and later renamed as "SQL".
+	- SQL is not a case-sensitive language i.e user can write sql queries in upper /
+	lower / combination of upper and lower case characters.
+		EX:
+		sql> select * from emp; --------------> executed
+		SQL> SELECT * FROM EMP;--------> executed
+		Sql> SeleCT * From Emp;------------> executed
+	- Every sql query should ends with semicolon " ; ".
+	- In oracle storage data is a case-sensitive.
+
+SUB-LANGUAGES OF SQL:
+======================
+1. Data Definition Language(DDL):
+============================
+	- CREATE 
+	- ALTER 
+		> ALTER - MODIFY
+		> ALTER - ADD
+		> ALTER - RENAME
+		> ALTER - DROP
+	- RENAME
+	- TRUNCATE
+	- DROP
+
+New Features:
+============
+	- RECYCLEBIN
+	- FLASHBACK
+	- PURGE
+
+2) Data Manipulation Language(DML):
+================================
+	- INSERT 
+	- UPDATE
+	- DELETE
+
+3) Data Query / Retrieve Language(DQL/DRL):
+======================================
+	- SELECT (read only)
+
+4) Transaction Control Language(TCL):
+================================
+	- COMMIT
+	- ROLLBACK
+	- SAVEPOINT
+
+5) Data Control Language(DCL):
+==========================
+	- GRANT
+	- REVOKE
+==========================================================================
+1. Data Definition Language(DDL):
+============================
+CREATE :
+========
+	- it is used to create a new object in database.
+	Ex: Table,Views,Sequence,Index,Procedure,Function,Trigger,.....etc
+
+How to create a table in oracle:
+===========================
+syntax:
+======
+create table <table name>(<column name1> <datatype>[size],<column name2> <datatype>[size],...............);
+
+Datatypes in Oracle:
+=================
+	- it is an attribute which is used for storing "type of data" into a column 
+in the table.
+	- oracle supports the following datatypes are,
+		> Number datatype
+		> Character / String datatypes
+		> Long datatype
+		> Date datatypes
+		> Raw & Long Raw datatypes
+		> LOB datatypes
+
+Number datatype:
+===============
+	- it again classified into two types.
+		i) Number(p)
+		ii) Number(p,s)
+
+i) Number(p):
+===========
+	- it will store integer format data only.
+
+Precision(p):
+===========
+	- counting all digits in the given expression.
+	- maximum size of precision is 38 digits.
+
+EX:
+	i) 25	- precision = 2
+	ii) 856	- precision = 3
+	iii) 84763	- precision = 5
+	
+EX:
+	SNO number(5)
+	=============
+	0
+	1
+	2
+	
+	
+	99999
+	100000-------error
+
+ii) Number(p,s):
+=============
+	- it will store float values.
+Scale(s):
+========
+	- counting the right digits of a decimal point in the given expression.
+	- there is no maximum size for scale because it is a part of precision value.
+
+EX:
+	i) 25.12		- precision = 4 , scale = 2
+	ii) 463.10		- precision = 5 , scale = 2
+	iii) 987653.735	- precision = 9 , scale = 3
+
+EX:
+	PRICE  number(8,2) -----------> 0
+	=================
+	0.0
+	25.17
+	98.66
+
+	999999.99
+	1000000(1000000.00)---------error
+NOTE:
+=====
+	- scale is always less than or is equals to precision.
+
+Character / String datatypes:
+========================
+	- these datatypes are allowed string format data only.
+	- in database string can be represent with '<string>'.
+EX:
+		Emp_Name Char(10)
+		================
+	smith-------> error
+	'smith'-----> smith
+	123 ---------> error
+	'123'--------> 123
+	45.12-------> error
+	'45.12'-----> 45.12
+
+
+			 string format data
+				||
+		characters only		alphanumeric 
+		        string 		     string
+		[ A - Z / a - z ]		[ A - Z / a - z , 0 - 9, @,#,$<%,&,_,... ]
+	EX: 'SMITH','smith',...........etc		EX: 's123@gmail.com',PAN NUMBER,Password,....etc 
+
+Types of string datatypes:
+=====================
+	- these datatypes are again classified into two types.
+		1. Non-Unicode datatypes:
+		======================
+			- supporting to store "localized data"(i.e English Language Only).
+				i) char(size)
+				ii) varchar2(size)
+
+		2. Unicode datatypes:
+		==================
+			- supporting to store "globalized data"(i.e All National Languages).
+				i) Nchar(size)
+				ii) Nvarchar2(size)
+			- Here "N" stands for National Language.
+
+i) char(size):
+==========
+	- it is a fixed length datatypes(static datatype).
+	- it will store non-unicode characters in the form of 1 char = 1 byte.
+	- the maximum size is 2000 bytes.
+
+	EX:	Emp_Name char(10)
+		=================
+	'ward' ----> ward 	---------> 4 bytes / 10 bytes ---------> 6 bytes wasted
+	'smith'-----> smith	---------> 5 bytes / 10 bytes ---------> 5 bytes wasted
+	'miller'-----> miller	---------> 6 bytes / 10 bytes ----------> 4 bytes wasted
+
+	Disadvantage:
+	============
+		- Memory wasted.
+
+ii) varchar2(size):
+===============
+	- it is a variable length datatypes(dynamic datatype).
+	- it will store non-unicode characters in the form of 1 char = 1 byte.
+	- the maximum size is 4000 bytes.
+
+	EX:	Emp_Name varchar2(10)
+		====================
+	'ward' ----> ward 	---------> 4 bytes / 4 bytes -----------> 0 bytes wasted
+	'smith'-----> smith	---------> 5 bytes / 5 bytes -----------> 0 bytes wasted
+	'miller'-----> miller	---------> 6 bytes / 6 bytes -----------> 0 bytes wasted
+
+	Advantage:
+	============
+		- Memory saved.
+
+
+iii) Nchar(size):
+=============
+	- it is a fixed length datatypes(static datatype).
+	- it will store unicode characters in the form of 1 char = 1 byte.
+	- the maximum size is 2000 bytes.
+
+	Disadvantage:
+	============
+		- Memory wasted.
+
+iv) Nvarchar2(size):
+===============
+	- it is a variable length datatypes(dynamic datatype).
+	- it will store unicode characters in the form of 1 char = 1 byte.
+	- the maximum size is 4000 bytes.
+
+	Advantage:
+	=========
+		- Memory saved.
+
+Long datatype:
+============	
+	- it is a variable length datatypes(dynamic datatype).
+	- it will store non-unicode & unicode characters in the form of 1 char = 1 byte.
+	- the maximum size is 2 gb.
+	- a table is having only one long datatype column.
+
+Date datatypes:
+=============
+	- to store date and time information of particular day / particular transaction.
+			i) DATE
+			ii) TIMESTAMP
+
+i) DATE:
+=======
+	- to store date and time information but time is optional.
+	- if user not enter time information then oracle will take '00:00:00am' by default.
+	- the default date format of oracle is ' DD-MON-YY/YYYY HH:MI:SS '.
+	EX:
+		' DD-MON-YY/YYYY  HH:MI:SS '
+		' 20-MAY-25/2025	10:37:xx  '
+		   1     1     2                1    1    1 -----------> 7 bytes(fixed memory)
+
+ii) TIMESTAMP:
+=============
+	- to store date and time information along with milliseconds.
+	- the default format of timestamp in oracle is ' DD-MON-YY/YYYY HH:MI:SS.MS'.
+	EX:
+		' DD-MON-YY/YYYY  HH:MI:SS.MS '
+		' 20-MAY-25/2025	10:37:XX.XXXX  '
+		   1     1     2                1    1    1    4-----------> 11 bytes(fixed memory)
+
+Raw & Long Raw datatypes:
+=======================
+	- Storing image / audio / video file in the form of 010010101010 binary format.
+		RAW		: static datatype	: 2000 bytes
+		LONG RAW	: dynamic datatype	: 2 gb
+
+LOB datatypes:
+=============
+	- LOB stands for "large objects".
+		i) CLOB
+		ii) NCLOB
+		iii) BLOB
+
+i) CLOB:
+=======
+	- it stands for "character large object" datatype.
+	- it is a dynamic datatype.
+	- it will store non-unicode characters in the form of 1 char=1 byte.
+	- the maximum size is 4 gb.
+
+ii) NCLOB:
+========
+	- it stands for "national character large object" datatype.
+	- it is a dynamic datatype.
+	- it will store unicode characters in the form of 1 char=1 byte.
+	- the maximum size is 4 gb.
+
+iii) BLOB:
+========
+	- it stands for "binary large object" datatype.
+	- it is a dynamic datatype.
+	- it will store image / audio / video file in the form of 0101000101010 binary fromat.
+	- the maximum size is 4gb.
+
+Conclusion on datatypes:
+====================
+	Non-unicode characters:
+	====================
+		> char(size)	- 2000 bytes
+		> varchar2(size)	- 4000 bytes
+		> long		- 2gb
+		> clob		- 4gb
+
+	Unicode characters:
+	====================
+		> Nchar(size)	- 2000 bytes
+		> Nvarchar2(size)	- 4000 bytes
+		> long		- 2gb
+		> Nclob		- 4gb
+
+	Binary format data:
+	================
+		> raw		- 2000 bytes
+		> long raw	- 2gb
+		> blob		- 4gb
+==============================================================================
+How to create a new table in oracle:
+==============================
+syntax:
+======
+create table <table name>(<column name1> <datatype>[size],<column name2> <datatype>[size],...............);
+
+EX:
+> go to open SQLPLUS editor
+	Enter username : MYDB9AM 
+	Enter password  : MYDB9AM
+	connected.
+
+SQL> CREATE TABLE STUDENT(STID NUMBER(4),SNAME CHAR(10),SFEE NUMBER(8,2));
+table created.
+
+How to view the list of tables in oracle:
+================================
+syntax:
+======
+select * from tab;(Tab is a pre-defined table)
+
+EX:
+SQL> SELECT * FROM TAB;
+
+How to view the structure of table in oracle:
+====================================
+syntax:
+======
+desc <table name>; ( Describe command )
+
+EX:
+SQL> DESC STUDENT;
+
+ALTER command:
+===============
+	- to change / modify the structure of a table in database.
+	- this command is having four sub-commands.
+		i) ALTER - MODIFY
+		ii) ALTER - ADD
+		iii) ALTER - RENAME
+		iv) ALTER - DROP
+
+i) ALTER - MODIFY:
+================
+	- to change the datatype and also the size of datatype of a specific column in the table.
+syntax:
+======
+alter table <table name> modify <column name> <new datatype>[new size];
+
+EX:
+SQL> ALTER TABLE STUDENT MODIFY SNAME VARCHAR2(20);
+
+ii) ALTER - ADD:
+=============
+	- to add a new column to an existing table.
+syntax:
+======
+alter table <table name> add <new column name> <datatype>[size];
+
+EX:
+SQL> ALTER TABLE STUDENT ADD DOB DATE;
+
+iii) ALTER - RENAME:
+=================
+	- to change the name of a specific column in the table.
+syntax:
+======
+alter table <table name> rename <column> <old column name> to <new column name>;
+
+EX:
+SQL> ALTER TABLE STUDENT RENAME COLUMN STID TO STUDENT_ID;
+
+iv) ALTER - DROP:
+================
+	- to delete / drop a column from an existing table permanently.
+syntax:
+======
+alter table <table name> drop <column> <column name>;
+
+EX:
+SQL> ALTER TABLE STUDENT DROP COLUMN SFEE;
+
+RENAME command:
+================
+	- to change a table name.
+syntax:
+======
+rename <old table name> to <new table name>;
+
+EX:
+SQL> RENAME STUDENT TO STUDENT_DETAILS;
+
+TRUNCATE command:
+==================
+	- to delete all rows but not columns of a table.
+	- deleting rows from table permanently.
+	- we cannot delete a specific row from a table because it does not supports
+	"WHERE" clause condition.
+syntax:
+=======
+trunate table <table name>;
+
+EX:
+SQL> TRUNCATE TABLE DEPT WHERE DEPTNO=20;             
+ERROR at line 1:
+ORA-03291: Invalid truncate option - missing STORAGE keyword
+
+EX:
+SQL> TRUNCATE TABLE DEPT;------ALLOWED
+
+DROP command:
+==============
+	- deleting the entire table(i.e rows & columns) from database.
+syntax:
+=======
+drop table <table name>;
+
+EX:
+SQL> DROP TABLE DEPT;
+
+NOTE:
+=====
+	- Before oracle10g enterprise edition once we drop a table from database then
+it was deleted permanently whereas from oracle10g enterprise edition once we drop 
+a table from database then it was deleted temporarlly.
+
+New features in Oracle10g enterprise edition:
+======================================
+1. RECYCLEBIN:
+=============
+	- it is a system defined table.
+	- it will store the information about deleted tables from database.
+
+To view the structure of RECYCLEBIN table:
+=====================================
+syntax:
+======
+desc <table name>;
+
+EX:
+SQL> DESC RECYCLEBIN;
+
+To view deleted tables in RECYCLEBIN:
+=================================
+syntax:
+======
+SQL> SELECT OBJECT_NAME,ORIGINAL_NAME FROM RECYCLEBIN;
+
+OBJECT_NAME					ORIGINAL_NAME
+-------------------------------------------------------------			-----------------------------------
+BIN$58AAqZJpS+elgyrJ1gkG5Q==$0			DEPT
+
+2. FLASHBACK:
+=============
+	- it is ddl command which is used to restore deleted table from 
+recyclebin to database.
+
+syntax:
+=======
+flashback table <table name> to before drop;
+
+EX:
+SQL> FLASHBACK TABLE DEPT TO BEFORE DROP;
+
+3. PURGE:
+=========
+	- To delete a table from database permanently.
+syntax:
+=======
+drop table <table name> purge;
+
+EX:
+SQL> DROP TABLE DEPT PURGE;
+
+NOTE:
+=====
+	- the above three features are working under MYDB9AM(user) account but not
+under SYSTEM(admin) account.
+==========================================================================
+2) Data Manipulation Language(DML):
+================================
+INSERT command:
+================
+	- To insert a new row(i.e data) into a table.
+	- There are two methods to insert data into a table.
+
+Method-1: Inserting all values for all columns in the table:
+================================================
+syntax:
+=======
+insert into <table name> values(value1,value2,..................);
+
+EX:
+SQL> INSERT INTO STUDENT VALUES(1021,'SMITH','15-MAY-2025');
+
+Method-2: Inserting values for required columns in the table:
+==================================================
+syntax:
+=======
+insert into <table name>(required columns names) values(value1,value2,..................);
+
+EX:
+SQL> INSERT INTO STUDENT(SNAME,DOB,STUDENT_ID)VALUES('MILLER','05-APR-2024',1025);
+SQL> INSERT INTO STUDENT(STUDENT_ID,DOB)VALUES(1024,'12-JUN-2024');
+SQL> INSERT INTO STUDENT(STUDENT_ID,SNAME)VALUES(1023,'WARD');
+SQL> INSERT INTO STUDENT(SNAME)VALUES('ALLEN');
+
+How to insert data into a table dynamically(i.e at runtime):(For multiple rows)
+===============================================================
+	- when we insert data into a table dynamically then we should use a special 
+operator is "&".
+
+Method-1:
+========
+syntax:
+======
+insert into <table name> values(&<column name1>,&<column name2>,..................);
+
+EX:
+SQL> INSERT INTO STUDENT VALUES(&STUDENT_ID,'&SNAME','&DOB');
+Enter value for student_id: 1
+Enter value for sname: SMITH
+Enter value for dob: 12-JUN-2024
+
+SQL>  /  ( To re-execute the lastly executed sql query in sqlplus editor )
+...............................................
+...............................................
+...............................................
+
+Method-2:
+========
+syntax:
+======
+insert into <table name>(required column names)values(&<column name1>,&<column name2>,..................);
+
+EX:
+SQL> INSERT INTO STUDENT(STUDENT_ID)VALUES(&STUDENT_ID);
+Enter value for student_id: 4
+
+SQL> /
+Enter value for student_id: 5
+
+SQL> /
+...............................................
+
+UPDATE command:
+================
+	- to update all rows data in a table at a time.
+			(or)
+	- to update a specific row data in a table by using "WHERE" clause condition.
+syntax:
+======
+update <table name> set <column name1>=<value1>,<column name2>=<value2>,
+........................[ where <condition> ];
+
+EX:
+SQL> UPDATE STUDENT SET SNAME='SCOTT' WHERE STUDENT_ID=1;
+
+SQL> UPDATE STUDENT SET SNAME='MILLER',DOB='11-APR-2017' 
+          WHERE STUDENT_ID=5;
+
+SQL> UPDATE STUDENT SET DOB=NULL WHERE SNAME='ALLEN';
+
+SQL> UPDATE STUDENT SET STUDENT_ID=NULL,SNAME=NULL,DOB=NULL 
+          WHERE SNAME='JONES';
+
+SQL> UPDATE STUDENT SET STUDENT_ID=3,SNAME='ADAMS',DOB='02-OCT-2021'
+          WHERE STUDENT_ID IS NULL;
+
+SQL> UPDATE STUDENT SET DOB=NULL;
+SQL> UPDATE STUDENT SET DOB='01-JAN-2024';
+
+DELETE command:
+================
+	- to delete all rows from a table at a time.
+		(or)
+	- to delete a specific row from a table by using "WHERE" clause condition.
+syntax:
+======
+delete from <table name> [ where <condition> ];
+
+EX:
+SQL> DELETE FROM STUDENT WHERE STUDENT_ID=1;
+SQL> DELETE FROM STUDENT WHERE SNAME IS NULL;
+SQL> DELETE FROM STUDENT;
+
+DELETE vs TRUNCATE:
+===================
+
+	DELETE 				TRUNCATE
+	=======				==========
+1. it is a DML operation.			1. it is a DDL operation.
+
+2. we can delete a specific row 		2. we cannot delete a specific row 
+from a table.				from a table.
+
+3. it supports "WHERE" clause condition.		3. it does not supports "WHERE" clause condition.
+
+4. deleting data from a table temporarlly.		4. delete data from a table permanently.
+
+5. we can restore deleted data into a table 	5. we cannot restore deleted data into
+by using "ROLLBACK" command.		a table by using "ROLLBACK" command.
+
+6. deleting rows from a table in row-by-row 	6. deleting rows from a table as a
+manner.					 page wise.
+
+7. the execution speed is slow.		7. the execution speed is fast.
+
+
+3) Data Query / Retrieve Language(DQL/DRL):
+======================================
+SELECT:
+=======
+	- to retrieve all rows from a table at a time.
+		(or)
+	- to retrieve a specific row from a table by using "WHERE" clause condition.
+syntax:
+=======
+select * / <list of columns> from <table name>[where <condition>];
+	Here,
+		*  -  all columns in table
+
+EX:
+SQL> SELECT * FROM DEPT;
+	(OR)
+SQL> SELECT DEPTNO,DNAME,LOC FROM DEPT;
+
+EX:
+SQL> SELECT * FROM DEPT WHERE DNAME='SALES';
+SQL> SELECT DNAME,LOC FROM DEPT WHERE DEPTNO=10;
+
+EX:
+SQL> SELECT DNAME FROM DEPT;
+SQL> SELECT DNAME,LOC FROM DEPT;
+
+4) Transaction Control Language(TCL):
+================================
+COMMIT:
+========
+	- to make a transaction(i.e operation) is permanent.
+	- oracle supports the following two types of commit transactions.
+		i) Implicit commit:
+		================
+			- these transactions are committed by the system by default.(i.e auto commit)
+				EX: DDL commands.
+		ii) Explicit commit:
+		================
+			- these transactions are committed by user.
+				EX: DML commands.
+			- to commit a transaction by explicitly then we use the 
+		frollowing syntax:
+			=======
+				COMMIT;
+				
+EX:
+SQL> CREATE TABLE BRANCH(BCODE NUMBER(4),BNAME VARCHAR2(10),BLOC VARCHAR2(10));
+
+SQL> INSERT INTO BRANCH VALUES(1021,'SBI','HYD');
+SQL> COMMIT;
+
+SQL> UPDATE BRANCH SET BLOC='PUNE' WHERE BCODE=1021;
+SQL> COMMIT;
+
+SQL> DELETE FROM BRANCH WHERE BCODE=1021;
+SQL> COMMIT;
+		(OR)
+
+SQL> INSERT INTO BRANCH VALUES(1021,'SBI','HYD');
+SQL> UPDATE BRANCH SET BLOC='PUNE' WHERE BCODE=1021;
+SQL> DELETE FROM BRANCH WHERE BCODE=1021;
+SQL> COMMIT;
+
+ROLLBACK:
+==========
+	- to cancel a transaction.
+	- once we committed a transaction then we cannot rollback.(i.e cancel)
+syntax:
+======
+	ROLLBACK;
+
+EX:
+SQL> INSERT INTO BRANCH VALUES(1021,'SBI','HYD');
+SQL> ROLLBACK;
+
+SQL> UPDATE BRANCH SET BLOC='PUNE' WHERE BCODE=1021;
+SQL> ROLLBACK;
+
+SQL> DELETE FROM BRANCH WHERE BCODE=1021;
+SQL> ROLLBACK;
+		(OR)
+
+SQL> INSERT INTO BRANCH VALUES(1021,'SBI','HYD');
+SQL> UPDATE BRANCH SET BLOC='PUNE' WHERE BCODE=1021;
+SQL> DELETE FROM BRANCH WHERE BCODE=1021;
+SQL> ROLLBACK;
+
+SAVEPOINT:
+==========
+	- when we created a savepoint internally system is allocating a special memory
+for a savepoint for storing a specific row / rows which we want to cancel(i.e rollback) in
+the future.
+
+How to create a savepointer:
+=========================
+syntax:
+=======
+savepoint <pointer name>;
+
+How to rollback a savepointer:
+==========================
+syntax:
+======
+rollback to <pointer name>;
+
+EX1:
+SQL> DELETE FROM BRANCH WHERE BCODE=1021;
+SQL> DELETE FROM BRANCH WHERE BCODE=1025;
+
+SQL> SAVEPOINT P1;
+SQL> DELETE FROM BRANCH WHERE BCODE=1023;
+
+Case-1: 
+======
+	ROLLBACK TO P1; --------> ( Here 1023 row only rollback)
+
+Case-2:
+======
+	COMMIT / ROLLBACK ;
+
+EX2:
+SQL> DELETE FROM BRANCH WHERE BCODE=1021;
+
+SQL> SAVEPOINT P1;
+SQL> DELETE FROM BRANCH WHERE BCODE IN(1023,1025);
+
+Case-1: 
+======
+	ROLLBACK TO P1; --------> ( Here 1023,1025 rows are rollback)
+
+Case-2:
+======
+	COMMIT / ROLLBACK ;
+
+ACID properties:
+==============
+	- Generally all database servers are having ACID properties by default.
+	- By using ACID properties database servers are manage and maintain data / information
+	with accurate and consistency manner.
+	- ACID stands for :
+			A - Automicity
+			C - Consistency
+			I  - Isolation
+			D - Durability
+
+Automicity:
+=========
+	- All operations in a transaction will treat as a single transaction in database.
+	(Atomic=Single)
+
+Ex:
+	Withdraw Transaction:
+	====================	
+			ATM
+			====
+		step1: Insert ATM card
+		step2: Select Language
+		step3: Click on Banking option
+		step4: Click on Withdraw option
+		step5: Enter Amount : 5000
+		step6: Select Saving / Current account
+		step7: Enter Pin no : XXXX
+		step8: Yes(commit) / No(rollback)	
+
+Consistency:
+===========
+	- To maintain accurate information before / after a transaction.
+EX:
+		X-customer					Y-customer
+		==========					===========
+	main bal   :          7000 (before transaction)		main bal :      2000 (before transaction)
+	transfer    :      (-) 4000 (debit amount)		                 recieved : (+) 4000 (credit amount)
+	===============================			===============================
+	new bal    :           3000 				new bal  :       6000
+	debit amt :      (+) 4000 (debit amount)			credit amt : (-)4000 (credit amount)
+	================================			================================
+	main bal  :            7000 (after transaction)		main bal  :      2000 (after transaction)
+	=================================			==================================
+
+Isolation:
+========
+	- Every transaction is independent transaction i.e one transaction will never involved 
+	in an other transaction.
+EX:
+	Withdraw Transaction:
+	===================
+		WD-1 : 5000 --------> Trid: XXXXXXXXX986 ( unique )
+		WD-2 : 1000 --------> Trid: XXXXXXXXX987 ( unique )
+		WD-3 : 4000 --------> Trid: XXXXXXXXX988 ( unique )
+
+Durability:
+=========
+	- once we committed a transaction then we cannot rollback at any level.
+=========================================================================================
+ALIAS NAMES:
+============
+	- it is a temporary name for columns and table.
+	- we can create alias names at two levels in database.
+		i) column level:
+		=============
+			- creating alias name for columns.
+		ii) table level:
+		===========
+			- creating alias name for table.
+syntax:
+======
+select <column name1> [as] <column alias name1>,<column name2> [as] <column alias name2>,
+.........................from <table name> <table alias name>;
+
+EX:
+SQL> SELECT DEPTNO AS X,DNAME AS Y,LOC AS Z FROM DEPT D;
+		(OR)
+SQL> SELECT DEPTNO  X,DNAME  Y,LOC  Z FROM DEPT D;
+
+CONCATENATION OPERATOR( || ):
+============================
+	- To add two or more than two expressions.
+syntax:
+=======
+	<expression1> || <expression2> || <expression3> || ....................;
+
+EX:
+SQL> SELECT 'THE EMPLOYEE'||' '||ENAME||' '||'IS WORKING AS A'||' '||JOB FROM EMP;
+
+DISTINCT keyword:
+=================
+	- to eliminate duplicate values from a specific column temporarlly.
+syntax:
+=======
+	distinct <column name>
+
+EX:
+SQL> SELECT DISTINCT JOB FROM EMP;
+SQL> SELECT DISTINCT DEPTNO FROM EMP ORDER BY DEPTNO;
+
+NOTE:
+=====
+	- if we want to display the large scale data tables in proper systematical order 
+in sqlplus then we must use the following two properties.
+		i) PAGESIZE n
+		ii) LINES n
+
+i) PAGESIZE n:
+=============
+	- by default a page can display up to 14 rows only.
+	- it is used to display no.of rows in a single page.Here "n" is no.of rows.
+	- the maximum size of a page is 50000 rows.
+syntax:
+=======
+set pagesize n;
+
+Ex:
+SQL> SET PAGESIZE 100;
+
+ii) LINES n:
+==========
+	- by default a line can display up to 80 characters.
+	- this property is used to print no.of characters in a single line.Here "n" no.of characters.
+	- the maximum size is 32767 bytes / character.
+syntax:
+=======
+set lines n;
+
+EX:
+SQL> SET LINES 160;
+==============================================================================================
+OPERATORS:
+===========
+	- to perform some operations on the given operand values.
+	- oracle supports the following operators are,
+
+		- Assignment operator	=>	=
+		- Arithmetic operators	=>	+ , - , * , /
+		- Relational operators	=>	< , > , <= , >= , != (or) < >
+		- Logical operators		=>	AND,OR,NOT
+		- Set operators		=>	UNION,UNION ALL,INTERSECT,MINUS
+		
+		- Special operators		=>	(+ve)		(-ve)
+						=====		=====
+						IN		NOT IN
+						BETWEEN	NOT BETWEEN
+						IS NULL		IS NOT NULL
+						LIKE		NOT LIKE
+
+Assignment operator:
+==================
+	- to assign value to a variable / to an attribute.
+syntax:
+=======
+	<column name> <assignment operator> <value>
+
+EX:
+SQL> UPDATE EMP SET SAL=5000;
+SQL> UPDATE EMP SET JOB='HR' WHERE ENAME='SMITH';
+
+Arithmetic operators:
+==================
+	- to calculate arithmetic operations like addition,subtraction,multiple and division.
+syntax:
+=======
+	<column name> <arithmetic operator> <value>
+
+EX:
+waq to display all employees salaries after adding 1000/-?
+SQL> SELECT ENAME,SAL AS OLD_SALARY,SAL+1000 AS NEW_SALARY FROM EMP;
+
+EX:
+waq to display EMPNO,ENAME,BASIC SALARY and ANNUAL SALARY from emp table who are
+working as a "MANAGER"?
+SQL> SELECT EMPNO,ENAME,SAL AS BASIC_SALARY,SAL*12 AS ANNUAL_SALARY FROM EMP
+          WHERE JOB='MANAGER';
+
+EX:
+waq to display all employees salaries after increment of 5% on their salaries?
+SQL> SELECT ENAME,SAL AS BEFORE_INCREMENT,SAL+SAL*5/100 AS AFTER_INCREMENT FROM EMP;
+
+EX:
+waq to display EMPNO,ENAME,BASIC_SALARY,INCREMENT OF 10% amount and TOTAL SALARY
+from emp table who are working under deptno is 20?
+SQL> SELECT EMPNO,ENAME,SAL AS BASIC_SALARY,SAL*10/100 AS INCREMENT_AMOUNT,
+  2  SAL+SAL*0.1 AS TOTAL_SALARY FROM EMP WHERE DEPTNO=20;
+
+EX:
+waq to display employee name,basic salary,3% of hra,2% of da,3% of pf and also display
+their gross salary,net salary of all employees from emp table?
+SQL> SELECT ENAME,SAL AS BASIC,SAL*0.03 AS HRA,SAL*0.02 AS DA,SAL*0.03 AS PF,
+          SAL+SAL*0.03+SAL*0.02+SAL*0.03 AS GROSS,
+          (SAL+SAL*0.03+SAL*0.02+SAL*0.03)-(SAL*0.03) AS NET FROM EMP;
+
+EX:
+waq to display all employees salaries after decrement of 10% on basic salary?
+SQL> SELECT ENAME,SAL AS BEFORE_DECREMENT,SAL-SAL*0.1 AS AFTER_DECREMENT FROM EMP;
+
+Relational operators:
+=================
+	-  comparing a specific column values with user defined condition in the query.
+syntax:
+======
+	where <column name> <relational operator> <value>;
+
+EX:
+waq to display list of employees who are joined after 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE>'31-DEC-1981';
+
+EX:
+waq to display list of employees who are joined before 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE<'01-JAN-1981';
+
+Logical operators:
+===============
+	- to check more than one condition in the query.
+	- AND,OR,NOT operators.
+
+AND operator:
+============
+	- it return a value if both conditions are TRUE in the query.
+
+cond1	cond2
+=====	=====
+T	T	===> T
+T	F	===> F
+F	T	===> F
+F	F	===> F
+
+syntax:
+=======
+	where <condition1> AND <condition2>
+
+EX:
+waq to display employees details whose name is "SMITH" and working as a "CLERK" ?
+SQL> SELECT * FROM EMP WHERE ENAME='SMITH' AND JOB='CLERK';
+
+
+OR operator:
+============
+	- it return a value if any one condition is TRUE in the query.
+
+cond1	cond2
+=====	=====
+T	T	===> T
+T	F	===> T
+F	T	===> T
+F	F	===> F
+
+syntax:
+=======
+	where <condition1> OR <condition2>
+
+EX:
+waq to display employees details who are working as a "PRESIDENT","SALESMAN","MANAGER"?
+SQL> SELECT * FROM EMP WHERE JOB='PRESIDENT' OR JOB='SALESMAN' OR JOB='MANAGER';
+
+NOTE:
+=====
+	> AND 	- Use when our required data is on same row.
+	> OR	- Use when our required data is on different rows.
+
+NOT operator:
+===========
+	- it returns all values from a table except the given conditional values in the query.
+syntax:
+=======
+	where NOT <condition1> AND NOT <condition2>
+
+EX:
+waq to display employees details whose EMPNO is not 7369 and 7788 ?
+SQL> SELECT * FROM EMP WHERE NOT EMPNO=7369 AND NOT EMPNO=7788;
+
+SET OPERATORS:
+==============
+	- set operators are used to combined the results of two SELECT queries.
+syntax:
+======
+	<select query1> <set operator> <select query2>;
+
+EX:
+	A={10,20,30}	B={30,40,50}
+
+UNION:
+======
+	- To combined two sets values without duplicates.
+		A U B = { 10,20,30,40,50 }
+
+UNION ALL:
+==========
+	- To combined two sets values with duplicates.
+		A UL B = { 10,20,30,30,40,50 }
+
+INTERSECT:
+==========
+	- It return common values from both sets.
+		A I B = { 30 }
+
+MINUS:
+======
+	- It return un-common values from the left set but not from the right set.
+		A - B = { 10,20 }
+		B - A = { 40,50 }
+
+DEMO_TABLES:
+=============
+SQL> SELECT * FROM JAVA_COURSE;
+
+      STID SNAME
+   ---------- ----------
+         1 SMITH
+         2 ALLEN
+         3 WARD
+
+SQL> SELECT * FROM ORACLE_COURSE;
+
+      STID SNAME
+    ---------- ----------
+         1 SMITH
+         4 MILLER
+         5 SCOTT
+
+EX:
+waq to display all students details who are joined in the courses?
+SQL> SELECT * FROM JAVA_COURSE UNION ALL SELECT * FROM ORACLE_COURSE; ( Including duplicates)
+SQL> SELECT * FROM JAVA_COURSE UNION  SELECT * FROM ORACLE_COURSE; ( Excluding duplicates)
+
+EX:
+waq to display students details who are joined in ORACLE but not in JAVA course?
+SQL> SELECT * FROM ORACLE_COURSE MINUS SELECT * FROM JAVA_COURSE;
+
+EX:
+waq to display students details who are joined in both courses?
+SQL> SELECT * FROM JAVA_COURSE INTERSECT SELECT * FROM ORACLE_COURSE;
+
+BASIC RULES:
+============
+1. no.of columns in both select queries should same.
+2. order of columns and their datatypes of columns in both select queries must be match.
+
+Special operators:
+===============
+IN operator:
+==========
+	- comparing group of values with a single condition.
+syntax:
+======
+	where <column name> IN(list of values);
+	where <column name> NOT IN(list of values);
+
+EX:
+waq to display list of employees details whose EMPNO is 7369,7566,7788,7900?
+SQL> SELECT * FROM EMP WHERE EMPNO IN(7369,7566,7788,7900);
+
+EX:
+waq to display list of employees who are not working as a "CLERK","SALESMAN","MANAGER"?
+SQL> SELECT * FROM EMP WHERE JOB NOT IN('CLERK','SALESMAN','MANAGER');
+
+BETWEEN operator:
+================
+	- comparing a particular range value.
+syntax:
+======
+	where <column name> BETWEEN <low value> AND <high value>;
+	where <column name> NOT BETWEEN <low value> AND <high value>;
+
+EX:
+waq to display list of employees details from emp table who are joined in 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE BETWEEN '01-JAN-1981' AND '31-DEC-1981';
+
+EX:
+waq to display list of employees details from emp table who are not joined in 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE NOT BETWEEN '01-JAN-1981' AND '31-DEC-1981';
+
+IS NULL operator:
+===============
+	- comparing NULLS in a specific column.
+syntax:
+======
+	where <column name> IS NULL;
+	where <column name> IS NOT NULL;
+
+EX:
+waq to display list of employees whose commission is empty / undefined / unknown?
+SQL> SELECT * FROM EMP WHERE COMM IS NULL;
+
+EX:
+waq to display list of employees whose commission is not empty / defined / known?
+SQL> SELECT * FROM EMP WHERE COMM IS NOT NULL;
+
+What is NULL?
+============
+	- it is an empty / undefined / unknown value in database.
+	- NULL != 0  & NULL != space.
+
+Working with NULL?
+=================
+	- if we perform some arithmetic operation with NULL then it returns NULL only.
+	Ex:
+	IF x=100;
+		i) x+null ===> 100+null ===> null
+		ii) x-null ===> 100-null  ===> null
+		iii) x*null ==> 100*null  ===> null
+		iv) x/null  ==> 100/null   ===> null
+
+EX:
+waq to display EMPNO,ENAME,SALARY,COMMISSION and also calculate SALARY+COMMISSION
+from emp table whose name is "SMITH"?
+SQL> SELECT EMPNO,ENAME,SAL,COMM,SAL+COMM AS TOTAL_SALARY FROM EMP
+          WHERE ENAME='SMITH';
+
+OUTPUT:
+========
+     EMPNO ENAME  SAL     COMM   TOTAL_SALARY
+      ----------   ----------    ----------  ----------    ------------
+      7369    SMITH   800
+
+	- In the above example the employee SMITH salary is 800 and there is no commission
+so that salary+commission is 800 only but it returns NULL.
+	- To overcome the above problem oracle will provide a pre-defined function is NVL().
+
+What is NVL(exp1,exp2):
+====================
+	- it stands for NULL VALUE.
+	- it is used to replace a user defined value inplace of NULL in the expression.
+	- this function is having two arguments are Expression1 and Expression2.
+		> If Exp1 is NULL then it return Exp2 value(user defined value).
+		> If Exp1 is NOT NULL then it return Exp1 value only.
+syntax:
+=======
+	NVL(exp1,exp2)
+
+EX:
+SQL> SELECT NVL(NULL,500) FROM DUAL;--------> 500
+SQL> SELECT NVL(0,500) FROM DUAL;--------------> 0
+
+Solution:
+========
+SQL> SELECT EMPNO,ENAME,SAL,COMM,SAL+NVL(COMM,0) AS TOTAL_SALARY FROM EMP
+          WHERE ENAME='SMITH';
+
+OUTPUT:
+========
+     EMPNO ENAME  SAL     COMM   TOTAL_SALARY
+      ----------   ----------    ----------  ----------    --------------------------
+      7369    SMITH   800		800
+
+NVL2(exp1,exp2,exp3):
+===================
+	- it is an extension of NVL().
+	- it contains the following arguments are Expression1,Expression2 and Expression3.
+		> If Exp1 is NULL then it returns Exp3 value(user defined value)
+		> If Exp1 is NOT NULL then it returns Exp2 value(user defined value)
+EX:
+SQL> SELECT NVL2(NULL,50,10) FROM DUAL;--------> 10
+SQL> SELECT NVL2(0,50,10) FROM DUAL;---------------> 50
+SQL> SELECT NVL2(100,50,10) FROM DUAL;-----------> 50
+
+EX:
+waq to update all employees commission in the table based on the following conditions.
+	1. if employee commission is NULL then update those employees commission as 800.
+	2. if employee commission is NOT NULL then update those employees commission as COMM+300.
+
+Solution:
+=======
+SQL> UPDATE EMP SET COMM=NVL2(COMM,COMM+300,800);
+
+LIKE operator:
+============
+	- comparing a specific string character pattern.
+	- when we use "LIKE" operator we should use the following two wildcard operators.
+		i) %	- it represent the group of characters after selected character.
+		ii) _	- it represent a single character from the expression.
+syntax:
+======
+where <column name> LIKE ' [<wildcard operator>] <specific character pattern> [<wildcard operator>] '
+where <column name> NOT LIKE ' [<wildcard operator>] <specific character pattern> [<wildcard operator>] '
+
+Ex:
+waq to fetch employees details whose name starts with "S" character?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE 'S%';
+
+Ex:
+waq to fetch employees details whose name ends with "N" character?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '%N';
+
+EX:
+to fetch employees details whose name is having 'O' character?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '%O%';
+
+EX:
+to fetch employees details whose name is having 'LL' characters?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '%LL%';
+
+EX:
+to fetch employees details whose name is having 4 characters?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '____';
+
+EX:
+to fetch employees details whose name is having the second character is "O" ?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '_O%';
+
+EX:
+waq to fetch employee details whose salary is having 3 digits?
+SQL> SELECT * FROM EMP WHERE SAL LIKE '___';
+
+EX:
+waq to fetch employees whose employee number starts with 7 and ends with 8?
+SQL> SELECT * FROM EMP WHERE EMPNO LIKE '7%8';
+
+EX:
+waq to display employees details who are joined in 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE LIKE '%81';
+
+EX:
+waq to display employees details who are joined in the month of "DECEMBER"?
+SQL> SELECT * FROM EMP WHERE HIREDATE LIKE '%DEC%';
+
+EX:
+waq to display employees details who are joined in the month of "JUNE","DECEMBER"?
+SQL> SELECT * FROM EMP WHERE HIREDATE LIKE '%JUN%' OR HIREDATE LIKE '%DEC%';
+
+EX:
+waq to display employees details who are joined in the month of "DECEMBER" in 1982?
+SQL> SELECT * FROM EMP WHERE HIREDATE LIKE '%DEC%' AND HIREDATE LIKE '%82';
+				(OR)
+SQL> SELECT * FROM EMP WHERE HIREDATE LIKE '%DEC-82';
+
+LIKE operator with special characters:
+================================
+DEMO_TABLE:
+===========
+SQL> SELECT * FROM CUSTOMER;
+
+       SNO CNAME
+     ---------- ----------
+         1 WAR_NER
+         2 MILL@ER
+         3 JAMES#
+         4 %ADAMS
+         5 TRUN%ER
+         6 JONES_
+
+EX:
+waq to fetch customers details whose name is having "@" symbol?
+SQL> SELECT * FROM CUSTOMER WHERE CNAME LIKE '%@%';
+
+EX:
+waq to fetch customers details whose name is having "#" symbol?
+SQL> SELECT * FROM CUSTOMER WHERE CNAME LIKE '%#%';
+
+EX:
+waq to fetch customers details whose name is having "_" symbol?
+SQL> SELECT * FROM CUSTOMER WHERE CNAME LIKE '%_%';
+
+EX:
+waq to fetch customers details whose name is having "%" symbol?
+SQL> SELECT * FROM CUSTOMER WHERE CNAME LIKE '%%%';
+
+	- The above two examples are retrun wrong results because oracle server will 
+treat % , _  as a wildcard operators but not special characters.
+	- To overcome the above problem we should use a pre-defined keyword in oracle 
+is called as  "ESCAPE ' / ' " .
+
+Solution:
+========
+SQL> SELECT * FROM CUSTOMER WHERE CNAME LIKE '%/_%'ESCAPE'/';
+SQL> SELECT * FROM CUSTOMER WHERE CNAME LIKE '%/%%'ESCAPE'/';
+
+EX:
+waq to fetch employees details whose name not starts with 'S' character?
+SQL> SELECT * FROM EMP WHERE ENAME NOT LIKE'S%';
+==============================================================================
+FUNCTIONS:
+===========
+	- it is a block code to perform some task  as per the given input values from the user
+and return a value.
+	- oracle supports the following two types of functions.
+		1. Pre-defined functions
+			> Use in SQL & PL/SQL
+		2. User-defined functions
+			> Use in PL/SQL
+
+1. Pre-defined functions:
+=====================
+	- these functions are also called as "Built-In-Functions" in oracle.
+	- these again classified into two types.
+		i) Single row functions (Scalar Functions)
+		ii) Multiple row functions (Grouping Functions)
+
+i) Single row functions:
+===================
+	- these functions are return a single value only.
+		> Numeric Functions
+		> Chracter / String Functions
+		> Date Functions
+		> Null Functions(NVL() , NVL2())
+		> Conversion Functions
+		> Analytical Functions (SUBQUERY)
+
+Numeric Functions:
+================
+ABS():
+=====
+	- it convert (-ve) sign values into (+ve) sign values.
+
+syntax:
+======
+	abs(n)
+
+How to call a Function in oracle:
+===========================
+syntax:
+=======
+SELECT <FNAME>(values) FROM DUAL; (DUAL is a pre-defined table)
+
+EX:
+SQL> SELECT ABS(-45) FROM DUAL; ------> 45
+SQL> SELECT EMPNO,ENAME,SAL,COMM,ABS(COMM-SAL) AS RESULT FROM EMP;
+
+CEIL():
+=====
+	- it return a value which is greater than or is equals to the given expression.
+syntax:
+======
+	ceil(n)
+
+EX:
+SQL> SELECT CEIL(9.0) FROM DUAL;-----------> 9
+SQL> SELECT CEIL(9.1) FROM DUAL;-----------> 10
+
+EX:
+SQL> SELECT ENAME,CEIL(SAL*0.03) AS INCREMENT_SAL FROM EMP;
+
+FLOOR():
+========
+	- it return a value which is less than or is equals to the given expression.
+syntax:
+======
+	floor(n)
+
+EX:
+SQL> SELECT FLOOR(9.0) FROM DUAL;-----------> 9
+SQL> SELECT FLOOR(9.9) FROM DUAL;-----------> 9
+
+EX:
+SQL> SELECT ENAME,FLOOR(SAL*0.03) AS INCREMENT_SAL FROM EMP;
+
+POWER():
+========
+	- it return the power of the given expression.
+syntax:
+======
+	power(m,n)
+EX:
+SQL> SELECT POWER(10,2) FROM DUAL;----------------------------------------> 100
+SQL> SELECT ENAME,POWER(SAL,2) AS RESULT FROM EMP;
+
+MOD():
+=====
+	- it return the remainder value from the given expression.
+syntax:
+======
+	mod(m,n)
+
+EX:
+SQL> SELECT MOD(10,2) FROM DUAL;-----> 0
+
+EX:
+SQL> SELECT * FROM EMP WHERE MOD(EMPNO,2)=0;(For even)
+SQL> SELECT * FROM EMP WHERE MOD(EMPNO,2)=1;(For odd)
+
+ROUND():
+========
+	- it return the nearest value of the given expression based 0.5 value.
+		> if an expression value is less than to 0.5 then add "0" to an expression.
+		> if an expression value is greater than or is equals to 0.5 then add "1" to an expression.
+
+syntax:
+=======
+	round(expression[,decimal places])
+
+EX:
+SQL> SELECT ROUND(25.1) FROM DUAL;
+Solution:
+=======
+	25.1 ===> 25 ===> 0.1 < 0.5 then add " 0 " to expression value.
+		+ 0
+		===
+		25
+		===
+
+SQL> SELECT ROUND(25.5) FROM DUAL;
+Solution:
+=======
+	25.5 ===> 25 ===> 0.5 = 0.5 then add " 1 " to expression value.
+		+1
+		===
+		26
+		===
+
+SQL> SELECT ROUND(25.8) FROM DUAL;
+Solution:
+=======
+	25.8 ===> 25 ===> 0.8 > 0.5 then add " 1 " to expression value.
+		+1
+		===
+		26
+		===
+
+EX:
+SQL> SELECT ROUND(25.173,2) FROM DUAL;
+Solution:
+=======
+	25.173 ===> 25.17 ===> 0.3 < 0.5 ===> add "0" to 2nd decimal point value.
+		          +0
+		==========
+		     25.17
+		==========
+
+SQL> SELECT ROUND(25.178,2) FROM DUAL;
+Solution:
+=======
+	25.178 ===> 25.17 ===> 0.8 > 0.5 ===> add "1" to 2nd decimal point value.
+		          +1
+		==========
+		     25.18
+		==========
+
+TRUNC():
+=======
+	- it return an exact value from the given expression.
+	- it does not consider 0.5 value.
+syntax:
+======
+	trunc(expression[,decimal point])
+
+EX:
+SQL> SELECT TRUNC(25.1) FROM DUAL;-------> 25
+SQL> SELECT TRUNC(25.5) FROM DUAL;-------> 25
+SQL> SELECT TRUNC(25.8) FROM DUAL;-------> 25
+
+EX:
+SQL> SELECT TRUNC(25.854,3) FROM DUAL;-------> 25.854
+SQL> SELECT TRUNC(25.8545,3) FROM DUAL;-----> 25.854
+
+Character / String Functions:
+========================
+LENGTH():
+=========
+	- it return the length of the given string expression.
+syntax:
+=======
+	length(string)
+
+EX:
+SQL> SELECT LENGTH('HELLO') FROM DUAL;-------------> 5
+SQL> SELECT LENGTH('WEL COME') FROM DUAL;------> 8
+
+EX:
+SQL> SELECT ENAME,LENGTH(ENAME) FROM EMP;
+SQL> SELECT * FROM EMP WHERE LENGTH(ENAME)>5;
+SQL> SELECT * FROM EMP WHERE LENGTH(ENAME)=5;
+SQL> SELECT * FROM EMP WHERE LENGTH(ENAME)<5;
+
+LOWER():
+========
+	- to convert upper case characters into lower case characters.
+syntax:
+======
+	lower(string)
+
+EX:
+SQL> SELECT LOWER('HELLO') FROM DUAL;
+hello
+
+EX:
+SQL> SELECT ENAME,LOWER(ENAME) FROM EMP;
+SQL> UPDATE EMP SET ENAME=LOWER(ENAME) WHERE JOB='SALESMAN';
+SQL> UPDATE EMP SET ENAME=LOWER(ENAME);
+
+UPPER():
+=======
+	- to convert lower case characters into upper case characters.
+syntax:
+======
+	upper(string)
+
+EX:
+SQL> SELECT UPPER('hello') FROM DUAL;
+HELLO
+
+EX:
+SQL> UPDATE EMP SET ENAME=UPPER(ENAME);
+
+INITCAP():
+=========
+	- to make the initial character as capital.
+syntax:
+======
+	initcap(string)
+
+EX:
+SQL> SELECT INITCAP('hello') FROM DUAL;
+Hello
+
+SQL> SELECT INITCAP('good morning') FROM DUAL;
+Good Morning
+
+EX:
+SQL> SELECT ENAME,INITCAP(ENAME) FROM EMP;
+SQL> UPDATE EMP SET ENAME=INITCAP(ENAME) WHERE DEPTNO=10;
+
+CONCAT():
+=========
+	- to add two string expressions.
+syntax:
+======
+	concat(string1,string2)
+
+EX:
+SQL> SELECT CONCAT('HAI','BYE') FROM DUAL;
+HAIBYE
+
+EX:
+SQL> SELECT ENAME,CONCAT('Mr./Miss.',ENAME) FROM EMP;
+SQL> UPDATE EMP SET ENAME=CONCAT('Mr.',ENAME);
+
+LTRIM():
+=======
+	- to remove unwanted characters from the left side of the given string.
+syntax:
+======
+	ltrim(string,'<trimming character>')
+
+EX:
+SQL> SELECT LTRIM('XXXSMITH','X') FROM DUAL;
+SMITH
+
+SQL> SELECT LTRIM('XYXYXYSMITH','XY') FROM DUAL;
+SMITH
+
+SQL> SELECT LTRIM('123SMITH','123') FROM DUAL;
+SMITH
+
+EX:
+SQL> UPDATE EMP SET ENAME=LTRIM(ENAME,'Mr.');
+
+RTRIM():
+=======
+	- to remove unwanted characters from the right side of the given string.
+syntax:
+======
+	rtrim(string,'<trimming character>')
+
+EX:
+SQL> SELECT RTRIM('SMITHXXX','X') FROM DUAL;
+SMITH
+
+TRIM():
+======
+	- to remove unwanted characters from the both sides of the given string.
+syntax:
+======
+	trim('trimming character' FROM string)
+EX:
+SQL> SELECT TRIM('X' FROM 'XXXSMITHXXXX') FROM DUAL;
+SMITH
+
+SQL> SELECT TRIM('X' FROM 'XXXSMITHYYYYY') FROM DUAL;
+SMITHYYYYY
+
+SQL> SELECT TRIM('Y' FROM 'XXXSMITHYYYYY') FROM DUAL;
+XXXSMITH
+
+SQL> SELECT TRIM('XY' FROM 'XXXSMITHYYYYY') FROM DUAL
+ERROR at line 1:
+ORA-30001: trim set should have only one character
+
+LPAD():
+======
+	- filling a specific character on the left side of string.if string length is less than to
+user defined length.
+
+syntax:
+======
+	lpad(string,<user defined lengtj>,'specific character')
+
+EX:
+SQL> SELECT LPAD('SMITH',1) FROM DUAL;
+S
+
+SQL> SELECT LPAD('SMITH',3) FROM DUAL;
+SMI
+
+EX:
+SQL> SELECT LPAD('SMITH',10,'@') FROM DUAL;
+@@@@@SMITH
+
+SQL> SELECT LPAD('SMITH',10,'@#$%^') FROM DUAL;
+@#$%^SMITH
+
+RPAD():
+======
+	- filling a specific character on the right side of string.if string length is less than to
+user defined length.
+
+syntax:
+======
+	rpad(string,<user defined lengtj>,'specific character')
+
+EX:
+SQL> SELECT RPAD('SMITH',10,'@#$%^') FROM DUAL;
+SMITH@#$%^
+
+REPLACE():
+==========
+	- to replace string to string in the given expression.
+syntax:
+======
+	replace(expression,string1,string2)
+
+EX:
+SQL> SELECT REPLACE('JACK AND JUE','J','BL') FROM DUAL;
+BLACK AND BLUE
+
+SQL> SELECT REPLACE('HELLO','ELLO','XYZ') FROM DUAL;
+HXYZ
+
+EX:
+SQL> SELECT REPLACE('HELLO','ELO','XYZ') FROM DUAL; 
+HELLO -------> return wrong result
+
+TRANSLATE():
+============
+	- to translate character by character.
+syntax:
+=======
+	translate(Expression,'<old characters>','<new characters>')
+
+EX:
+SQL> SELECT TRANSLATE('HELLO','ELO','XYZ') FROM DUAL;
+HXYYZ
+	Here,
+		E = X , L = Y , O = Z
+
+SQL> SELECT TRANSLATE('HELLO','ELO','XY') FROM DUAL;
+HXYY
+	Here,
+		E = X , L = Y 
+SQL> SELECT TRANSLATE('HELLO','ELO','X') FROM DUAL;
+HX
+	Here,
+		E = X 
+
+SUBSTR():
+=========
+	- it return the required substring from the given string.
+syntax:
+======
+	substr(string,<starting position of character>,<length of the characters>)
+
+Expression:
+==========
+		 1 2  3 4 5  6  7	
+		 W E L C O M E
+	                -7 -6 -5 -4 -3 -2 -1
+
+EX:
+SQL> SELECT SUBSTR('WELCOME',1,1) FROM DUAL;
+W
+
+SQL> SELECT SUBSTR('WELCOME',3,3) FROM DUAL;
+LCO
+
+SQL> SELECT SUBSTR('WELCOME',7,2) FROM DUAL;
+E
+
+SQL> SELECT SUBSTR('WELCOME',-3,1) FROM DUAL;
+O
+
+SQL> SELECT SUBSTR('WELCOME',-6,4) FROM DUAL;
+ELCO
+
+SQL> SELECT SUBSTR('WELCOME',-5,-2) FROM DUAL;--------> No result
+
+INSTR():
+=======
+	- it return the occurrence position of character from the given string.
+syntax:
+======
+instr(string,'<specific character>',<starting position of character>,<occurrence position of character>)
+
+Expression:
+==========
+	               -13-12-11-10-9-8-7-6-5-4-3-2-1
+		' W E L C O M E      H E L L O '
+		  1  2 3 4 5  6  7 8 910111213----------> Fixed position and it should be (+ve)
+
+NOTE:
+=====
+	- Searching character from left to right (or) from right to left but it should consider 
+always (+ve) position of character.
+
+EX:
+SQL> SELECT INSTR('WELCOME HELLO','E',1,3) FROM DUAL;---------> 10
+SQL> SELECT INSTR('WELCOME HELLO','E',5,2) FROM DUAL;----------> 10
+SQL> SELECT INSTR('WELCOME HELLO','E',5,3) FROM DUAL;--------> 0
+SQL> SELECT INSTR('WELCOME HELLO','L',3,3) FROM DUAL;---------> 12
+SQL> SELECT INSTR('WELCOME HELLO','O',12,1) FROM DUAL;--------> 13
+
+EX:
+SQL> SELECT INSTR('WELCOME HELLO','O',-2,1) FROM DUAL;--------> 5
+SQL> SELECT INSTR('WELCOME HELLO','E',-5,1) FROM DUAL;-------> 7
+SQL> SELECT INSTR('WELCOME HELLO','E',-3,3) FROM DUAL;-------> 2	
+
+SQL> SELECT INSTR('WELCOME HELLO','E',-4,-1) FROM DUAL;                                            
+ERROR at line 1:
+ORA-01428: argument '-1' is out of range
+
+Date Functions:
+==============
+SYSDATE:
+========
+	- it return the current date information of the system.
+syntax:
+=======
+	sysdate
+
+EX:
+SQL> SELECT SYSDATE FROM DUAL;
+05-JUN-25
+
+SQL> SELECT SYSDATE+10 FROM DUAL;
+15-JUN-25
+
+SQL> SELECT SYSDATE-10 FROM DUAL;
+26-MAY-25
+
+ADD_MONTHS():
+=============
+	- to add / subtract no.of months to / from the given date.
+syntax:
+======
+	add_months(date,<no.of months>)
+
+EX:
+SQL> SELECT ADD_MONTHS(SYSDATE,3) FROM DUAL;
+05-SEP-25
+
+SQL> SELECT ADD_MONTHS('12-JUN-2024',-3) FROM DUAL;
+12-MAR-24
+
+EX:
+SQL> CREATE TABLE PRODUCT(PNAME VARCHAR2(10),MFG_DATE DATE,EXP_DATE DATE);
+
+SQL> INSERT INTO PRODUCT(PNAME,MFG_DATE)VALUES('P1','12-APR-2023');
+SQL> INSERT INTO PRODUCT(PNAME,MFG_DATE)VALUES('P2','25-SEP-2024');
+SQL> COMMIT;
+
+SQL> SELECT * FROM PRODUCT;(Before update)
+SQL> UPDATE PRODUCT SET EXP_DATE=ADD_MONTHS(MFG_DATE,24);
+SQL> SELECT * FROM PRODUCT;(After update)
+
+LAST_DAY():
+==========
+	- it return the last day from the given month in the date expression.
+syntax:
+=======
+	last_day(date)
+
+EX:
+SQL> SELECT LAST_DAY(SYSDATE) FROM DUAL;
+30-JUN-25
+
+SQL> SELECT LAST_DAY('29-SEP-2021') FROM DUAL;
+30-SEP-21
+
+MONTHS_BETWEEN():
+==================
+	- it return the no.of months in between the given two dates.
+	- date1 is always greater than to date2 otherwise it returns (-ve) sign value.
+syntax:
+=======
+	months_between(date1,date2)
+
+EX:
+SQL> SELECT MONTHS_BETWEEN('05-JUN-2024','05-JUN-2025') FROM DUAL;--------> -12
+SQL> SELECT MONTHS_BETWEEN('05-JUN-2025','05-JUN-2024') FROM DUAL;--------> 12
+
+Conversion Functions:
+===================
+		I) TO_CHAR()
+		II) TO_DATE()
+
+I) TO_CHAR():
+============
+	- to convert date type to char type and also display date in different formats.
+syntax:
+=======
+	to_char(sysdate,'<interval>')
+
+Year Formats:
+---------------------------
+YYYY	 - Year in four digits format
+YY	 - Last two digits from year
+YEAR	 - Twenty Twenty-Five
+CC	 - Centuary 21
+AD / BC	 - AD Year / BC Year
+
+EX:
+SQL> SELECT TO_CHAR(SYSDATE,'YY YYYY YEAR CC BC') FROM DUAL;
+
+OUTPUT:
+--------------------------------------------------------
+25 2025 TWENTY TWENTY-FIVE 21 AD
+
+Month Format:
+----------------------------
+MM	 - Month In Number Format
+MON	 - First Three Char's From Month Spelling
+MONTH	 - Full Name Of Month
+
+EX:
+SQL> SELECT TO_CHAR(SYSDATE,'MM MON MONTH') FROM DUAL;
+
+OUTPUT:
+--------------------------
+06 JUN JUNE
+
+Day Formats:
+-------------------------
+DDD	 - Day Of The Year.
+DD	 - Day Of The Month.
+D 	 - Day Of The Week
+		Sun 	- 1
+		Mon 	- 2
+		Tue 	- 3
+		Wen 	- 4
+		Thu 	- 5
+		Fri 	- 6
+		Sat 	- 7
+
+DAY	 - Full Name Of The Day 
+DY	 - First Three Char's Of Day Spelling
+
+EX:
+SQL> SELECT TO_CHAR(SYSDATE,'D DD DDD DY DAY') FROM DUAL;
+
+OUTPUT:
+----------------------------------------------------------
+6 06 157 FRI FRIDAY
+
+Quater Format:
+----------------------------
+	Q - One Digit Quater Of The Year
+		1 - Jan - Mar
+		2 - Apr - Jun
+		3 - Jul - Sep
+		4 - Oct - Dec
+
+EX:
+SQL> SELECT TO_CHAR(SYSDATE,'Q') FROM DUAL;
+
+OUTPUT:
+========
+2
+
+Week Format:
+--------------------------
+WW	 - Week Of The Year
+W 	 - Week Of Month
+
+SQL> SELECT TO_CHAR(SYSDATE,'W WW') FROM DUAL;
+
+OUTPUT:
+=========
+1 23
+
+EX:
+waq to display employees and their joined year?
+SQL> SELECT ENAME,HIREDATE,TO_CHAR(HIREDATE,'YYYY') AS YEARS FROM EMP;
+
+EX:
+waq to display list of employees details who are joined in 1981?
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'YY')='81';
+			(OR)
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'YYYY')='1981';
+			(OR)
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'YEAR')='NINETEEN EIGHTY-ONE';
+
+EX:
+waq to display list of employees details who are joined in 1980,1982,1983?
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'YYYY') IN ('1980','1982','1983');
+
+EX:
+waq to display list of employees details who are joined in the month of DECEMBER?
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'MM')='12';
+			(OR)
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'MON')='DEC';
+			(OR)
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'MONTH')='DECEMBER';
+no rows selected
+
+NOTE:
+=====
+	- when we work with "MONTH","DAY" intervals oracle server return no rows from a 
+table because system will allocate 9 bytes memory for MONTH,DAY intervals by default.
+	- so to remove extra bytes from an expression then we should use "FM" (fill mode)
+interval in the MONTH,DAY expression like below,
+
+Solution:
+========
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'FMMONTH')='DECEMBER';
+
+EX:
+waq to display list of employees details who are joined in the month of DECEMBER in 1982?
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'MON')='DEC' AND TO_CHAR(HIREDATE,'YYYY')='1982';
+		(OR)
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'MONYYYY')='DEC1982';	
+
+EX:
+waq to display employees and their joined day from emp table?
+SQL> SELECT ENAME,HIREDATE,TO_CHAR(HIREDATE,'DAY') AS DAYS FROM EMP;
+
+EX:
+waq to display employees who are joined on weekends?
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'DY') IN('SAT','SUN');
+
+EX:
+waq to display employees who joined in the 3rd week of the month?
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'W')='3';
+
+EX:
+waq to display employees who joined in the 3rd week of the DECEMBER month?
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'W')='3' AND TO_CHAR(HIREDATE,'MM')='12';
+
+EX:
+waq to display employees who joined in 2nd quater of 1981?
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'Q')='2' AND TO_CHAR(HIREDATE,'YYYY')='1981';
+		(OR)
+SQL> SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'QYYYY')='21981';
+
+II) TO_DATE():
+============
+	- to convert string type to oracle default date type(i.e DD-MON-YY) and also display date
+in different format.
+
+syntax:
+======
+	to_date(string,['format'])
+
+EX:
+SQL> SELECT TO_DATE('12-JUNE-2025') FROM DUAL;
+12-JUN-25
+
+SQL> SELECT TO_DATE('12/JUNE/2025') FROM DUAL;
+12-JUN-25
+
+SQL> SELECT TO_DATE('12.JUNE.2025') FROM DUAL;
+12-JUN-25
+
+EX:
+waq to add 10 days to an explicit date expression when the month is in number format?
+SQL> SELECT TO_DATE('12-06-2025')+5 FROM DUAL;
+ERROR at line 1:
+ORA-01843: not a valid month
+	- To overcome the above problem then convert month character type to date type by using FORMAT
+interval.
+
+Solution:
+========
+SQL> SELECT TO_DATE('12-06-2025','DD-MM-YYYY')+10 FROM DUAL;
+22-JUN-25
+
+EX:
+waq to add 5 months to an explicit date expression ?
+SQL> SELECT ADD_MONTHS(TO_DATE('12-06-2025','DD-MM-YYYY'),5) FROM DUAL;
+12-NOV-25
+
+EX:
+waq to add 1 year to an explicit date expression ?
+SQL> SELECT ADD_MONTHS(TO_DATE('12-06-2025','DD-MM-YYYY'),12) FROM DUAL;
+12-JUN-26
+
+EX:
+waq to add 5 years to an explicit date expression ?
+SQL> SELECT ADD_MONTHS(TO_DATE('12-06-2025','DD-MM-YYYY'),60) FROM DUAL;
+12-JUN-30
+
+To convert a user defined date in different styles/ formats:
+==================================================
+SQL> SELECT TO_CHAR(TO_DATE('12-06-2025','DD-MM-YYYY'),'DD.MM.YYYY') FROM DUAL;
+12.06.2025
+
+SQL> SELECT TO_CHAR(TO_DATE('12-06-2025','DD-MM-YYYY'),'MM.DD.YYYY') FROM DUAL;
+06.12.2025
+
+SQL> SELECT TO_CHAR(TO_DATE('12-06-2025','DD-MM-YYYY'),'YYYY.MM.DD') FROM DUAL;
+2025.06.12
+
+SQL> SELECT TO_CHAR(TO_DATE('12-06-2025','DD-MM-YYYY'),'DD.MON.YYYY') FROM DUAL;
+12.JUN.2025
+
+SQL> SELECT TO_CHAR(TO_DATE('12-06-2025','DD-MM-YYYY'),'FMDAY.MONTH.YEAR') FROM DUAL;
+THURSDAY.JUNE.TWENTY TWENTY-FIVE
+
+ii) Multiple row functions:
+======================
+	- these functions are also called as "Grouping Functions / Aggregative Functions".
+
+SUM():
+=======
+	- it return total value.
+
+syntax:
+======
+	sum(column name)
+
+EX:
+SQL> SELECT SUM(SAL) AS TOTAL_SALARY_OF_EMPLOYEES FROM EMP;
+SQL> SELECT SUM(SAL) AS TOTAL_SALARY_OF_JOB FROM EMP WHERE JOB='MANAGER';
+
+AVG():
+=====
+	- it return average value.
+
+syntax:
+======
+	avg(column name)
+
+EX:
+SQL> SELECT AVG(SAL) AS AVG_SALARY_OF_EMPLOYEES FROM EMP;
+SQL> SELECT AVG(SAL) AS AVG_SALARY_OF_JOB FROM EMP WHERE JOB='MANAGER';
+
+MIN():
+=====
+	- it return minimum value.
+syntax:
+=======
+	min(column name)
+
+EX:
+SQL> SELECT MIN(SAL) AS MIN_SAL_DEPTNO FROM EMP WHERE DEPTNO=30;
+SQL> SELECT MIN(HIREDATE) AS MIN_DOJ_OF_EMPLOYEES FROM EMP;
+
+MAX():
+=====
+	- it return maximum value.
+syntax:
+=======
+	max(column name)
+
+EX:
+SQL> SELECT MAX(SAL) AS MAX_SAL_DEPTNO FROM EMP WHERE DEPTNO=30;
+SQL> SELECT MAX(HIREDATE) AS MAX_DOJ_OF_EMPLOYEES FROM EMP;
+
+COUNT():
+========
+	- it again classified into three types.
+		i) COUNT(*)
+		ii) COUNT(column name)
+		iii) COUNT(distinct <column name>)
+i) COUNT(*):
+===========
+	- counting all rows including duplicates and nulls.
+syntax:
+======
+	count(*)
+
+EX:
+SQL> SELECT COUNT(*) FROM EMP;
+SQL> SELECT COUNT(*) FROM EMP WHERE JOB='SALESMAN';
+
+EX:
+waq to display no. of employees are joined in 1981?
+SQL> SELECT COUNT(*) FROM EMP WHERE HIREDATE BETWEEN '01-JAN-1981' AND '31-DEC-1981';
+				(OR)
+SQL> SELECT COUNT(*) FROM EMP WHERE TO_CHAR(HIREDATE,'YYYY')='1981';
+
+EX:
+waq to find out no.of employees are joined in the mont of DECEMBER?
+SQL> SELECT COUNT(*) FROM EMP WHERE TO_CHAR(HIREDATE,'MON')='DEC';
+
+EX:
+waq to find out no.of employees are joined on MONDAY?
+SQL> SELECT COUNT(*) FROM EMP WHERE TO_CHAR(HIREDATE,'DY')='MON';
+
+ii) COUNT(column name):
+=====================
+	- counting values including duplicates but not nulls from a specific column.
+syntax:
+======
+	count(column name)
+
+EX:
+SQL> SELECT COUNT(MGR) FROM EMP;
+          13
+
+SQL> SELECT COUNT(COMM) FROM EMP;
+          4
+
+iii) COUNT(distinct column name):
+============================
+	- counting unique values from a specific column.(i.e no duplicates & no nulls)
+syntax:
+======
+	count(distinct <column name>);
+
+EX:
+SQL> SELECT COUNT(DISTINCT MGR) FROM EMP;
+                6
+
+SQL> SELECT COUNT(DISTINCT COMM) FROM EMP;
+	4
+
+EX:
+SQL> SELECT COUNT(DISTINCT HIREDATE) FROM EMP WHERE TO_CHAR(HIREDATE,'YYYY')='1981';
+SQL> SELECT COUNT(DISTINCT DEPTNO) FROM EMP WHERE DEPTNO=30;
+==================================================================================
+CLAUSES:
+=========
+	- it is a statement which is used to add to sql query for providing some additional 
+facilities are "filtering rows,sorting values,grouping similar data" based on columns from a table.
+	- oracle supports the following clauses are:
+		- WHERE
+		- ORDER BY
+		- GROUP BY
+		- HAVING
+syntax:
+=======
+	<SQL query> + <CLAUSE statement>;
+
+WHERE:
+=======
+	- filtering rows in one-by-one manner before grouping data in a table.
+	- it can be used in "SELECT,UPDATE,DELETE" commands only.
+syntax:
+======
+	where <filtering condition>;
+EX:
+SQL> SELECT * FROM EMP WHERE EMPNO=7788;
+SQL> UPDATE EMP SET SAL=50000 WHERE JOB='PRESIDENT';
+SQL> DELETE FROM EMP WHERE DEPTNO=20;
+
+ORDER BY:
+=========
+	- to arrange a specific column values either in ascending or in descending order.
+	- by default order by clause will arrange the values in ascending order.if we want 
+	to arrange the values in descending order then we should use "DESC" keyword.
+	- it can be used in "SELECT" query.
+syntax:
+======
+select * / <list of columns> from <table name> order by <column name1> <asc/desc>,
+<column name2> <asc/desc>,...........;
+
+EX:
+waq to display employees details who are working under deptno is 30 and arrange those 
+employees salaries in descending order?
+SQL> SELECT * FROM EMP WHERE DEPTNO=30 ORDER BY SAL DESC;
+
+EX:
+waq to arrange employees deptno's in ascending order and their employees salaries in 
+descending order from emp table?
+SQL> SELECT * FROM EMP ORDER BY DEPTNO,SAL DESC;
+
+NOTE:
+=====
+	- Order by clause can apply on not only column names even though we can apply on
+the position of column in SELECT query.
+
+EX:
+SQL> SELECT * FROM EMP ORDER BY 8;
+SQL> SELECT * FROM EMP ORDER BY 8 DESC;
+
+SQL> SELECT EMPNO,ENAME,DEPTNO FROM EMP ORDER BY 3;
+SQL> SELECT EMPNO,ENAME,DEPTNO FROM EMP ORDER BY 2 DESC;
+SQL> SELECT EMPNO,ENAME,DEPTNO FROM EMP ORDER BY 1;
+
+ORDER BY with NULL clauses:
+=========================
+	- there are two null clauses.
+		i) NULLS FIRST
+		ii) NULLS LAST
+
+i)  NULLS FIRST:
+===============
+	- by default order by clause on NULLS in ascending order,
+	Ex:
+	SQL> SELECT * FROM EMP ORDER BY COMM;
+		First : Values
+		Later : Nulls
+	- To change the above order and make nulls in first  in ascending order then we should use 
+	"NULLS FIRST" clause in the query like below,
+	Solution:
+	========
+	SQL> SELECT * FROM EMP ORDER BY COMM NULLS FIRST.
+		First : Nulls
+		Later : Values
+
+ii) NULLS LAST:
+==============
+	- by default order by clause on NULLS in descending order,
+	Ex:
+	SQL> SELECT * FROM EMP ORDER BY COMM DESC;
+		First : Nulls
+		Later : Values
+	- To change the above order and make nulls in last in descending order then we should use 
+	"NULLS LAST" clause in the query like below,
+	Solution:
+	========
+	SQL> SELECT * FROM EMP ORDER BY COMM DESC NULLS LAST.
+		First : Values
+		Later : Nulls
+
+GROUP BY:
+==========
+	- it is used to make groups based on column.
+	- when we use "group by" clause we must use "grouping functions" 
+	to get the final result.
+	- it can use in "SELECT" command only.
+syntax:
+======
+select <column name1>,<column name2>,..............,<grouping function name1>,................
+from <table name> group by <column name1>,<column name2>,..........;
+
+EX:
+waq to find out no.of employees are working in an organization?
+SQL> SELECT COUNT(*) AS NO_OF_EMPLOYEES FROM EMP;
+
+EX:
+waq to find out no.of employees are working as "manager" ?
+SQL> SELECT COUNT(*) AS NO_OF_EMPLOYEES FROM EMP WHERE JOB='MANAGER';
+
+EX:
+waq to find out no.of employees are working in each  job wise?
+SQL> SELECT JOB,COUNT(*) AS NO_OF_EMPLOYEES FROM EMP GROUP BY JOB;
+
+EX:
+waq to find out no.of employees are working in each job along with their deptno?
+SQL> SELECT JOB,DEPTNO,COUNT(*) AS NO_OF_EMPLOYEES FROM EMP 
+          GROUP BY JOB,DEPTNO ORDER BY JOB;
+
+EX:
+waq to display the total expenditures of each deptno wise?
+SQL> SELECT DEPTNO,SUM(SAL) AS TOT_EXP FROM EMP GROUP BY DEPTNO ORDER BY DEPTNO;
+
+EX:
+waq to display the average expenditure of each deptno wise?
+SQL> SELECT DEPTNO,AVG(SAL) AS AVG_EXP FROM EMP GROUP BY DEPTNO ORDER BY DEPTNO;
+
+EX:
+waq to display no.of employees,total expenditure,maximum expenditure and minimum expenditure
+of each deptno wise?
+SQL> SELECT DEPTNO,COUNT(*) AS NO_OF_EMP,SUM(SAL) AS TOT_EXP,MAX(SAL) AS MAX_EXP,
+MIN(SAL) AS MIN_EXP   FROM EMP GROUP BY DEPTNO ORDER BY DEPTNO;
+
+EX:
+waq to find out no.of employees are joined in each YEAR wise?
+SQL> SELECT TO_CHAR(HIREDATE,'YYYY') AS YEARS,COUNT(*) AS NO_OF_EMP FROM EMP
+        GROUP BY TO_CHAR(HIREDATE,'YYYY');
+
+
+EX:
+waq to find out no.of employees are joined in each MONTH wise?
+SQL> SELECT TO_CHAR(HIREDATE,'MONTH') AS YEARS,COUNT(*) AS NO_OF_EMP FROM EMP
+        GROUP BY TO_CHAR(HIREDATE,'MONTH');
+
+
+EX:
+waq to find out no.of employees are joined in each WEEK wise?
+SQL> SELECT TO_CHAR(HIREDATE,'W') AS YEARS,COUNT(*) AS NO_OF_EMP FROM EMP
+        GROUP BY TO_CHAR(HIREDATE,'W');
+
+HAVING:
+=======
+	- filtering rows after grouping data in the table.
+	- it always use after "group by" clause only.
+	- it can use in "SELECT" query.
+syntax:
+======
+select <column name1>,<column name2>,..............,<grouping function name1>,................
+from <table name> group by <column name1>,<column name2>,.......having<filtering condition>;
+
+EX:
+waq to display total expenditure of deptno from emp table in which deptno the total expenditure 
+is more than to 10000;
+SQL> SELECT DEPTNO,SUM(SAL) AS TOT_EXP FROM EMP 
+         GROUP BY DEPTNO HAVING SUM(SAL)>10000;
+
+EX:
+waq to display no.of employees in a job from emp table in which job the no.of employees are 
+working less than to 3?
+SQL> SELECT JOB,COUNT(*) AS NO_OF_EMP FROM EMP GROUP BY JOB HAVING COUNT(*)<3;
+
+EX:
+waq to display no.of employees in a year from emp table in which year the no.of employees are 
+joined less than or is equals to 2?
+SQL> SELECT TO_CHAR(HIREDATE,'YYYY') AS YEARS,COUNT(*) AS NO_OF_EMP FROM EMP
+          GROUP BY TO_CHAR(HIREDATE,'YYYY') HAVING COUNT(*)<=2;
+
+WHERE vs HAVING:
+=================
+
+	WHERE				HAVING
+	=======				========
+1. filtering rows before grouping data		1. filtering rows after grouping data
+in the table.				in the table.
+
+2. WHERE condition will work on 		2. HAVING condition will work on
+each individual row wise.			each group of rows wise.
+
+3. it does not supports "grouping functions".	3. it supports "grouping functions".
+
+4. it will use before "group by" clause.		4. it will use after "group by" clause.
+
+5. without "group by" clause WHERE clause	5. without "group by" clause HAVING 
+can be worked.				clause can not be worked.
+
+Using  all clauses in a single SELECT query:
+=====================================
+syntax:
+======
+select <column name1>,<column name2>,..............,<grouping function name1>,................
+from <table name> [ where <filtering condition>
+			group by <column name1>,<column name2>,.......
+				having<filtering condition>	
+					order by <column name1> <asc/desc>,..........
+		];
+
+Execution order of the clauses:
+==========================
+From clause
+	> where clause
+		> group by clause
+			> having clause
+				> select query
+					> order by clause
+
+EX:
+SQL> SELECT DEPTNO,COUNT(*) AS NO_OF_EMP FROM EMP WHERE SAL>1000
+          GROUP BY DEPTNO HAVING COUNT(*)>3 ORDER BY DEPTNO;
+
+    DEPTNO  NO_OF_EMP
+     ----------     ----------
+        20          4
+        30          5
+==============================================================================
+JOINS:
+=======
+	- In RDBMS data can be organized / stored in multiple tables.From those multiple tables
+if user want to retrieve the required data / information then we should use a technique is known
+as "JOINS".
+	- Joins are used to retrieving data/information from multiple tables at a time.
+
+Types of joins:
+=============
+	- Oracle supports the following joins are,
+		1) Inner joins
+			> Equi join
+			> Non-Equi join
+			> Self join
+		2) Outer joins
+			> Left outer join
+			> Right outer join
+			> Full outer join
+		3) Cross join
+		4) Natural join
+
+	- Every join can be implemented in two ways in oracle.
+		i) NON-ANSI format joins
+		ii) ANSI format joins
+
+NON-ANSI joins vs ANSI joins
+========================
+
+	NON-ANSI					ANSI
+	========					=====
+1. these statements are not a portability statements.	1. these statements are portability 
+						statements whereas portability 
+						is nothing but to move a join statement
+						from one platform to another platform
+						without doing any changes.
+
+2. joining two or more than two tables based on		2. joining two or more than two tables
+"WHERE" clause condition.				with "ON" clause condition.
+
+syntax:						syntax:
+======						=======
+select * from <table name1>,<table name2>		select * from <table name1> <join>
+where <join condition>;				<table name2> on <join condition>;
+
+1) Inner joins
+============
+Equi join:
+=======
+	- retrieving data from multiple tables based on " = " operator is known as 
+	  equi join.
+	- when we use equi join we have a common column name(optional) in both tables
+	  and their datatypes must be match in both tables.
+	- having realtionship between tables are optional for joins.
+	- it always retrieving matching rows only.
+
+syntax for NON-ANSI format " JOIN CONDITION " :
+=========================================
+WHERE <table name1 / table alias name1>.<common column name> = <table name2 / table alias name2>.<common column name>;
+
+syntax for ANSI format "JOIN CONDITION " :
+====================================
+ON <table name1 / table alias name1>.<common column name> = <table name2 / table alias name2>.<common column name>;
+
+DEMO_TABLES:
+=============
+SQL> SELECT * FROM COLLEGES;
+
+CCODE 	CNAME
+-----------  	----------
+1021 	SVIT
+1022 	CBIT
+1023 	VBIT
+
+SQL> SELECT * FROM STUDENTS;
+
+STID	SNAME	CCODE
+-------- 	------------	----------
+1 	SMITH	1021
+2 	JONES	1021
+3 	ADAMS	1022
+4 	SCOTT
+
+EX:
+waq to retrieve students and their college details from the given two tables?
+NON-ANSI:
+SQL> SELECT * FROM STUDENTS,COLLEGES WHERE STUDENTS.CCODE=COLLEGES.CCODE;
+			(OR)
+SQL> SELECT * FROM STUDENTS S,COLLEGES C WHERE S.CCODE=C.CCODE;
+
+ANSI:
+SQL> SELECT * FROM STUDENTS JOIN COLLEGES ON STUDENTS.CCODE=COLLEGES.CCODE;
+			(OR)
+SQL> SELECT * FROM STUDENTS S INNER JOIN COLLEGES C ON S.CCODE=C.CCODE;
+
+
+RULE FOR JOINS:
+================
+	====================================================
+	|| a row in a table is comparing with all rows of another table ||
+	====================================================
+
+EX:
+waq to retrieve students details along with college details from the given two tables.who are joined 
+in SVIT college?
+ANSI:
+SQL> SELECT STID,SNAME,CNAME FROM STUDENTS S JOIN COLLEGES C ON S.CCODE=C.CCODE WHERE CNAME='SVIT';
+					(OR)
+SQL> SELECT STID,SNAME,CNAME FROM STUDENTS S JOIN COLLEGES C ON S.CCODE=C.CCODE AND CNAME='SVIT';
+
+EX:
+waq to retrieve employees details from emp,dept tables who are working in the location is  "DALLAS"?		
+SQL> SELECT ENAME,LOC FROM EMP E JOIN DEPT D ON E.DEPTNO=D.DEPTNO AND LOC='DALLAS';
+
+EX:
+waq to display total expenditures of each department names wise from emp,dept tables?
+SQL> SELECT DNAME,SUM(SAL) AS TOT_EXP FROM EMP E JOIN DEPT D 
+         ON E.DEPTNO=D.DEPTNO
+         GROUP BY DNAME;
+
+EX:
+waq to display deptno,total expenditures of each department names wise from emp,dept tables?
+SQL> SELECT D.DEPTNO,DNAME,SUM(SAL) AS TOT_EXP FROM EMP E JOIN DEPT D 
+         ON E.DEPTNO=D.DEPTNO
+         GROUP BY D.DEPTNO,DNAME 
+         ORDER BY DEPTNO;
+
+EX:
+waq to display total expenditures of department names from emp,dept tables.if the total expenditure of
+departement is more than to 10000?
+SQL> SELECT DNAME,SUM(SAL) AS TOT_EXP FROM EMP E JOIN DEPT D 
+         ON E.DEPTNO=D.DEPTNO
+         GROUP BY DNAME
+         HAVING SUM(SAL)>10000;
+
+NON-EQUI JOIN:
+==============
+	- retrieving data from multiple tables based on any condition except an " = " operator.
+	- in this join we will use the following operators are " < , > , <= , >= , !=,Between,and,or.....etc".
+
+DEMO TABLES:
+=============
+SQL> SELECT * FROM TEST11;
+
+       SNO NAME
+---------- ----------
+         1 SMITH
+         2 ALLEN
+
+SQL> SELECT * FROM TEST12;
+
+       SNO    SAL
+---------- 	----------
+         1      35000
+         3      42000
+
+NON-ANSI
+SQL> SELECT * FROM TEST11 T1,TEST12 T2 WHERE T1.SNO>T2.SNO;
+
+ANSI:
+SQL> SELECT * FROM TEST11 T1 JOIN TEST12 T2 ON T1.SNO>T2.SNO;
+SQL> SELECT * FROM TEST11 T1 JOIN TEST12 T2 ON T1.SNO>=T2.SNO;
+SQL> SELECT * FROM TEST11 T1 JOIN TEST12 T2 ON T1.SNO<T2.SNO;
+SQL> SELECT * FROM TEST11 T1 JOIN TEST12 T2 ON T1.SNO<=T2.SNO;
+SQL> SELECT * FROM TEST11 T1 JOIN TEST12 T2 ON T1.SNO!=T2.SNO;
+
+EX:
+waq to display employees whose salary is between low salary and high salary from emp,salgrade
+tables?
+SQL> SELECT ENAME,SAL,LOSAL,HISAL FROM EMP JOIN SALGRADE 
+          ON SAL BETWEEN LOSAL AND HISAL;
+
+EX:
+waq to display employees grades and also salaries which will comes between low salary
+and high salary?
+SQL> SELECT ENAME,SAL,LOSAL,HISAL,GRADE FROM EMP JOIN SALGRADE 
+          ON SAL BETWEEN LOSAL AND HISAL;
+
+EX:
+waq to display employees who are comes under 3rd grade from emp,salgrade tables?
+SQL> SELECT ENAME,SAL,LOSAL,HISAL,GRADE FROM EMP JOIN SALGRADE
+          ON SAL BETWEEN LOSAL AND HISAL WHERE GRADE=3;
+
+EX:
+waq to display employees who are comes under 3rd and 5th grade 
+from emp,salgrade tables?
+SQL> SELECT EMPNO,ENAME,SAL,LOSAL,HISAL,GRADE FROM EMP JOIN SALGRADE
+        ON SAL BETWEEN LOSAL AND HISAL WHERE GRADE=3 OR GRADE=5;
+			(OR)
+SQL> SELECT EMPNO,ENAME,SAL,LOSAL,HISAL,GRADE FROM EMP JOIN SALGRADE
+  2  ON SAL BETWEEN LOSAL AND HISAL WHERE GRADE IN(3,5);
+
+OUTER JOINS:
+============
+	- it again classified into three types.
+		i) Left outer join
+		ii) Right outer join
+		iii) Full outer join
+i) Left outer join:
+==============
+	- retrieving matching rows from both table and unmatching rows from the 
+left side of table.
+
+ANSI:
+SQL> SELECT * FROM STUDENTS S LEFT OUTER JOIN COLLEGES C ON S.CCODE=C.CCODE;
+
+NON-ANSI:
+=========
+	- when we want to implement outer joins in non-ansi format then we should 
+use a special operator is called as "join operator (+)".
+
+EX:
+SQL> SELECT * FROM STUDENTS S,COLLEGES C WHERE S.CCODE=C.CCODE(+);
+
+ii) Right outer join:
+==============
+	- retrieving matching rows from both table and unmatching rows from the 
+right side of table.
+
+ANSI:
+SQL> SELECT * FROM STUDENTS S RIGHT OUTER JOIN COLLEGES C ON S.CCODE=C.CCODE;
+
+NON-ANSI:
+SQL> SELECT * FROM STUDENTS S,COLLEGES C WHERE S.CCODE(+)=C.CCODE;
+
+iii) Full outer join:
+===============
+	- it is a combination of left outer and right outer join.
+	- retrieving matching rows and also unmatching rows from both tables 
+	at a time.
+ANSI:
+SQL> SELECT * FROM STUDENTS S FULL OUTER JOIN COLLEGES C ON S.CCODE=C.CCODE;
+
+NON-ANSI:
+SELECT * FROM STUDENTS S,COLLEGES C WHERE S.CCODE(+)=C.CCODE(+);                                           
+ERROR at line 1:
+ORA-01468: a predicate may reference only one outer-joined table
+
+	- if we want to implment full outer join in non-ansi format then we "UNION"
+operator between left outer and right outer join statements.
+
+Solution:
+========
+SQL> SELECT * FROM STUDENTS S,COLLEGES C WHERE S.CCODE=C.CCODE(+)
+          UNION
+          SELECT * FROM STUDENTS S,COLLEGES C WHERE S.CCODE(+)=C.CCODE;
+
+CROSS JOIN:
+===========
+	- joining two or more than two tables without any condition.
+	- in cross join,each row of the first will joins with each row of the second table.
+	for example a table is having (m) no.of rows and another table is having (n)
+	no.of rows then the result is (mXn) rows.
+EX:
+ANSI:
+SQL> SELECT * FROM STUDENTS CROSS JOIN COLLEGES;
+
+NON-ANSI:
+SQL> SELECT * FROM STUDENTS,COLLEGES;
+
+EX:
+DEMO_TABLES:
+==============
+SQL> SELECT * FROM ITEMS1;
+
+SNO	INAME	PRICE
+---------- 	---------- 	----------
+1 	PIZZA       180
+2 	BURGER    85
+
+SQL> SELECT * FROM ITEMS2;
+
+SNO 	INAME	PRICE
+---------- 	---------- 	----------
+11 	PEPSI           25
+12 	COCACOLA   20
+
+SQL> SELECT I1.INAME,I1.PRICE,I2.INAME,I2.PRICE,
+  2  I1.PRICE+I2.PRICE AS COMBO_PRICE FROM
+  3  ITEMS1 I1 CROSS JOIN ITEMS2 I2;
+
+NATURAL JOIN:
+=============
+	- it is a similar to equi join for retrieving matching rows from multiple tables.
+
+NATURAL JOIN vs EQUI JOIN:
+==========================
+	
+	NATURAL JOIN 				EQUI JOIN
+	============				=========
+1. preparing a join condition by implicitly.	1. preparing a join condition by explicitly.
+
+2. common column name is mandatory.		2. common column name is optional.
+
+3. to avoid duplicate columns from the 		3. it does not avoid duplicate columns
+result set(output) automatically.		from the result set automatically.
+
+4. preparing join condition based on 		4. preparing join condition based on
+"USING" clause.				" WHERE / ON " clause.
+
+EX:
+SQL> SELECT * FROM STUDENTS S NATURAL JOIN COLLEGES C;
+
+SELF JOIN:
+=========
+	- joining a table by itself is known as SELF JOIN.
+			(or)
+	- comparing a table data by itself is known as SELF JOIN.
+	- self join can work on a single table only.
+	- when we use self join we should use alias name on a table otherwise we cannot
+	implement self join mechanism.
+	- whenever we are creating alias name on a table internally oracle server is 
+	preparing a virtual table on each alias name and stored in buffer memory.
+	- we can create any no.of alias names on a single table but each alias name
+	must be different name.
+
+Why we need SELF JOIN?
+======================
+	- Self join is required for:
+		1. comparing a single column values by itself with in the table.
+		2. comparing multiple columns values to each other with in the table.
+
+Examples on comparing a single column values by itself with in the table:
+==============================================================
+EX:
+waq to display employees details who are working in same the location where the 
+employee SMITH is also working?
+
+DEMO_TABLE:
+============
+SQL> SELECT * FROM TEST50;
+
+ENAME	CITY
+---------- 	----------
+SMITH	HYD
+ALLEN      MUMBAI
+MILLER	HYD
+WARNER	DELHI
+SCOTT	CHENNAI
+
+Solution:
+SQL> SELECT T1.ENAME,T1.CITY FROM TEST50 T1,TEST50 T2 WHERE T1.CITY=T2.CITY 
+         AND T2.ENAME='SMITH';
+
+output:
+==============
+ENAME	CITY
+----------	----------
+SMITH	HYD
+MILLER	HYD
+
+EX:
+waq to display employees details whose salary is same as the employee SCOTT salary
+from emp table?
+SELECT E1.ENAME,E1.SAL FROM EMP E1,EMP E2 WHERE E1.SAL=E2.SAL AND E2.ENAME='SCOTT';
+
+EX:
+waq to display employees details whose manager id is same as the employee ALLEN
+manager id from emp table?
+SELECT E1.ENAME,E1.MGR FROM EMP E1,EMP E2 WHERE E1.MGR=E2.MGR AND E2.ENAME='ALLEN';
+
+EX:
+waq to display employees details who are working same department where the employee
+ADAMS is also working from emp table?
+SQL> SELECT E1.ENAME,E1.DEPTNO FROM EMP E1,EMP E2 WHERE E1.DEPTNO=E2.DEPTNO AND E2.ENAME='ADAMS';
+
+
+EX:
+waq to display employees details who are joined on same date the employee
+JAMES is also joined from emp table?
+SQL> SELECT E1.ENAME,E1.HIREDATE FROM EMP E1,EMP E2 WHERE E1.HIREDATE=E2.HIREDATE AND E2.ENAME='JAMES';
+
+Examples on comparing multiple columns values to each other with in the table:
+==================================================================
+Ex:
+waq to displays managers and their employees from emp table?
+SQL> SELECT M.ENAME AS MANAGER,E.ENAME AS EMPLOYEES FROM
+          EMP E JOIN EMP M ON M.EMPNO=E.MGR;
+
+EX:
+waq to display employees who are working under the manager is "KING" ?
+SQL> SELECT E.ENAME AS EMPLOYEE,M.ENAME AS MANAGER FROM EMP E JOIN EMP M
+  2  ON M.EMPNO=E.MGR AND M.ENAME='KING';
+
+EX:
+waq to display BLAKE manager from emp table?
+SQL> SELECT E.ENAME AS EMPLOYEE,M.ENAME AS MANAGER FROM EMP E JOIN EMP M
+  2  ON M.EMPNO=E.MGR AND E.ENAME='BLAKE';
+
+EX:
+waq to display employees who are joined before their managers?
+SQL> SELECT E.ENAME AS EMPLOYEES,E.HIREDATE AS EMP_DOJ,
+  2  M.ENAME AS MANAGER,M.HIREDATE AS MGR_DOJ FROM
+  3  EMP E JOIN EMP M ON M.EMPNO=E.MGR AND E.HIREDATE<M.HIREDATE;
+
+EX:
+waq to display employees whose salary is more than to their managers?	
+SQL> SELECT E.ENAME AS EMPLOYEES,E.SAL AS EMP_SAL,
+  2  M.ENAME AS MANAGER,M.SAL AS MGR_SAL FROM
+  3  EMP E JOIN EMP M ON M.EMPNO=E.MGR AND E.SAL>M.SAL;
+
+How to join more than two tables:
+============================
+syntax for NON_ANSI:
+==================
+select * from <table name1>,<table name2>,<table name3>,..................................................
+where <join condition1> and <join condition2> and ...................;
+
+syntax for ANSI:
+==============
+select * from <table name1> <join key> <table name2> on <join condition1>
+<join key> <table name3> on <join condition2>
+<join key> <table name4> on <join condition3>
+...........................................................................
+...........................................................................
+<join key> <table name n> on <join condition n-1>;
+
+NOTE:
+======	
+	- when we join "N" tables then we prepare "N-1" conditions.
+
+DEMO_TABLES:
+=============
+SQL> SELECT * FROM COLLEGES;
+SQL> SELECT * FROM STUDENTS;
+SQL> SELECT * FROM REGISTER;
+
+     REGNO REGDATE        CCODE
+     ----------   ----------------        ----------
+     10001   23-JUN-25       1021
+     10002   24-JUN-25
+
+EQUI JOIN:
+=========
+NON-ANSI:
+=========
+SQL> SELECT * FROM STUDENTS S,COLLEGES C,REGISTER R
+  2  WHERE S.CCODE=C.CCODE AND C.CCODE=R.CCODE;
+
+ANSI:
+=====
+SQL> SELECT * FROM STUDENTS S JOIN COLLEGES C ON S.CCODE=C.CCODE
+  2  JOIN REGISTER R ON C.CCODE=R.CCODE;
+=============================================================================
+CONSTRAINTS:
+============
+	- Constraints are used to enforce / restrict unwanted data(i.e invalid) from users into table.
+	- By using constraints we will maintain accurate and consistency data/information in tables.
+	- Oracle supports the following six types of constraints.those are,
+		i) UNIQUE
+		ii) NOT NULL
+		iii) CHECK
+		iv) PRIMARY KEY
+		v) FOREIGN KEY(references)
+		vi) DEFAULT
+	- Constraints are applied on a table in two ways.
+		1) Column level:
+		===============
+			- In this level we will define a constraint on each individual column wise.
+		syntax:
+		======
+		create table <table name>(<column name1> <datatype>[size] <constraint type>,
+		<column name2> <datatype>[size] <constraint type>,...................................);
+
+		2) Table level: ( composite constraints )
+		==================================
+			- In this level we will define a constraint after all columns definitions i.e
+		the end of the table structure.
+		syntax:
+		=======
+		create table <table name>(<column name1> <datatype>[size],<column name2> <datatype>[size],
+		<column name3> <datatype>[size],.............,<constraint type>(<column name1>,<column name2>,..........));
+
+i) UNIQUE:
+=========
+	- to restricted duplicates but allowed nulls into a column.
+EX:
+column level:
+============
+SQL> CREATE TABLE TEST1(SNO NUMBER(2) UNIQUE ,NAME VARCHAR2(10) UNIQUE);
+
+TESTING:
+SQL> INSERT INTO TEST1 VALUES(1,'A');---------------ALLOWED
+SQL> INSERT INTO TEST1 VALUES(1,'A');---------------NOT ALLOWED
+SQL> INSERT INTO TEST1 VALUES(NULL,NULL);--ALLOWED
+
+table level:
+=========
+SQL> CREATE TABLE TEAMS(TEAM1 VARCHAR2(10),TEAM2 VARCHAR2(10),UNIQUE(TEAM1,TEAM2));
+
+TESTING:
+SQL> INSERT INTO TEAMS VALUES('IND','AUS');------ALLOWED
+SQL> INSERT INTO TEAMS VALUES('IND','AUS');------NOT ALLOWED
+SQL> INSERT INTO TEAMS VALUES('IND','ENG');------ALLOWED
+SQL> INSERT INTO TEAMS VALUES(NULL,NULL);------ALLOWED
+
+NOT NULL:
+==========
+	- to restricted nulls but allowed duplicate values into a column.
+	- it can be defined at column level but not at table level.
+EX:
+column level:
+============
+SQL> CREATE TABLE TEST2(SNO NUMBER(2) NOT NULL,NAME VARCHAR2(10) NOT NULL);
+
+TESTING:
+SQL> INSERT INTO TEST2 VALUES(1,'A');---------> ALLOWED
+SQL> INSERT INTO TEST2 VALUES(1,'A');---------> ALLOWED
+SQL> INSERT INTO TEST2 VALUES(NULL,NULL);---------> NOT ALLOWED
+
+CHECK:
+=======
+	- to check the values with user defined condition before accepting into a column.
+EX:
+colum level:
+==========
+SQL> CREATE TABLE REGISTER
+  2  (
+  3  REGNO NUMBER(5) UNIQUE NOT NULL,
+  4  CNAME VARCHAR2(10) NOT NULL,
+  5  ENTRY_FEE NUMBER(6,2) NOT NULL CHECK(ENTRY_FEE=500),
+  6  AGE NUMBER(3) NOT NULL CHECK(AGE BETWEEN 18 AND 30),
+  7  MBNO NUMBER(10) UNIQUE NOT NULL CHECK(LENGTH(MBNO)=10),
+  8  CITY VARCHAR2(10) NOT NULL CHECK(CITY IN('HYD','MUMBAI','DELHI'))
+  9  );
+
+TESTING:
+SQL> INSERT INTO REGISTER VALUES(10001,'SMITH',400,31,987456321,'HYDERABAD');---NOT ALLOWED
+SQL> INSERT INTO REGISTER VALUES(10001,'SMITH',500,30,9874563214,'HYD');----ALLOWED
+
+table level:
+=========
+SQL> CREATE TABLE TEST3(STID NUMBER(4),SNAME VARCHAR2(10),SFEE NUMBER(8,2),
+          CHECK(SNAME=LOWER(SNAME) AND SFEE>=25000));
+
+TESTING:
+SQL> INSERT INTO TEST3 VALUES(1021,'SMITH',15000);------NOT ALLOWED
+SQL> INSERT INTO TEST3 VALUES(1021,'smith',35000);-------ALLOWED
+PRIMARY KEY:
+============
+	- it is a combination of UNIQUE and NOT NULL constraint.
+	- it restricted duplicates and nulls from a columm.
+	- a table is having only one primary key.
+EX:
+column level:
+===========
+SQL> CREATE TABLE USERS(USERID VARCHAR2(20) UNIQUE NOT NULL,
+          UNAME VARCHAR2(10),MAILID VARCHAR2(20) PRIMARY KEY);
+
+TESTING:
+SQL> INSERT INTO USERS VALUES('SMITH123','SMITH','s@gmail.com');-----> ALLOWED
+SQL> INSERT INTO USERS VALUES('ALLEN123','ALLEN','s@gmail.com');-----> NOT ALLOWED
+SQL> INSERT INTO USERS VALUES('ALLEN123','ALLEN','a@gmail.com');-----> ALLOWED
+
+Composite Primary Key (Table level):
+==============================
+	- when we defined a primary key constraint on combination of mulitple columns 
+are called as "composite primary key".
+	- in composite primary key each individual columns are accepting duplicate values
+but the combination of columns are not accepting duplicate values.
+
+EX:
+SQL> CREATE TABLE BRANCH_DETAILS(BCODE NUMBER(4),BNAME VARCHAR2(10),
+          BLOC VARCHAR2(10),PRIMARY KEY(BCODE,BNAME));
+
+TESTING:
+SQL> INSERT INTO BRANCH_DETAILS VALUES(1021,'SBI','AMEERPET');----ALLOWED
+SQL> INSERT INTO BRANCH_DETAILS VALUES(1021,'SBI','MADHPUR');----NOT ALLOWED
+SQL> INSERT INTO BRANCH_DETAILS VALUES(1022,'SBI','MADHAPUR');----ALLOWED
+SQL> INSERT INTO BRANCH_DETAILS VALUES(1021,'HDFC','AMEERPET');----ALLOWED
+
+FOREIGN KEY(references):
+======================
+	- it is used to establish relationship between tables for taking an 
+identity(i.e reference data) from one table to another table.
+
+BASIC RULES:
+============
+1. To maintain common column name(optional) in both tables.
+
+2. Those columns datatypes must be match.
+
+3. One table should have "primary key" and another table should have "foreign key".
+
+4. A primary key table is called as "parent table" and a foreign key table 
+is called s "child table" in the relationship.
+
+5. A foreign key column is allowed the values which should be there in 
+    primary key column.
+
+6. By default a foreign key column is allowed duplicates and nulls.
+
+syntax:
+=======
+<common column name of child table> <datatype>[size] references 
+<parent table name>(primary key column)
+
+EX:
+SQL> CREATE TABLE DEPT1(DNO NUMBER(2) PRIMARY KEY,DNAME VARCHAR2(10));---> PARENT TABLE
+
+SQL> INSERT INTO DEPT1 VALUES(1,'JAVA');
+SQL> INSERT INTO DEPT1 VALUES(2,'DB');
+
+SQL> CREATE TABLE EMP1(EID NUMBER(4) PRIMARY KEY,
+          ENAME VARCHAR2(10),DNO NUMBER(2) REFERENCES DEPT1(DNO));--> CHILD TABLE
+
+SQL> INSERT INTO EMP1 VALUES(1021,'SMITH',1);
+SQL> INSERT INTO EMP1 VALUES(1022,'ALLEN',1);
+SQL> INSERT INTO EMP1 VALUES(1023,'WARD',2);
+SQL> INSERT INTO EMP1 VALUES(1024,'JONES',NULL);
+
+NOTE:
+=====
+	- Once we establish a relationship between tables there are two rules are come into picture.
+		1. Insertion Rule
+		2. Deletion Rule
+
+1. Insertion Rule:
+===============
+	- we cannot insert the values into a child table those values are not existing in primary key
+of parent table.
+		i.e no parents = no child
+EX:
+SQL> INSERT INTO EMP1 VALUES(1025,'SMITH',3);
+ERROR at line 1:
+ORA-02291: integrity constraint (MYDB9AM.SYS_C008644) violated - parent key not found
+
+2. Deletion Rule:
+==============
+	- we cannot delete a row from parent table that parent row is having the corresponding 
+child rows in child table without addressing to child.
+
+EX:
+SQL> DELETE FROM DEPT1 WHERE DNO=1;
+ERROR at line 1:
+ORA-02292: integrity constraint (MYDB9AM.SYS_C008644) violated - child record found
+
+How to address child before deleting a row from parent table:
+=====================================================
+	- There are two rules to address to child before deleting a row from a parent table.
+			i) ON DELETE CASCADE
+			ii) ON DELETE SET NULL
+	
+i) ON DELETE CASCADE:
+======================
+	- when we delete a row from parent table then the corresponding child rows also 
+deleted from child table automatically.
+
+EX:
+SQL> CREATE TABLE DEPT2(DNO NUMBER(2) PRIMARY KEY,DNAME VARCHAR2(10));---> PARENT TABLE
+
+SQL> INSERT INTO DEPT2 VALUES(1,'JAVA');
+SQL> INSERT INTO DEPT2 VALUES(2,'DB');
+
+SQL> CREATE TABLE EMP2(EID NUMBER(4) PRIMARY KEY,
+          ENAME VARCHAR2(10),DNO NUMBER(2) REFERENCES DEPT2(DNO)
+          ON DELETE CASCADE);--> CHILD TABLE
+
+SQL> INSERT INTO EMP2 VALUES(1021,'SMITH',1);
+SQL> INSERT INTO EMP2 VALUES(1022,'ALLEN',2);
+
+TESTING:
+SQL> DELETE FROM DEPT2 WHERE DNO=1;
+1 row deleted.
+
+ii) ON DELETE SET NULL:
+======================
+	- when we delete a row from parent table then the corresponding child rows of a foreign key 
+column values are converting NULLS in child table automatically.
+
+EX:
+SQL> CREATE TABLE DEPT3(DNO NUMBER(2) PRIMARY KEY,DNAME VARCHAR2(10));---> PARENT TABLE
+
+SQL> INSERT INTO DEPT3 VALUES(1,'JAVA');
+SQL> INSERT INTO DEPT3 VALUES(2,'DB');
+
+SQL> CREATE TABLE EMP3(EID NUMBER(4) PRIMARY KEY,
+          ENAME VARCHAR2(10),DNO NUMBER(2) REFERENCES DEPT3(DNO)
+          ON DELETE SET NULL);--> CHILD TABLE
+
+SQL> INSERT INTO EMP3 VALUES(1021,'SMITH',1);
+SQL> INSERT INTO EMP3 VALUES(1022,'ALLEN',2);
+
+TESTING:
+SQL> DELETE FROM DEPT3 WHERE DNO=2;
+1 row deleted.
+
+DATADICTIONARIES(READ ONLY TABLES):
+===================================
+	- whenever we are installing oracle s/w internally system is creating some pre-defined tables
+are called as "datadictionaries".
+	- datadictionaries are used to store the information(i.e metadata (data on data) ) about Tables,
+constraints,views,sequences,indexes,procedure,functions,triggers,......etc.
+	- we cannot perform DML operations on datadictionaries.
+	- datadictionaries are allowed "SELECT" command only.so that these are called as 
+"Read Only Tables"	in oracle database.
+	- to view all datadictionaries in oracle database then we should follow the following 
+SYNTAX:
+=======
+SQL> SELECT * FROM DICT; (dictionary)
+
+PRE-DEFINED CONSTRAINT NAMES(ID's):
+====================================
+	- when we apply a constraint on a column internally system is creating a unique 
+identity for each constraint for identifying a constraint by oracle server.
+
+syntax:
+======
+<column name> <datatype>[size] <constraint type>
+
+EX:
+SQL> CREATE TABLE TEST4(SNO NUMBER(2) PRIMARY KEY,NAME VARCHAR2(10) UNIQUE);
+
+NOTE:
+=====
+	- if we want to view constraint names along with column names of a particular table
+in oracle database then we use a datadictionary is "USER_CONS_COLUMNS".
+
+EX:
+SQL> DESC USER_CONS_COLUMNS;
+SQL> SELECT COLUMN_NAME,CONSTRAINT_NAME FROM USER_CONS_COLUMNS 
+          WHERE TABLE_NAME='TEST4';
+
+COLUMN_NAME			CONSTRAINT_NAME
+---------------------------			--------------------------------
+SNO				SYS_C008804
+NAME				SYS_C008805
+
+USER DEFINED CONSTRAINT NAMES:
+==============================
+	- when we created a constraint name for identifying a constraint is called as 
+"user defined constraint".
+
+syntax:
+=======
+<column name> <datatype>[size] <constraint> <user defined constraint name> <constraint type>
+
+EX:
+SQL> CREATE TABLE TEST5
+  2  (
+  3  SNO NUMBER(2) CONSTRAINT SNO_PK PRIMARY KEY,
+  4  NAME VARCHAR2(10) CONSTRAINT NAME_UQ UNIQUE
+  5  );
+
+SQL> SELECT COLUMN_NAME,CONSTRAINT_NAME FROM USER_CONS_COLUMNS 
+          WHERE TABLE_NAME='TEST5';
+
+COLUMN_NAME			CONSTRAINT_NAME
+---------------------------			--------------------------------
+SNO				SNO_PK
+NAME				NAME_UQ
+
+How to add constraint to an existing table:
+====================================
+syntax:
+======
+alter table <table name> add constraint <constraint name> <constraint type>(column name);
+
+EX:
+SQL> CREATE TABLE PARENT(STID NUMBER(4),SNAME VARCHAR2(10),SFEE NUMBER(6,2));
+Table created.
+
+i) Adding Primary key:
+==================
+SQL> ALTER TABLE PARENT ADD CONSTRAINT STID_PK PRIMARY KEY(STID);
+
+ii) Adding Unique constraint:
+========================
+SQL> ALTER TABLE PARENT ADD CONSTRAINT SNAME_UQ UNIQUE(SNAME);
+
+iii) Adding Check constraint:
+========================
+SQL> ALTER TABLE PARENT ADD CONSTRAINT SFEE_CHK CHECK(SFEE>=5000);
+
+NOTE:
+=====
+	- if we want to view check constraint condition value of a specific column in oracle
+database then we use a datadictionary is "user_constraints".
+
+EX:
+SQL> DESC USER_CONSTRAINTS;
+SQL> SELECT CONSTRAINT_NAME,SEARCH_CONDITION FROM USER_CONSTRAINTS  
+          WHERE TABLE_NAME='PARENT';
+
+CONSTRAINT_NAME	SEARCH_CONDITION
+-----------------------------------	--------------------------------------
+SFEE_CHK		SFEE>=5000
+
+iv) Adding NOT NULL constraint:
+==========================
+syntax:
+======
+alter table <table name> modify <column name> <constraint> <constraint name> not null;
+
+EX:
+SQL> ALTER TABLE PARENT MODIFY SNAME CONSTRAINT SNAME_NN NOT NULL;
+
+v) Adding Foreign key references:
+===========================
+syntax:
+======
+alter table <table name> add constraint <constraint name> 
+foreign key(common column of child table) references
+<parent table name>(common column of parent table) 
+on delete cascade / on delete set null;
+
+EX:
+SQL> CREATE TABLE CHILD(BNAME VARCHAR2(10),STID NUMBER(4));
+Table created.
+
+SQL> ALTER TABLE CHILD ADD CONSTRAINT STID_FK FOREIGN KEY(STID)
+          REFERENCES PARENT(STID) ON DELETE CASCADE;
+
+How to drop a constraint from an existing table:
+========================================
+syntax:
+=======
+alter table <table name> drop <constraint> <constraint name>;
+
+i) Dropping a primary key:
+=====================
+case-1:(with relationship)
+=====================
+SQL> ALTER TABLE CHILD DROP CONSTRAINT STID_FK;-----FIRST
+SQL> ALTER TABLE PARENT DROP CONSTRAINT STID_PK;---LATER
+		(OR)
+SQL> ALTER TABLE PARENT DROP CONSTRAINT STID_PK CASCADE;
+	Here,
+	   - we are deleting a primary key along with all foreign keys at a time.
+
+case-2:(without relationship):
+========================
+SQL> ALTER TABLE PARENT DROP CONSTRAINT STID_PK;
+
+ii) Dropping UNIQUE,CHECK,NOT NULL constraint:
+=========================================
+SQL> ALTER TABLE PARENT DROP CONSTRAINT SNAME_UQ;
+SQL> ALTER TABLE PARENT DROP CONSTRAINT SFEE_CHK;
+SQL> ALTER TABLE PARENT DROP CONSTRAINT SNAME_NN;
+
+How to rename a constraint name:
+=============================
+syntax:
+======
+alter table <table name> rename constraint <old constraint name> to <new constraint name>;
+
+EX:
+SQL> CREATE TABLE TEST6(SNUM NUMBER(3) PRIMARY KEY);
+Table created.
+
+SQL> SELECT COLUMN_NAME,CONSTRAINT_NAME FROM USER_CONS_COLUMNS 
+          WHERE TABLE_NAME='TEST6';
+
+COLUMN_NAME		CONSTRAINT_NAME
+-------------------------------		-----------------------------------------
+SNUM			SYS_C008813
+
+Renaming a constraint name:
+========================
+SQL> ALTER TABLE TEST6 RENAME CONSTRAINT SYS_C008813 TO PK_SNUM;
+
+COLUMN_NAME		CONSTRAINT_NAME
+-------------------------------		-----------------------------------------
+SNUM			PK_SNUM
+
+DEFAULT constraint:
+=================
+	- to assign a user defined default value to a column.
+syntax:
+======
+	<column name> <datatype>[size] default <value / expression>
+
+EX:
+SQL> CREATE TABLE TEST7(SNO NUMBER,BASIC_PRICE NUMBER(8,2) DEFAULT 5000,
+          CITY VARCHAR2(10) DEFAULT 'HYD');
+
+TESTING:
+SQL> INSERT INTO TEST7 VALUES(1,25000,'PUNE');
+SQL> INSERT INTO TEST7(SNO,BASIC_PRICE) VALUES(2,12000);
+SQL> INSERT INTO TEST7(SNO) VALUES(3);
+SQL> SELECT * FROM TEST7;
+
+How to add a default value to an existing table:
+=======================================
+syntax:
+======
+alter table <table name> modify <column name> default <value/expression>;
+
+EX:
+SQL> CREATE TABLE TEST8(REGNUM NUMBER(5),REGFEE NUMBER(6,2));
+SQL> ALTER TABLE TEST8 MODIFY REGFEE DEFAULT 500;
+
+TESTING:
+SQL> INSERT INTO TEST8(REGNUM)VALUES(10001);
+SQL> SELECT * FROM TEST8;
+
+How to remove a default value from an existing table:
+============================================
+SQL> ALTER TABLE TEST8 MODIFY REGFEE DEFAULT NULL;
+
+TESTING:
+SQL> INSERT INTO TEST8(REGNUM)VALUES(10002);
+SQL> SELECT * FROM TEST8;
+==============================================================================
+SUBQUERY / NESTED QUERY:
+========================
+	- a query inside another query is known as "SUBQUERY / NESTED QUERY".
+syntax:
+======
+select * from <table name> where <condition>(select * from ........(select * from ...........));
+
+	- a subquery statement is having two more queries those are,
+		i) main query / parent query / outer query
+		ii) subquery / child query / inner query
+
+	- as per the execution process of subquery it again classified into two types.
+		1. NON-CORELATED subquery
+		2. CO-RELATED subquery
+
+1. NON-CORELATED subquery:
+==========================
+	- In this mechanism first inner query is executed and later outer query will execute.
+	- NON-CORELATED subquery again classified into four types.
+		i) Single row subquery
+		ii) Multiple row subquery
+		iii) Multiple column subquery
+		iv) In-line view
+
+i) Single row subquery:
+===================
+	- when a subquery return a single value is known as SRSQ.
+	- in this SRSQ we are using the following operators are " = , < , > , <= , >= , !=(or) <> ".
+
+EX:
+waq to display employees details who are getting the first highest salary?
+		=======================================
+		subquery statement = Outer query + Inner query
+		=======================================
+step1: Inner query:
+===============
+SQL> SELECT MAX(SAL) FROM EMP;
+
+  MAX(SAL)
+---------------------
+      5000
+
+step2: Outer query :
+================
+SQL> SELECT * FROM EMP WHERE <inner query return value column name>=(INNER QUERY);
+
+step3: Subquery(Outer query+Inner query):
+===================================
+SQL> SELECT * FROM EMP WHERE SAL=(SELECT MAX(SAL) FROM EMP);
+
+EX:
+waq to display the senior most employees details from emp table?
+SQL> SELECT * FROM EMP WHERE HIREDATE=(SELECT MIN(HIREDATE) FROM EMP);
+
+EX:
+waq to find out the second highest salary from emp table?
+SQL> SELECT MAX(SAL) FROM EMP WHERE SAL<(SELECT MAX(SAL) FROM EMP);
+
+  MAX(SAL)
+--------------------
+      3000
+
+EX:
+waq to display employees details who are earning the second highest salary?
+SQL> SELECT * FROM EMP WHERE SAL=
+(SELECT MAX(SAL) FROM EMP WHERE SAL<
+(SELECT MAX(SAL) FROM EMP));
+
+EX:
+waq to display list of employees whose salary is more than to the maximum salary of MANAGER?
+SQL> SELECT * FROM EMP WHERE SAL>(SELECT MAX(SAL) FROM EMP WHERE JOB='MANAGER');
+
+EX:
+waq to find out the 3rd highest salary from emp?
+SQL> SELECT MAX(SAL) FROM EMP WHERE SAL<
+  2  (SELECT MAX(SAL) FROM EMP WHERE SAL<
+  3  (SELECT MAX(SAL) FROM EMP));
+
+  MAX(SAL)
+-------------------
+      2975
+
+EX:
+waq to display employees details who are earning the 3rd highest salary?
+SQL> SELECT * FROM EMP WHERE SAL=
+  2  (SELECT MAX(SAL) FROM EMP WHERE SAL<
+  3  (SELECT MAX(SAL) FROM EMP WHERE SAL<
+  4  (SELECT MAX(SAL) FROM EMP)));
+
+	Nth		N+1
+	====		====
+	1st		2Q
+	2nd		3Q
+	3rd		4Q
+
+		
+		
+	50th		51Q
+
+
+	150th		151Q
+
+ii) Multiple row subquery:
+======================
+	- when a subquery return more than one value is known as MRSQ.
+	- in this subquery we will use the following operators are " IN , ANY , ALL ".
+
+EX:
+waq to display employees details whose job is same as the job of the employees 
+"SMITH","ALLEN"?
+SQL> SELECT * FROM EMP WHERE JOB IN(SELECT JOB FROM EMP 
+         WHERE ENAME IN('SMITH','ALLEN'));
+
+EX:
+waq to display employees details who are earning minimum and maximum salary ?
+SQL> SELECT * FROM EMP WHERE SAL IN
+  2  (
+  3  SELECT MIN(SAL) FROM EMP
+  4  UNION
+  5  SELECT MAX(SAL) FROM EMP
+  6  );
+
+EX:
+waq to display employees details who are getting maximum salary from each job wise?
+SQL> SELECT * FROM EMP WHERE SAL IN(SELECT MAX(SAL) FROM EMP GROUP BY JOB);
+
+EX:
+waq to display the senior most employees details from each deptno wise?
+SQL> SELECT * FROM EMP WHERE HIREDATE IN(SELECT MIN(HIREDATE) FROM EMP GROUP BY DEPTNO);
+
+ANY operator:
+============
+	- it return TRUE if any one value was satisfied with the given condition value 
+                 from the list.
+
+	Ex:
+		If X(40) >ANY(10,20,30)
+			X = 09 ===> FALSE
+			X = 25 ===> TRUE
+			X = 40 ===> TRUE
+
+ALL  operator:
+============
+	- it return TRUE if all values are satisfied with the given condition value from the list.
+
+	Ex:
+		If X(40) >ALL(10,20,30)
+			X = 09 ===> FALSE
+			X = 25 ===> FALSE
+			X = 40 ===> TRUE
+
+EX:
+waq to display list of employees details from emp table whose salary is more than to ALL 
+managers salaries?
+SQL> SELECT * FROM EMP WHERE SAL>ALL(SELECT SAL FROM EMP WHERE JOB='MANAGER');
+
+EX:
+waq to display list of employees details from emp table whose salary is more than to ANY 
+manager salary?
+SQL> SELECT * FROM EMP WHERE SAL>ANY(SELECT SAL FROM EMP WHERE JOB='MANAGER');
+
+		ANY operator			ALL operator
+		============			============
+		X>ANY(list of values)		X>ALL(list of values)
+		X>=ANY(list of values)		X>=ALL(list of values)
+		X<ANY(list of values)		X<ALL(list of values)
+		X<=ANY(list of values)		X<=ALL(list of values)
+		X=ANY(list of values)		X=ALL(list of values)
+		X!=ANY(list of values)		X!=ALL(list of values)
+
+Multiple columns subquery:
+=======================
+	- comparing multiple columns values of inner query with multiple columns values of
+outer query is known as MCSQ.
+
+syntax:
+======
+select * from <table name> where(<column name1>,<column name2>,......) IN(select 
+<column name1>,<column name2>,........from <table name>.......);
+
+Ex:
+waq to display employees details whose MGR,SALARY are same as the MGR,SALARY of the
+employee "SCOTT"?
+SQL> SELECT * FROM EMP WHERE(MGR,SAL)IN(SELECT MGR,SAL FROM EMP WHERE ENAME='SCOTT');
+
+Ex:
+waq to display employees details whose JOB,MGR are same as the JOB,MGR of the employee
+"ALLEN"?
+SQL> SELECT * FROM EMP WHERE(JOB,MGR) IN(SELECT JOB,MGR FROM EMP WHERE ENAME='ALLEN');
+
+PSEUDO COLUMNS:
+================
+	- these are working just like normal columns in the table.
+	- oracle server will maintain the following two types pseudo columns.
+			i) ROWID
+			ii) ROWNUM
+i) ROWID:
+========
+	- when we insert a new row into a table internally system is creating a unique row 
+                 identity for each row wise on a table automatically.
+	- these rowid's are saved in database permanently.
+EX:
+SQL> SELECT ENAME,ROWID FROM EMP;
+SQL> SELECT EMP.*,ROWID FROM EMP;
+SQL> SELECT ENAME,DEPTNO,ROWID FROM EMP WHERE DEPTNO=10;
+
+EX:
+SQL> SELECT MIN(ROWID) FROM EMP;
+
+MIN(ROWID)
+------------------
+AAASt0AAHAAAAHLAAA
+
+SQL> SELECT MAX(ROWID) FROM EMP;
+
+MAX(ROWID)
+------------------
+AAASt0AAHAAAAHLAAN
+
+How to delete multiple duplicate rows except one row from a table:
+========================================================
+EX:
+SQL> SELECT * FROM TEST;
+
+       SNO NAME
+---------- ----------
+         1 A
+         1 A
+         1 A
+         2 B
+         2 B
+         3 C
+         4 D
+         4 D
+         4 D
+         5 E
+         5 E
+
+Solution:
+========
+SQL> DELETE FROM TEST WHERE ROWID NOT IN(SELECT MAX(ROWID) FROM TEST 
+          GROUP BY SNO);	
+
+ii) ROWNUM:
+==========
+	- to generate row numbers to each row wise / to each group of rows wise on a table
+	automatically.
+	- these row numbers are not saved in database.so that these are temporary numbers.
+	- to perform "Nth","Top n" operations on table.
+
+EX:
+SQL> SELECT ROWNUM,EMP.* FROM EMP;
+SQL> SELECT ROWNUM,ENAME,DEPTNO FROM EMP WHERE DEPTNO=10;
+
+EX:
+waq to fetch the 1st row from emp table by using rownum?
+SQL> SELECT * FROM EMP WHERE ROWNUM=1;
+
+EX:
+waq to fetch the 2nd row from emp table by using rownum?
+SQL> SELECT * FROM EMP WHERE ROWNUM=2;
+no rows selected
+	- Generally rownum is always starts with 1 from every selected row from a table.so 
+to overcome this problem we should the following operators are < , <= and MINUS.
+
+Solution:
+========
+SQL> SELECT * FROM EMP WHERE ROWNUM<=2
+  2  MINUS
+  3  SELECT * FROM EMP WHERE ROWNUM=1;
+
+EX:
+waq to fetch the 5th row from emp table by using rownum?
+SQL> SELECT * FROM EMP WHERE ROWNUM<=5
+  2  MINUS
+  3  SELECT * FROM EMP WHERE ROWNUM<5;
+
+EX:
+waq to fetch the row from 5th row to 10th row from emp table by using rownum?
+SQL> SELECT * FROM EMP WHERE ROWNUM<=10
+  2  MINUS
+  3  SELECT * FROM EMP WHERE ROWNUM<5;
+
+EX:
+waq to fetch the last two rows from emp table by using rownum?
+SQL> SELECT * FROM EMP WHERE ROWNUM<=14
+  2  MINUS
+  3  SELECT * FROM EMP WHERE ROWNUM<=12;
+	      (OR)
+SQL> SELECT * FROM EMP
+  2  MINUS
+  3  SELECT * FROM EMP WHERE ROWNUM<=(SELECT COUNT(*)-2 FROM EMP);
+
+EX:
+waq to fetch top 5 rows from emp by using rownum?
+SQL> SELECT * FROM EMP WHERE ROWNUM<=5;
+
+iv) In-line view:
+=============
+	- Providing a select query inplace of table name in SELECT statement 
+	is known as "inline view".
+		(or)
+	- Providing a select query under FROM clause in SELECT statement is
+	also called as "inline view".
+syntax:
+=======
+SELECT * FROM (SELECT  QUERY);
+
+why we need INLINE VIEW?
+=======================
+	- there are two reasons to use INLINE VIEW statement.
+		1. Generally column alias name is not allowed to use under "WHERE" clause.
+		if we want to use column alias name under "WHERE" clause condition then
+		we must create INLINE VIEW statement.
+
+		2. Generally order by clause is not allowed to use under "SUBQUERY".if we 
+		want to use order by clause in SUBQUERY then we must create INLINE VIEW
+		statement.
+
+EX:
+waq to display employees details whose annual salary is more than 25000?
+SQL>SELECT EMPNO,ENAME,JOB,SAL,SAL*12 AS ANN_SAL FROM EMP WHERE ANN_SAL>25000;                                                       
+ERROR at line 1:
+ORA-00904: "ANN_SAL": invalid identifier
+
+Solution:
+========
+By using Inline View:
+=================
+SQL> SELECT * FROM (SELECT EMPNO,ENAME,JOB,SAL,SAL*12 AS ANN_SAL FROM EMP) 
+          WHERE ANN_SAL>25000;
+EX:
+waq to fetch top 6 highest salaries rows from emp table by using rownum along with INLINE
+VIEW statement?
+SQL> SELECT * FROM(SELECT * FROM EMP ORDER BY SAL DESC) WHERE ROWNUM<=6;
+
+EX:
+waq to fetch 6th highest salary row from emp table by using rownum along with INLINE VIEW?
+SQL> SELECT * FROM(SELECT * FROM EMP ORDER BY SAL DESC) WHERE ROWNUM<=6
+  2  MINUS
+  3  SELECT * FROM(SELECT * FROM EMP ORDER BY SAL DESC) WHERE ROWNUM<=5;
+
+ANALYTICAL FUNCTIONS:
+======================
+	- these functions are used to assign rank numbers to each row wise (or) to each 
+	group of rows wise from a table automatically.
+	- oracle supporting the following analytical functions are,
+		i) RANK()
+		ii) DENSE_RANK()
+
+EX:
+===
+ENAME	SALARY	RANK()	DENSE_RANK()
+=====	=======	=======	=============
+A	85000	1	1
+B	72000	2	2
+C	72000	2	2
+D	68000	4	3
+E	55000	5	4
+F	55000	5	4
+G	48000	7	5
+
+syntax:
+======
+analytical function name()over([partition by <column name>] order by <column name> <asc/desc>)
+	Here,
+		partition by clause is optional
+		order by clause is mandatory
+
+Without Partition By clause:
+=======================
+EX:
+SQL> SELECT EMPNO,ENAME,JOB,SAL,RANK()OVER(ORDER BY SAL DESC) AS RANKS FROM EMP;
+SQL> SELECT EMPNO,ENAME,JOB,SAL,DENSE_RANK()OVER(ORDER BY SAL DESC) AS RANKS FROM EMP;
+
+EX:
+waq to fetch employees who are getting the top most salary in the organization by using 
+dense_rank() along with INLINE VIEW?
+SQL> SELECT * FROM(SELECT EMPNO,ENAME,JOB,SAL,
+          DENSE_RANK()OVER(ORDER BY SAL DESC) AS RANKS FROM EMP)
+          WHERE RANKS=1;
+
+EX:
+waq to fetch 3rd,5th rank employees from emp table by using dense_rank() along with 
+INLINE VIEW?
+SQL> SELECT * FROM(SELECT EMPNO,ENAME,JOB,SAL,
+          DENSE_RANK()OVER(ORDER BY SAL DESC) AS RANKS FROM EMP)
+         WHERE RANKS IN(3,5);
+
+With Partition By clause:
+====================
+EX:
+SQL> SELECT EMPNO,ENAME,JOB,SAL,RANK()OVER(PARTITION BY JOB ORDER BY SAL DESC) 
+         AS RANKS FROM EMP;
+
+SQL> SELECT EMPNO,ENAME,JOB,SAL,DENSE_RANK()OVER(PARTITION BY JOB ORDER BY SAL DESC)
+         AS RANKS FROM EMP;
+
+EX:
+waq to fetch 3rd rank employees from each job wise by using dense_rank() along with 
+INLINE VIEW?
+SQL> SELECT * FROM(SELECT EMPNO,ENAME,JOB,SAL,
+          DENSE_RANK()OVER(PARTITION BY JOB ORDER BY SAL DESC) AS RANKS FROM EMP) 
+          WHERE RANKS=3;
+
+EX:
+waq to fetch the 2nd senior most employees from each deptno wise by using dense_rank()
+along with INLINE VIEW?
+SQL> SELECT * FROM(SELECT EMPNO,ENAME,DEPTNO,HIREDATE,DENSE_RANK()
+  2  OVER(PARTITION BY DEPTNO ORDER BY HIREDATE) AS RANKS FROM EMP)
+  3  WHERE RANKS=2;
+
+2) CORELATED subquery:
+====================
+	- In this mechanism first outer query is executed and later inner query will execute.
+
+To find out "Nth" High / Low salary:
+=============================
+syntax:
+======
+select * from <table name> <table alias name1> where N-1=(select count(distinct <column name)
+from <table name> <table alias name2> where <table alias name2>.<column name> ( < / > )
+<table alias name1>.<column name>);
+	Here,
+		> - for high salary
+		< - for low salary
+
+DEMO_TABLE:
+============
+SQL> SELECT * FROM EMPLOYEE;
+
+ENAME     SAL
+---------- 	----------
+SMITH      85000
+JONES     62000
+WARD       28000
+MILLER    85000
+ADAMS     15000
+SCOTT      48000
+
+EX:
+waq to find out the 1st highest salary employees details?
+
+Solution:
+========
+	If N=1 ===> N-1 ===> 1-1 ===> 0
+
+SQL> SELECT * FROM EMPLOYEE E1 WHERE 0=(SELECT COUNT(DISTINCT SAL) FROM 
+          EMPLOYEE E2 WHERE E2.SAL>E1.SAL);
+
+
+EX:
+waq to find out the 3rd highest salary employees details?
+Solution:
+========
+	If N=3 ===> N-1 ===> 3-1 ===> 2
+
+SQL> SELECT * FROM EMPLOYEE E1 WHERE 2=(SELECT COUNT(DISTINCT SAL) FROM 
+          EMPLOYEE E2 WHERE E2.SAL>E1.SAL);
+
+EX:
+waq to find out the 1st lowest salary employees details?
+
+Solution:
+========
+	If N=1 ===> N-1 ===> 1-1 ===> 0
+
+SQL> SELECT * FROM EMPLOYEE E1 WHERE 0=(SELECT COUNT(DISTINCT SAL) FROM 
+          EMPLOYEE E2 WHERE E2.SAL<E1.SAL);
+
+To find out "Top n" High / Low salaries:
+===============================
+syntax:
+======
+select * from <table name> <table alias name1> where N>(select count(distinct <column name>)
+from <table name> <table alias name2> where <table alias name2>.<column name> ( < / > )
+<table alias name1>.<column name>);
+	Here,
+		> - for high salary
+		< - for low salary
+
+Ex:
+waq to display top 3 highest salaries employees details from a table?
+Solution:
+========
+	if n=3 ====> N> ===> 3>
+SQL> SELECT * FROM EMPLOYEE E1 WHERE 3>(SELECT COUNT(DISTINCT SAL) FROM EMPLOYEE
+E2 WHERE E2.SAL > E1.SAL);
+
+Ex:
+waq to display top 3 lowest salaries employees details from a table?
+Solution:
+========
+	if n=3 ====> N> ===> 3>
+SQL> SELECT * FROM EMPLOYEE E1 WHERE 3>(SELECT COUNT(DISTINCT SAL) FROM EMPLOYEE
+E2 WHERE E2.SAL < E1.SAL);
+
+EXISTS operator:
+==============
+	- it is a special operator which is used in co-related subquery only.
+	- it is used to check the required row is existing in a table or not.
+		> if the row is EXISTS in a table then it return TRUE.
+		> if the row is NOT EXISTS in a table then it return FALSE.
+syntax:
+======
+	where exists(subquery);
+
+EX:
+waq to display department details in which department the employees are working?
+SQL> SELECT * FROM DEPT D WHERE EXISTS(SELECT DEPTNO FROM EMP E 
+          WHERE E.DEPTNO=D.DEPTNO);
+
+EX:
+waq to display department details in which department the employees are not working?
+SQL> SELECT * FROM DEPT D WHERE NOT EXISTS(SELECT DEPTNO FROM EMP E 
+          WHERE E.DEPTNO=D.DEPTNO);
+===============================================================================
+SEQUENCE:
+==========
+	- to generate sequence numbers on a specific column in the table automatically.
+	- it will provide "auto incremental value" facility on a table.
+syntax:
+======
+create sequence <sequence name>
+[ start with n ]
+[ minvalue n ]
+[ increment by n ]
+[ maxvalue n ]
+[ no cycle / cycle ]
+[ no cache / cache n ];
+
+Attributes of Sequence:
+====================
+start with n:
+==========
+	- to specify starting value of sequence.here "n" is a number.
+
+minvalue n:
+=========
+	- to show minimum value in the sequence.here "n" is a number.
+
+increment by n:
+=============
+	- to specify incremental value in between seqeucne numbers.here "n" is a number.
+
+maxvalue n:
+==========
+	- to show maximum value from sequence.here "n" is a number.
+
+no cycle:
+========
+	- it a default attribute of sequence object.
+	- when we created a sequecne object with "NO CYCLE" then the set of sequence 
+numbers are not repeat again and again.
+
+cycle:
+========
+	- when we created a sequecne object with "CYCLE" then the set of sequence 
+numbers are repeat again and again.
+
+no cache:
+=========
+	- it is a default attribute of sequence object.
+	- cache is a temporary memory.
+	- when we created a sequence object with "NO CACHE" then the set of sequence 
+numbers are saved in database memory directly.so that every user request will go to 
+database and retrieving the required data from database and send to client application.
+by this reason the burdon on database will increse and degrade the performance of database.
+
+cache n:
+========
+	- when we created a sequence object with "CACHE" then the set of sequence 
+numbers are saved in database memory and also the copy of data is saved in cache memory.
+so that now every user request will go to cache instead of database and retrieving the required data 
+from cache memory and send to client application.so that we reduce the burdon on database 
+and improve the performance of database.here "n" is the size of cache file and will create with
+2kb.
+
+NOTE:
+=====
+	- when we generate sequence numbers on a column then we must use a pseudo 
+column is "NEXTVAL".
+		NEXTVAL:
+		=========
+			- it is a pseudo column of a sequecne.
+			- it is used to generate next by next number.
+		syntax:
+		=======
+			<sequence name>.NEXTVAL
+
+EX1:
+SQL> CREATE SEQUENCE SQ1
+  2  START WITH 1
+  3  MINVALUE 1
+  4  INCREMENT BY 1
+  5  MAXVALUE 3;
+Sequence created.
+
+TESTING:
+SQL> CREATE TABLE TEST99(SNO NUMBER(3),NAME VARCHAR2(10));
+Table created.
+
+SQL> INSERT INTO TEST99 VALUES(SQ1.NEXTVAL,'&NAME');
+Enter value for name: A
+
+SQL> /
+Enter value for name: B
+
+SQL> /
+Enter value for name: C
+
+SQL> /
+Enter value for name: D
+ERROR at line 1:
+ORA-08004: sequence SQ1.NEXTVAL exceeds MAXVALUE and cannot be instantiated
+
+Altering a sequence object:
+=======================
+syntax:
+=======
+alter sequence <sequence name> <attribute name> n;
+
+EX:
+SQL> ALTER SEQUENCE SQ1 MAXVALUE 5;
+
+TESTING:
+SQL> INSERT INTO TEST99 VALUES(SQ1.NEXTVAL,'&NAME');
+Enter value for name: D
+
+SQL> /
+Enter value for name: E
+
+SQL> SELECT * FROM TEST99;
+
+EX2:
+SQL> CREATE SEQUENCE SQ2
+  2  START WITH 3
+  3  MINVALUE 1
+  4  INCREMENT BY 1
+  5  MAXVALUE 5
+  6  CYCLE
+  7  CACHE 2;
+
+TESTING:
+SQL> CREATE TABLE TEST100(SNO NUMBER(3),NAME VARCHAR2(10));
+
+SQL> INSERT INTO TEST100 VALUES(SQ2.NEXTVAL,'&NAME');
+Enter value for name: Q
+
+SQL> /
+......................................
+
+SQL> /
+.......................................
+
+SQL> SELECT * FROM TEST100;
+
+NOTE:
+=====
+- To view all sequence objects in oracle then use a datadictionary is "user_sequecnes".
+
+EX:
+SQL> DESC USER_SEQUENCES;
+SQL> SELECT SEQUENCE_NAME FROM USER_SEQUENCES;
+
+How to drop sequence object:
+=========================
+syntax:
+======
+drop sequence <sequence name>;
+
+EX:
+SQL> DROP SEQUENCE SQ1;
+==============================================================================
+VIEWS:
+======
+	- It is a virtual / subset of base table.
+	- it does not store data but it can access the required the data from a base table and 
+	display to users.
+	- when we perform DML/DQL operations on a view internally those operations are
+	executed on base table and reflected in view table to users.
+	- view will act as an interface between user and Table.
+
+purpose of view:
+==============
+	1. Providing security for data in a table.
+		i) column level:
+		=============
+			- In this level we are hiding the required columns data from users.
+		ii) row level:
+		==========
+			- in this level we are hiding the required rows data from users.
+
+	2. To store "select query" in database.
+
+Types of views:
+=============
+	- there are two types of views in database.
+		1. simple view
+		2. complex view
+1. simple view:
+============
+	- when we create a view to access the required data/information from a single base 
+table is known as "simple view".
+syntax:
+=======
+create view <view name> as <select query>;
+
+EX:
+create a view to access all department details from DEPT table?
+SQL> CREATE VIEW V1 AS SELECT * FROM DEPT;
+
+TESTING:
+SQL> INSERT INTO V1 VALUES(50,'ORACLE','HYD');
+SQL> UPDATE V1 SET LOC='PUNE' WHERE LOC='HYD';
+SQL> DELETE FROM V1 WHERE DEPTNO=50;
+SQL> SELECT * FROM V1;
+
+NOTE:
+=====
+	- By default simple views are allowing DML operations on a base table.
+
+EX:
+create a view to access EMPNO,ENAME and SALARY details from emp table?(Hiding Columns)
+SQL> CREATE VIEW V2 AS SELECT EMPNO,ENAME,SAL FROM EMP;
+
+TESTING:
+SQL> INSERT INTO V2 VALUES(1122,'YUVIN',6000);
+SQL> SELECT * FROM V2;
+
+EX:
+create a view to access employees details who are working as a MANAGER?(Hiding Rows)
+SQL> CREATE VIEW V3 AS SELECT * FROM EMP WHERE JOB='MANAGER';
+
+TESTING:
+SQL> SELECT * FROM V3;
+
+VIEW options:
+============
+	- View can be created with two options.
+		i) with read only
+		ii) with check option
+
+i) with read only:
+=============
+	- To restricted DML operations on a base table through a view.
+
+EX:
+SQL> CREATE VIEW V4 AS SELECT * FROM DEPT WITH READ ONLY;
+SQL> SELECT * FROM V4;
+
+TESTING:
+SQL> INSERT INTO V4 VALUES(50,'SAP','DELHI');
+ERROR at line 1:
+ORA-42399: cannot perform a DML operation on a read-only view
+
+ii) with check option:
+==================
+	- To restricted data on base table through a view.
+
+EX:
+create a view to access and also accept EMPNO,ENAME,SALARY details from emp table
+whose salary is more than 3000?
+SQL> CREATE VIEW V5 AS SELECT EMPNO,ENAME,SAL FROM EMP WHERE SAL>3000 
+          WITH CHECK OPTION;
+
+SQL> SELECT * FROM V5;
+
+TESTING:
+SQL> INSERT INTO V5 VALUES(1123,'BHUVIN',2000);-----NOT ALLOWED
+SQL> INSERT INTO V5 VALUES(1123,'BHUVIN',4000);-----ALLOWED
+
+2. complex view:
+==============
+	- when we create a view based on :
+		> multiple tables
+		> by using group by 
+		> by using grouping functions
+		> by using having
+		> by using set operators
+		> by using distinct keyword
+		> by using joins
+		> by using subquery.
+	- by default complex views are not allowed DML operations.
+
+syntax:
+======
+create view <view name> as <select query>;
+
+EX:
+SQL> CREATE VIEW V6 AS SELECT DEPTNO,SUM(SAL) AS TOT_EXP,AVG(SAL) AS AVG_EXP 
+FROM EMP GROUP BY DEPTNO ORDER BY DEPTNO;
+
+TESTING:
+SQL> SELECT * FROM V6; (Before Increment)
+SQL> UPDATE EMP SET SAL=SAL+1000 WHERE DEPTNO=10;
+SQL> SELECT * FROM V6; (After Increment)
+SQL> UPDATE EMP SET SAL=SAL-1000 WHERE DEPTNO=10;
+SQL> SELECT * FROM V6; (After Decrement)
+
+EX:
+SQL> CREATE VIEW V7 AS
+  2  SELECT * FROM JAVA_COURSE
+  3  UNION
+  4  SELECT * FROM ORACLE_COURSE;
+
+TESTING:
+SQL> SELECT * FROM V7;
+SQL> INSERT INTO V7 VALUES(6,'JAMES');     
+ERROR at line 1:
+ORA-01732: data manipulation operation not legal on this view
+
+NOTE:
+=====
+	- if we want see all views in oracle database then use "USER_VIEWS" datadictionary.
+EX:
+SQL> DESC USER_VIEWS;
+SQL> SELECT VIEW_NAME FROM USER_VIEWS;
+	
+	- if we want to see the "SELECT query" in a view.
+EX:
+SQL> SELECT TEXT FROM USER_VIEWS WHERE VIEW_NAME='V1';
+
+How to drop a view:
+=================
+syntax:
+======
+drop view <view name>;
+
+EX:
+SQL> DROP VIEW V1;
+SQL> DROP VIEW V7;
+==============================================================================
+INDEX:
+======
+	- it is a database object which is used to retrieve the required row/rows from a table fastly.
+	- database index is similar to book index page in a text book.by using book index page
+how we are retrieving the required topic from a text book fastly same as by using database index 
+we are retrieving the required row/rows from a table fastly.
+	- database index can be created on a particular column in the table and this column
+is called as "INDEXED KEY COLUMN".
+	- whenever we want to retrive the required row/rows from a table then we must use 
+INDEXED KEY COLUMN under WHERE clause condition then only indexes are working.
+	- all databases are supporting the following two types of searching mechanisms.
+			1. Table scan (default scan)
+			2. Index scan
+
+1. Table scan:
+============
+	- In this scan,oracle server is searching the entire table for required data.so that 
+it takes much time to give the required data to users.
+
+EX:
+SQL> SELECT * FROM EMP WHERE SAL=3000;
+
+     				 SAL
+    				----------
+       				800
+      				1600
+      				1250
+      				2975
+      				1250
+      	WHERE SAL=3000;		2850
+      				2450		
+      				3000
+      				5000
+      				1500
+      				1100
+       				950
+      				3000
+      				1300
+
+2. Index scan:
+============
+	- In this scan oracle server is searching the required row based on an indexed column 
+                   wise.
+	- there are two types of indexes in oracle.
+		i) B-tree index
+		ii) Bitmap index
+
+i) B-tree index:
+============
+	- these indexes are organizing data in the form of "Tree Structure".
+syntax:
+======
+create index <index name> on <table name>(column name);
+
+EX:
+SQL> CREATE INDEX I1 ON EMP(SAL);
+SQL> SELECT * FROM EMP WHERE SAL=3000;
+
+			       B-Tree Index
+				||
+			 (lp) < || 3000 || >= (rp)------> root node
+		            ||		                               ||
+		(lp) <||2975||>= (rp)		  (lp) <||5000|| >= (rp) --------parent node
+		||		                     ||
+     2850||*, 2450||*, 1600||* ,                                       3000||*,* --------------> child node
+     1500||*,1300||*, 1250||*,* ,
+     1100||*, 950||* , 800||*
+
+		Here,
+			lp  - left pointer
+			rp - right pointer
+			*   - rowid
+
+ii) Bitmap index:
+==============
+	- these indexes are organized data in the form of "TABLE" format with the help of
+bit numbers are " 1 " and " 0 ".
+		Here 
+			1 - when condition is true
+			0 - when condition is false
+syntax:
+=======
+create bitmap index <index name> on <table name>(column name);
+
+EX:
+SQL> CREATE BITMAP INDEX B1 ON EMP(JOB);
+SQL> SELECT * FROM EMP WHERE JOB='MANAGER';
+
+			Bitmap Indexed Table
+======================================================================================
+JOB		||   1   ||   2   ||   3   ||   4   ||   5   ||   6   ||   7   ||   8   ||   9   ||   10   ||   11   ||   12   ||   13   ||   14    
+=======================================================================================
+MANAGER	||   0   ||   0   ||   0   ||   1   ||   0   ||   1   ||   1   ||   0   ||   0   ||    0    ||    0     ||    0    ||    0    ||     0	
+=======================================================================================
+			 	(*)	  (*)       (*)
+			Here,
+				* - rowid
+
+NOTE:
+======
+	- if we want to view column name along with index name of a specific table in 
+oracle database then we use a datadictionary is "USER_IND_COLUMNS".
+
+EX:
+SQL> DESC USER_IND_COLUMNS;
+SQL> SELECT COLUMN_NAME,INDEX_NAME FROM USER_IND_COLUMNS WHERE TABLE_NAME='EMP';
+
+COLUMN_NAME			INDEX_NAME
+---------------------------			---------------------
+SAL				I1
+JOB				B1
+
+NOTE:
+=====
+	- if we want to view index name and type of index from a table in oracle database then
+we use a datadictionary is "USER_INDEXES".
+
+EX:
+SQL> DESC USER_INDEXES;
+SQL> SELECT INDEX_NAME,INDEX_TYPE FROM USER_INDEXES WHERE TABLE_NAME='EMP';
+
+INDEX_NAME 		INDEX_TYPE
+===========		===========
+I1			NORMAL(B-Tree Index)
+B1			BITMAP
+
+How to drop index object:
+=====================
+syntax:
+======
+DROP INDEX <INDEX NAME>;
+
+EX:
+SQL> DROP INDEX I1;
+SQL> DROP INDEX B1;
+==============================================================================
+NORMALIZATION:
+===============
+	What is Normalization?
+	===================
+		- it is a technique which is used to decompose(i.e divide) a table data 
+	into multiple tables.
+
+	Where we use Normalization?
+	=========================
+		- Use at DB designing level.
+		
+	Why Normalization?
+	================
+	EX:
+				Branch_Student_Details
+		==============================================
+		STID	SNAME	BRANCH	HOD	OFFICE_NUMBER
+		==============================================
+		1021	SMITH	IT	Mr.X	040-22334455
+		1022	ALLEN	IT	Mr.Y	040-22334455
+		1023	JONES	IT	Mr.X	040-22334455
+		1024	ADAMS	IT	Mr.Y	040-22334455
+		1025	JAMES	IT	Mr.X	040-22334455------> New row
+
+	Disadvantages:
+	=============
+		> Data Redundancy problem.(i.e duplicate data)
+		> Occupied more memory.
+		> Data Inconsistency problem.(i.e irregular data)
+		> Insertion problem.
+		> Updation problem.
+		> Deletion problem.
+	- To overcome the above problems we should use a technique is known as "Normalization".
+
+By using Normalization:
+====================
+
+  |-----------------------------------------------------------------------RELATIONSHIP -------------------------------------|
+(pk)	   Branch_Details				      Student_Details	(fk)
+====================================		======================
+Bcode	Bname	HOD	Office_number		Stid	Sname	Bcode
+====================================		=======================
+1	IT	Mr.X	040-22334455		1021	SMITH	1
+						1022	ALLEN	1
+						1023	JONES	1
+						1024	ADAMS	1
+						1025	JAMES	1
+						1026	SCOTT	1
+
+	Advantages of Normalization?
+	=========================
+		> To avoid data redundancy problem.(i.e no duplicate data)
+		> Occupied less memory.
+		> To avoid data inconsistency problem.(i.e regular data)
+		> To avoid insertion problem.
+		> To avoid updation problem.
+		> To avoid Deletion problem.
+
+	Types of Normalization forms?
+	=========================
+		> First normal form(1NF)
+		> Second normal form(2NF)
+		> Third normal form(3NF)
+		> Boyce-codd normal form(BCNF)
+		> Fourth normal form(4NF)
+		> Fifth normal form(5NF)
+
+First normal form(1NF):
+===================
+	
+First normal form:
+================
+	- For a table to be in the First Normal Form, it should follow the following 4 rules:
+		1. Each column should contain atomic value (atomic = single value).
+		2. A column should contain values that are same datatype.
+		3. All the columns in a table should have unique names.
+		4. The order in which data is stored, does not matter.	
+
+	Ex:	(pk)		
+		STID	SNAME	REGDATE	      	BRANCH 
+		==========================================
+		1	SMITH	12-MAY-2024	IT
+		2	CLARK	23-MAR-2024	CSE
+		3	ALLEN	02-JAN-2025	EEE
+		4	BLAKE	29-SEP-2023	EC
+
+Second normal form(2NF):
+======================
+	- For a table to be in the Second Normal Form, it must satisfy two conditions:
+		1. The table should be in the First Normal Form.
+		2. There should be no Partial Dependency.
+
+WHAT IS DEPENDENCY: 
+===================
+	- IN A TABLE IF NON-KEY COLUMNS (NONPRIMARY KEY) ARE DEPENDS ON 
+KEY COLUMN (PRIMARY KEY) THEN IT IS CALLED AS FULLY DEPENDENCY / FUNCTIONAL 
+DEPENDENCY.
+
+	(PK)
+EX: 	STID 	SNAME 	BRANCH	ADDRESS
+
+	- Here, “STID “IS A KEY COLUMN  and “SNAME”,”BRANCH”,”ADDRESS” ARE 
+NON-KEY COLUMNS.		
+	 - These non-key columns are linked with key column is STID.so that in this table
+there is no partial dependency columns.
+
+WHAT IS PARTIAL DEPENDENCY: 
+==========================
+	- IN A TABLE IF NON-KEY COLUMN DEPENDS ON THE PART OF THE KEY COLUMN, 
+THEN IT IS CALLED AS PARTIAL DEPENDENCY.
+
+<PRIMARY KEY (stu_id,sub_id) / COMPOSITE PRIMARY KEY>
+EX: 	STU_ID	 	SUB_ID		     STU_MARKS 	TEACHER
+
+	- Here, “STU_ID and SUB_ID “ IS A KEY COLUMNS - ” STU_MARKS”,” TEACHER” ARE 
+NON-KEY COLUMNS. THEN “TEACHER” DEPENDS ON “SUB_ID” BUT NOT “STU_ID” COLUMN.
+	- Here we found a partial dependency column is "TEACHER" so that we need to 
+do decompose a table like below,
+
+Solution:
+=========
+Ex:	
+	Subject_Table				 Student_table
+	============			                =============
+(pk)					   (pk)		  	 (fk)
+SUB_ID	    SUB_NAME	TEACHER		STU_ID	 STU_MARKS	SUB_ID
+
+Third normal form:
+================
+	- For a table to be in the third normal form there is two conditions.
+		1. It should be in the Second Normal form.
+		2. And it should not have Transitive Dependency.
+
+TRANSITIVE DEPENDENCY: 
+=======================
+	- IN TABLE IF NON-KEY COLUMN DEPENDS ON ANOTHER NON-KEY COLUMN, 
+THEN IT IS CALLED AS TRANSITIVE DEPENDENCY.
+
+EX: 	
+	|--------CPK-----------|
+ STUDENT_ID 	SUBJECT_ID 	STU_MARKS 	EXAM_NAME      TOTAL_MARKS
+===========	==========	==========	===========     =============
+
+	- Here, “STU_ID and SUB_ID  “ ARE KEY COLUMNS . ” EXAM_NAME”,” TOTAL_MARKS” 
+ARE NON-KEY COLUMNS. THEN “TOTAL_MARKS” DEPENDS ON “EXAM_NAME” BUT NOT 
+“STU_ID and SUB_ID” COLUMNS.
+	- Here we found transitive dependency columns are "EXAM_NAME" and "TOTAL_MARKS"
+so that we need to do decompose the above table into multiple tables.
+
+Solution:
+=========
+(pk)	      Exam_Table			     	(pk)            Score_Table	(fk)
+==================================		=================================
+EXAM_ID	 EXAM_NAME   TOTAL_MARKS	  	STUDENT_ID    STU_MARKS  	EXAM_ID
+==================================		=================================	
+1	ORACLE		100			1021		85	1
+
+
+4. Boyce-Codd normal form(BCNF):
+=============================
+	- For a table to satisfy the Boyce - Codd Normal Form, it should satisfy the following 
+	two conditions:
+		1. It should be in the Third Normal Form.
+		2. And, for any dependency A → B, A should be a super key.
+SUPER KEY: 
+===========
+	- A COLUMN (OR) COMBNATION OF COLUMNS WHICH ARE UNIQUELY IDENTIFYING 
+A ROW IN A TABLE IS CALLED AS SUPER KEY.
+
+EX:
+	
+			STUDENT TABLE
+	=======================================================
+	STUDENT_ID 	NAME 	BRANCH 	MAILID 	REG_NUMBER
+	========================================================
+
+	Super key columns:
+	================
+	student_id	|	student_id + mailid		|
+	mailid		|	mailid + reg_number		| student_id + mailid + reg_number
+	reg_number	|	reg_number + student_id	|
+
+CANDIDATE KEY: 
+===============
+	- A MINIMAL SUPER KEY WHICH IS UNIQUELY IDENTIFYING A ROW IN A TABLE IS 
+CALLED AS CANDIDATE KEY.
+				(OR)
+	- A SUPER KEY WHICH IS SUBSET OF ANOTHER SUPER KEY, BUT THE COMBINATION 
+OF SUPER KEYS ARE NOT A CANDIDATE KEY.
+
+EX:	Candidate key columns:
+	====================
+	student_id
+	mailid
+	reg_number
+
+
+EX:				Professor Table
+		 |------------------cpk -------------------------|
+		============================================
+		PROFESSOR_ID 	SUBJECT(B) 	PROFESSOR(A)
+		==============================================
+		1		java		p.java
+		2		java		p.java
+
+	- Here, PROFESSOR column depends on SUBJECT so that PROFESSOR should be
+super key but is not a super key.
+	- Now to make a PROFESSOR column is a super key and SUBJECT is non-super key
+	column in the table then we do some changes in a table like below.
+
+Solution:
+=========			Professor Table
+		|---------------cpk----------------------|
+		=============================================
+		PROFESSOR_ID	PROFESSOR(A)	SUBJECT(B)			
+		=============================================
+		1		p.java		java
+		2		p.java		java
+
+
+Fourth normal form(4NF):
+=======================
+	- For a table to satisfy the Fourth Normal Form, it should satisfy the following 
+two conditions:
+		1. It should be in the Boyce-Codd Normal Form.
+		2. A table does not contain more than one independent multi valued 
+		attribute / Multi Valued Dependency.
+
+Multi valued Dependency: 
+=====================
+	- In a table one column same value mapping with multiple values of another column 
+is called as multi valued dependency.
+
+EX:
+		        COLLEGE ENROLLMENT TABLE (5NF)
+		======================================
+		STUDENT_ID 	COURSE 		HOBBY
+		======================================
+		1 		ORACLE 		Cricket
+		1 		JAVA 		Reading
+		1 		HTML 		Hockey
+
+
+Mapping with multiple values of columns after decomposing a table:
+===========================================================
+       Course_details (4NF)	 		     Hobbies_details(4NF)
+        =================			     ==================
+STUDENT_ID	COURSE			STUDENT_ID	HOBBY
+==========	=======			===========	=======
+	1	oracle			1		cricket
+	1	java			1		reading
+	1	html			1		hockey
+
+
+Fifth Normal Form (5NF): 
+====================
+	- If a table is having multi valued attributes and also that table cannot be decomposed 
+into multiple tables are called as fifth normal form.
+
+EX:
+		        COLLEGE ENROLLMENT TABLE (5NF)
+		======================================
+		STUDENT_ID 	COURSE 		HOBBY
+		======================================
+		1 		ORACLE 		Cricket
+		1 		JAVA 		Reading
+		1 		HTML 		Hockey
+
+NOTE:
+=====
+	- Here, BCNF,4NF and 5NF normal forms are optional in real time.
+========================================================================================
+			PL/SQL
+			======
+EX:
+write a pl/sql program to print "WELCOME TO PL/SQL PROGRAMS" statement?
+SQL> BEGIN
+  2  DBMS_OUTPUT.PUT_LINE('WELCOME TO PL/SQL PROGRAMS');
+  3  END;
+  4  /
+PL/SQL procedure successfully completed.
+
+To display output of a program:
+==========================
+syntax:
+=======
+SET SERVEROUTPUT OFF / ON;
+	Here,
+		OFF	- it is a default mode and will not display the output of a program.
+		ON	- it will display the output of a program.
+EX:
+SQL> SET SERVEROUTPUT ON;
+SQL> / 
+WELCOME TO PL/SQL PROGRAMS
+
+EX:
+write a pl/sql program to print the variables values?
+SQL> DECLARE
+  2  X NUMBER(3);
+  3  Y NUMBER(3);
+  4  BEGIN
+  5  X:=10;
+  6  Y:=20;
+  7  DBMS_OUTPUT.PUT_LINE('The variables values are:-'||X||','||Y);
+  8  END;
+  9  /
+The variables values are:-10,20
+
+EX:
+write a pl/sql program to find the sum of two numbers at runtime?
+SQL> DECLARE
+  2  X NUMBER(3);
+  3  Y NUMBER(3);
+  4  BEGIN
+  5  X:=&X;
+  6  Y:=&Y;
+  7  DBMS_OUTPUT.PUT_LINE('Sum of two numbers:-'||(X+Y));
+  8  END;
+  9  /
+Enter value for x: 10
+old     5: X:=&X;
+new   5: X:=10;
+Enter value for y: 20
+old     6: Y:=&Y;
+new   6: Y:=20;
+Sum of two numbers:-30
+
+To Disable / Enable bind variables(old,new) statements:
+==============================================
+syntax:
+======
+SET VERIFY ON/OFF;
+	Here,
+		ON	- it is a default mode and display bind variables statements.
+		OFF	- it will not display bind variables statements.
+
+EX:
+SQL> SET VERIFY OFF;
+SQL> /
+Enter value for x: 55
+Enter value for y: 22
+Sum of two numbers:-77
+
+How to retrieve data from a table in PL/SQL:
+=====================================
+syntax:
+======
+SELECT <COLUMN NAME1>,<COLUMN NAME2>,.......INTO <VARIABLE NAME1>,<VARIABLE NAME2>
+FROM <TABLE NAME> [ WHERE <CONDITION> ];
+
+NOTE:
+======
+	- Here, "SELECT .....INTO....." statement is always fetching a single row / a single value 
+	from a table.
+	- This statement should use in Execution Block only.
+
+EX:
+To fetch EMPNO,ENAME and SALARY details from emp table whose EMPNO is 7788?
+
+Solution:
+========
+In SQL:
+======
+SQL> SELECT EMPNO,ENAME,SAL FROM EMP WHERE EMPNO=7788;
+
+In PL/SQL:
+========
+SQL> DECLARE
+  2  v_EMPNO NUMBER(4);
+  3  v_ENAME VARCHAR2(10);
+  4  v_SAL NUMBER(8,2);
+  5  BEGIN
+  6  SELECT EMPNO,ENAME,SAL INTO v_EMPNO,v_ENAME,v_SAL FROM EMP WHERE EMPNO=7788;
+  7  DBMS_OUTPUT.PUT_LINE(v_EMPNO||','||v_ENAME||','||v_SAL);
+  8  END;
+  9  /
+
+ROW LEVEL ATTRIBUTE:
+====================
+	- In this level we are declaring a single variable for all different datatype columns
+from a table.it can be represent with "%rowtype".
+
+syntax:
+======
+	<variable name> <table name>%rowtype;
+Ex:
+	 i  emp%rowtype;
+
+SQL> DECLARE
+    i EMP%ROWTYPE;
+    BEGIN
+    SELECT * INTO i FROM EMP WHERE EMPNO=7788;
+    DBMS_OUTPUT.PUT_LINE(i.EMPNO||','||i.ENAME||','||i.SAL||','||i.DEPTNO);
+    END;
+    /
+
+OUTPUT:
+7788,SCOTT,3000,20
+===============================================================================================
+CURSOR:
+========
+	- it is a temporary memory / sql private area / workspace.
+	- there are two types of cursors in oracle.
+		1. Explicit cursor 
+		2. Implicit cursor
+1. Explicit cursor:
+================
+	- these cursors are created by user for fetching multiple rows from a table.
+	- explicit cursor can hold multiple rows but it can access a single row from 
+	a table Rat a time.
+	- when we want to create an explicit cursor memory then we should follow the 
+	following four steps procedure.
+
+step1: Declare cursor variable:
+=========================
+syntax:
+======
+declare cursor <cursor name> is select * from <table name>;
+
+step2: Open cursor connection:
+==========================
+syntax:
+=======
+open <cursor name>;
+
+step3: Fetch data from a cursor:
+===========================
+syntax:
+=======
+fetch <cursor name> into <variables>;
+
+step4: Close cursor connection:
+==========================
+syntax:
+======
+close <cursor name>;
+
+Attributes of Explicit cursor:
+========================
+	- these attributes are used to check the status of cursor.
+syntax:
+======
+	<cursor name>%<attribute name>
+
+i) %isopen:
+==========
+	- it is a default attribute of cursor.
+	- it returns TRUE when cursor connection successfully open otherwise returns FALSE.
+
+ii) %notfound:
+===========
+	- it returns TRUE when cursor is not having data otherwise returns FALSE.
+
+iii) %found:
+=========
+	- it returns TRUE when cursor is having data otherwise returns FALSE.
+
+iv) %rowcount:
+============
+	- it return how many no.of rows are fetched from cursor table.
+	- it return type is NUMBER.
+
+EX:
+write a cursor program to fetch a single row from DEPT table?
+SQL> DECLARE CURSOR C1 IS SELECT * FROM DEPT;
+  2  i DEPT%ROWTYPE;
+  3  BEGIN
+  4  OPEN C1;
+  5  FETCH C1 INTO i;
+  6  DBMS_OUTPUT.PUT_LINE(i.DEPTNO||','||i.DNAME||','||i.LOC);
+  7  CLOSE C1;
+  8  END;
+  9  /
+
+OUTPUT:
+========
+10,ACCOUNTING,NEW YORK
+
+EX:
+write a cursor program to fetch multiple rows from DEPT table?
+SQL> DECLARE CURSOR C1 IS SELECT * FROM DEPT;
+  2  i DEPT%ROWTYPE;
+  3  BEGIN
+  4  OPEN C1;
+  5  FETCH C1 INTO i;
+  6  DBMS_OUTPUT.PUT_LINE(i.DEPTNO||','||i.DNAME||','||i.LOC);
+  7  FETCH C1 INTO i;
+  8  DBMS_OUTPUT.PUT_LINE(i.DEPTNO||','||i.DNAME||','||i.LOC);
+  9  CLOSE C1;
+ 10  END;
+ 11  /
+
+OUTPUT:
+=======================
+10,ACCOUNTING,NEW YORK
+20,RESEARCH,DALLAS
+	
+	- In the above example we used multiple fetch statements for fetching multiple rows
+from a cursor table.To avoid no.of fetch statements then we should use "Looping statements".
+
+i) By using "Simple Loop":
+=====================
+SQL> DECLARE CURSOR C1 IS SELECT * FROM DEPT;
+  2  i DEPT%ROWTYPE;
+  3  BEGIN
+  4  OPEN C1;
+  5  LOOP
+  6  FETCH C1 INTO i;
+  7  EXIT WHEN C1%NOTFOUND;
+  8  DBMS_OUTPUT.PUT_LINE(i.DEPTNO||','||i.DNAME||','||i.LOC);
+  9  END LOOP;
+ 10  CLOSE C1;
+ 11  END;
+ 12  /
+
+OUTPUT:
+=======================
+10,ACCOUNTING,NEW YORK
+20,RESEARCH,DALLAS
+30,SALES,CHICAGO
+40,OPERATIONS,BOSTON
+
+By using "WHILE loop":
+====================
+SQL> DECLARE CURSOR C1 IS SELECT * FROM DEPT;
+  2  i DEPT%ROWTYPE;
+  3  BEGIN
+  4  OPEN C1;
+  5  FETCH C1 INTO i;---------------> Fetching starts from 1st row.
+  6  WHILE(C1%FOUND)
+  7  LOOP
+  8  DBMS_OUTPUT.PUT_LINE(i.DEPTNO||','||i.DNAME||','||i.LOC);
+  9  FETCH C1 INTO i; ------------> fetching continue upto last row.
+ 10  END LOOP;
+ 11  CLOSE C1;
+ 12  END;
+ 13  /
+
+OUTPUT:
+========================
+10,ACCOUNTING,NEW YORK
+20,RESEARCH,DALLAS
+30,SALES,CHICAGO
+40,OPERATIONS,BOSTON
+
+By using "FOR loop":
+=================
+SQL> DECLARE CURSOR C1 IS SELECT * FROM DEPT;
+  2  BEGIN
+  3  FOR i IN C1
+  4  LOOP
+  5  DBMS_OUTPUT.PUT_LINE(i.DEPTNO||','||i.DNAME||','||i.LOC);
+  6  END LOOP;
+  7  END;
+  8  /
+
+OUTPUT:
+========================
+10,ACCOUNTING,NEW YORK
+20,RESEARCH,DALLAS
+30,SALES,CHICAGO
+40,OPERATIONS,BOSTON
+
+EX:
+write a cursor program to fetch top 5 five rows from emp table?
+SQL> DECLARE CURSOR C1 IS SELECT ENAME,SAL FROM EMP;
+  2  v_ENAME VARCHAR2(10);
+  3  v_SAL NUMBER(8,2);
+  4  BEGIN
+  5  OPEN C1;
+  6  LOOP
+  7  FETCH C1 INTO v_ENAME,v_SAL;
+  8  EXIT WHEN C1%ROWCOUNT>5;
+  9  DBMS_OUTPUT.PUT_LINE(v_ENAME||','||v_SAL);
+ 10  END LOOP;
+ 11  CLOSE C1;
+ 12  END;
+ 13  /
+
+OUTPUT:
+=========
+SMITH,800
+ALLEN,1600
+WARD,1250
+JONES,2975
+MARTIN,1250
+
+EX:
+write a cursor program to fetch even position rows from emp table?
+SQL> DECLARE CURSOR C1 IS SELECT ENAME FROM EMP;
+  2  v_ENAME VARCHAR2(10);
+  3  BEGIN
+  4  OPEN C1;
+  5  LOOP
+  6  FETCH C1 INTO v_ENAME;
+  7  EXIT WHEN C1%NOTFOUND;
+  8  IF MOD(C1%ROWCOUNT,2)=0 THEN
+  9  DBMS_OUTPUT.PUT_LINE(v_ENAME);
+ 10  END IF;
+ 11  END LOOP;
+ 12  CLOSE C1;
+ 13  END;
+ 14  /
+
+OUTPUT:
+=========
+ALLEN
+JONES
+BLAKE
+SCOTT
+TURNER
+JAMES
+MILLER
+
+EX:
+write a cursor program to fetch 10th row from emp table?
+SQL> DECLARE CURSOR C1 IS SELECT ENAME FROM EMP;
+  2  V_ENAME VARCHAR2(10);
+  3  BEGIN
+  4  OPEN C1;
+  5  LOOP
+  6  FETCH C1 INTO V_ENAME;
+  7  EXIT WHEN C1%NOTFOUND;
+  8  IF C1%ROWCOUNT=10 THEN
+  9  DBMS_OUTPUT.PUT_LINE(V_ENAME);
+ 10  END IF;
+ 11  END LOOP;
+ 12  CLOSE C1;
+ 13  END;
+ 14  /
+TURNER
+
+2. Implicit cursor:
+===============
+	- these cursors are created by the system when we perform DML operations on a table 
+in database.
+	- in this cursor memory oracle server will maintain the information about DML operation 
+is successfully executed or not.
+
+EX:
+SQL> INSERT INTO DEPT VALUES(50,'DBA','HYD');
+1 row created.
+
+SQL> UPDATE EMP SET SAL=5000 WHERE DEPTNO=10;
+3 rows updated.
+
+SQL> DELETE FROM EMP WHERE JOB='ANALYST';
+2 rows deleted.
+===============================================================================
+EXCEPTION HANDLING:
+====================
+	What is an Exception?
+	====================
+		- it is a runtime error / execution error.
+
+	What is an Exception Handling?
+	===========================
+		- to avoid abnormal terimination of a program execution process
+	and provide user friendly message to a programmer.
+		- pl/sql supports the following two types of excedptions.
+			1. Pre-defined exceptions
+			2. User-defined exceptions
+
+1. Pre-defined exceptions:
+======================
+	- Oracle provide some pre-defined exception names.
+	Ex: no_data_found,too_many_rows,zero_divide,invalid_cursor,cursor_already_open,....etc
+
+syntax:
+=======
+	Exception
+	when <exception name> then
+	< statement>;
+	end;
+	/
+
+EX1:
+SQL> DECLARE
+  2  v_ENAME VARCHAR2(10);
+  3  BEGIN
+  4  SELECT ENAME INTO v_ENAME FROM EMP WHERE EMPNO=&EMPNO;
+  5  DBMS_OUTPUT.PUT_LINE('Employee name is:-'||v_ENAME);
+  6  END;
+  7  /
+Enter value for empno: 7788
+Employee name is:-SCOTT
+
+SQL> /
+Enter value for empno: 1122
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at line 4
+	- To handle the above exception oracle server is providing a pre-defined exception
+name is "no_data_found".
+
+Handling exception:
+=================
+SQL> DECLARE
+  2  v_ENAME VARCHAR2(10);
+  3  BEGIN
+  4  SELECT ENAME INTO v_ENAME FROM EMP WHERE EMPNO=&EMPNO;
+  5  DBMS_OUTPUT.PUT_LINE('Employee name is:-'||v_ENAME);
+  6  EXCEPTION
+  7  WHEN NO_DATA_FOUND THEN
+  8  DBMS_OUTPUT.PUT_LINE('Sorry Your Record Is Not Found.Plz Try Again!!!');
+  9  END;
+ 10  /
+Enter value for empno: 7788
+Employee name is:-SCOTT
+
+SQL> /
+Enter value for empno: 1122
+Sorry Your Record Is Not Found.Plz Try Again!!!
+
+EX2:
+DEMO TABLE:
+============
+SQL> SELECT * FROM TEST1;
+
+      STID SNAME  SFEE
+      ---------- ---------- ----------
+      1021 SMITH   25000
+      1022 JONES  35000
+
+SQL> DECLARE
+  2  v_SFEE NUMBER(8,2);
+  3  BEGIN
+  4  SELECT SFEE INTO v_SFEE FROM TEST1;
+  5  DBMS_OUTPUT.PUT_LINE('STUDENT FEE IS:-'||v_SFEE);
+  6  END;
+  7  /
+ERROR at line 1:
+ORA-01422: exact fetch returns more than requested number of rows
+ORA-06512: at line 4
+	- To handle the above exception oracle server is providing a pre-defined exception
+name is "too_many_rows".
+
+Handling exception:
+=================
+SQL> DECLARE
+  2  v_SFEE NUMBER(8,2);
+  3  BEGIN
+  4  SELECT SFEE INTO v_SFEE FROM TEST1;
+  5  DBMS_OUTPUT.PUT_LINE('STUDENT FEE IS:-'||v_SFEE);
+  6  EXCEPTION
+  7  WHEN TOO_MANY_ROWS THEN
+  8  DBMS_OUTPUT.PUT_LINE('Sorry Your Table Is Having More Than One Row.Plz Check it!!');
+  9  END;
+ 10  /
+Sorry Your Table Is Having More Than One Row.Plz Check it!!
+
+EX3:
+SQL> DECLARE
+  2  X NUMBER(3);
+  3  Y NUMBER(3);
+  4  Z NUMBER(5);
+  5  BEGIN
+  6  X:=&X;
+  7  Y:=&Y;
+  8  Z:=X/Y;
+  9  DBMS_OUTPUT.PUT_LINE('Division is:-'||Z);
+ 10  END;
+ 11  /
+Enter value for x: 10
+Enter value for y: 2
+Division is:-5
+
+SQL> /
+Enter value for x: 10
+Enter value for y: 0
+ERROR at line 1:
+ORA-01476: divisor is equal to zero
+ORA-06512: at line 8
+	- To handle the above exception oracle server is providing a pre-defined exception
+name is "zero_divide".
+
+Handling exception:
+=================
+SQL> DECLARE
+  2  X NUMBER(3);
+  3  Y NUMBER(3);
+  4  Z NUMBER(5);
+  5  BEGIN
+  6  X:=&X;
+  7  Y:=&Y;
+  8  Z:=X/Y;
+  9  DBMS_OUTPUT.PUT_LINE('Division is:-'||Z);
+ 10  EXCEPTION
+ 11  WHEN ZERO_DIVIDE THEN
+ 12  DBMS_OUTPUT.PUT_LINE('Second Number Should Not Be Zero.Try again!!!');
+ 13  END;
+ 14  /
+Enter value for x: 10
+Enter value for y: 5
+Division is:-2
+
+SQL> /
+Enter value for x: 10
+Enter value for y: 0
+Second Number Should Not Be Zero.Try again!!!
+
+2. User-defined exceptions:
+=======================
+	- when we create our own exception name to handle runtime errors in a pl/sql 
+program is known as user defined exceptions.
+	- to create user defined exception name then we follow the following three steps are,
+
+step1: Declare user defined exception name:
+=====================================
+syntax:
+======
+	declare
+	<user defined exception name> Exception;
+
+step2: Riase an exception with user defined exception name:
+==================================================
+	- there are two methods to use to raise an exception.
+
+Method-1:
+=========
+RAISE:
+======
+	- this statement is used to raise an exception and also handle an exception 
+in the program.
+
+syntax:
+======
+	raise <user defined exception name>; 
+
+Method-2:
+========
+RAISE_APPLICATION_ERROR(number,message):
+=======================================
+	- this statement is used to raise an exception but not handling an exception in the
+	program.
+	- this method is having two arguments are,
+		number	: it return user defined exception number.
+			this number must be -20001 to -20999.
+		message	: it return user defined exception message.
+syntax:
+======
+	raise_application_error(<UD exception number>,<UD exception message>);
+
+step3: Handling exception with user defined exception name:
+==================================================
+syntax:
+======
+	exception
+	when <user defined exception name> then
+	<statements>;
+	end;
+	/
+
+i) By using RAISE statement:
+========================
+SQL> DECLARE
+  2  X NUMBER(3);
+  3  Y NUMBER(3);
+  4  Z NUMBER(5);
+  5  EX EXCEPTION;
+  6  BEGIN
+  7  X:=&X;
+  8  Y:=&Y;
+  9  IF Y=0 THEN
+ 10  RAISE EX;
+ 11  ELSE
+ 12  Z:=X/Y;
+ 13  DBMS_OUTPUT.PUT_LINE('Division is:-'||Z);
+ 14  END IF;
+ 15  EXCEPTION
+ 16  WHEN EX THEN
+ 17  DBMS_OUTPUT.PUT_LINE('Second Number Not Be Zero.Plz Check It!!!');
+ 18  END;
+ 19  /
+Enter value for x: 10
+Enter value for y: 5
+Division is:-2
+
+SQL> /
+Enter value for x: 10
+Enter value for y: 0
+Second Number Not Be Zero.Plz Check It!!!
+
+ii) By using RAISE_APPLICATION_ERROR():
+====================================
+SQL> DECLARE
+  2  X NUMBER(3);
+  3  Y NUMBER(3);
+  4  Z NUMBER(5);
+  5  EX EXCEPTION;
+  6  BEGIN
+  7  X:=&X;
+  8  Y:=&Y;
+  9  IF Y=0 THEN
+ 10  RAISE EX;
+ 11  ELSE
+ 12  Z:=X/Y;
+ 13  DBMS_OUTPUT.PUT_LINE('Division is:-'||Z);
+ 14  END IF;
+ 15  EXCEPTION
+ 16  WHEN EX THEN
+ 17  RAISE_APPLICATION_ERROR(-20478,'Divisor is equals to zero!!!');
+ 18  END;
+ 19  /
+Enter value for x: 10
+Enter value for y: 2
+Division is:-5
+
+SQL> /
+Enter value for x: 10
+Enter value for y: 0
+ERROR at line 1:
+ORA-20478: Divisor is equals to zero!!!
+ORA-06512: at line 17
+
+How to handle multiple exceptions in a pl/sql program:
+=============================================
+SQL> DECLARE
+  2  X NUMBER(3);
+  3  Y NUMBER(3);
+  4  Z NUMBER(5);
+  5  BEGIN
+  6  X:=&X;
+  7  Y:=&Y;
+  8  Z:=X/Y;
+  9  DBMS_OUTPUT.PUT_LINE(Z);
+ 10  EXCEPTION
+ 11  WHEN ZERO_DIVIDE THEN
+ 12  DBMS_OUTPUT.PUT_LINE('SECOND NUMBER NOT BE ZERO');
+ 13  WHEN VALUE_ERROR THEN
+ 14  DBMS_OUTPUT.PUT_LINE('SORRY YOU ENTER WRONG VALUE.PLZ CHECK IT');
+ 15  END;
+ 16  /
+Enter value for x: 10
+Enter value for y: 5
+2
+
+SQL> /
+Enter value for x: 10
+Enter value for y: 0
+SECOND NUMBER NOT BE ZERO
+
+SQL> /
+Enter value for x: 10
+Enter value for y: 1000
+SORRY YOU ENTER WRONG VALUE.PLZ CHECK IT
+==============================================================================
+SUB BLOCKS:
+============
+	- these are named blocks which will stored logical code in database.
+	- pl/sql supports the following three types of sub blocks objects.
+		1. Stored procedures
+		2. Stored functions
+		3. Triggers
+1. Stored procedures:
+==================
+	- it is a named block which contains "pre-compiled code".
+	- by using stored procedure we will avoid unnecessary compilation of the code and
+	improve the performance of database.
+	- stored procedure will provide "reusability & security" of the code.
+
+syntax:
+=======
+create [or replace] procedure <pname>(<parameter name1> [mode type] <datatype>,...........)
+is
+<declare variables>;
+begin
+<procedure body / statements>;
+end;
+/
+
+How to call a stored procedure:
+==========================
+Method-1: By using anonymous block: (OLD method)
+==========================================
+syntax:
+=======
+begin
+<pname>(values);
+end;
+/
+
+Method-2: By using EXECUTE command:(NEW method)
+=============================================
+syntax:
+======
+execute <pname>(values);
+	(or)
+exec <pname>(values);
+
+Types of parameters modes:
+========================
+	- there are two modes in stored procedure.
+		i) IN mode :
+		===========
+			- these are default parameters of stored procedure.
+			- these parameters are used for storing INPUT values which 
+			was given by user at runtime.
+
+		ii) OUT mode:
+		============
+			- to return OUTPUT value to user.
+
+Stored procedure with DML operations:
+=================================
+Ex:
+create a SP to insert the new department details into DEPT table?
+SQL> CREATE OR REPLACE PROCEDURE SPINSERT(p_DNO IN NUMBER,p_DNAME IN VARCHAR2,
+  2  P_LOC IN VARCHAR2)
+  3  IS
+  4  BEGIN
+  5  INSERT INTO DEPT VALUES(p_DNO,p_DNAME,p_LOC);
+  6  DBMS_OUTPUT.PUT_LINE('Row Inserted');
+  7  END;
+  8  /
+
+OUTPUT:
+========
+SQL> BEGIN
+  2  SPINSERT(50,'ORACLE');
+  3  END;
+  4  /
+	(OR)
+SQL> EXECUTE SPINSERT(60,'JAVA','PUNE');
+Row Inserted
+	(OR)
+SQL> EXEC SPINSERT(70,'UI','MUMBAI');
+Row Inserted
+
+EX:
+create a SP to delete department details as per the given DEPTNO?
+SQL> CREATE OR REPLACE PROCEDURE SPDELETE(p_DEPTNO IN NUMBER)
+  2  IS
+  3  BEGIN
+  4  DELETE FROM DEPT WHERE DEPTNO=p_DEPTNO;
+  5  DBMS_OUTPUT.PUT_LINE('Row Deleted');
+  6  END;
+  7  /
+
+OUTPUT:
+=========
+SQL> EXECUTE SPDELETE(70);
+Row Deleted
+
+EX:
+create a SP to update employees salaries with the increment of 10% as per given JOB?
+SQL> CREATE OR REPLACE PROCEDURE SPUPDATE(p_JOB IN VARCHAR2)
+  2  IS
+  3  BEGIN
+  4  UPDATE EMP SET SAL=SAL+SAL*0.1 WHERE JOB=p_JOB;
+  5  DBMS_OUTPUT.PUT_LINE('Row Updated');
+  6  END;
+  7  /
+
+OUTPUT:
+SQL> EXECUTE SPUPDATE('MANAGER');
+Row Updated
+
+How to read a specific row from a table by using stored procedure:
+=======================================================
+EX:
+create a SP to read ENAME and SALARY details from emp table as per the given EMPNO?
+SQL> CREATE OR REPLACE PROCEDURE SPREAD(p_EMPNO IN NUMBER)
+  2  IS
+  3  v_ENAME VARCHAR2(10);
+  4  v_SAL NUMBER(8,2);
+  5  BEGIN
+  6  SELECT ENAME,SAL INTO v_ENAME,v_SAL FROM EMP WHERE EMPNO=p_EMPNO;
+  7  DBMS_OUTPUT.PUT_LINE('EMPLOYEE NAME IS:-'||v_ENAME);
+  8  DBMS_OUTPUT.PUT_LINE('EMPLOYEE SALARY IS:-'||v_SAL);
+  9  END;
+ 10  /
+
+OUTPUT:
+SQL> EXECUTE SPREAD(7788);
+EMPLOYEE NAME IS:-SCOTT
+EMPLOYEE SALARY IS:-3000
+
+EX:
+create a SP to fetch multiple rows from emp table using CURSOR?
+SQL> CREATE OR REPLACE PROCEDURE SPMULREAD(p_DEPTNO IN NUMBER)
+  2  IS
+  3  CURSOR C1 IS SELECT * FROM EMP WHERE DEPTNO=p_DEPTNO;
+  4  i EMP%ROWTYPE;
+  5  BEGIN
+  6  OPEN C1;
+  7  LOOP
+  8  FETCH C1 INTO i;
+  9  EXIT WHEN C1%NOTFOUND;
+ 10  DBMS_OUTPUT.PUT_LINE(i.EMPNO||','||i.ENAME||','||i.SAL||','||i.DEPTNO);
+ 11  END LOOP;
+ 12  CLOSE C1;
+ 13  END;
+ 14  /
+
+OUTPUT:
+SQL> EXECUTE SPMULREAD(10);
+7782,CLARK,2450,10
+7839,KING,5000,10
+7934,MILLER,1300,10
+
+Examples on "OUT" parameters:
+===========================
+Ex:
+create a SP to return cube of the given number by using OUT parameter?
+SQL> CREATE OR REPLACE PROCEDURE SPCUBE(X IN NUMBER,Y OUT NUMBER)
+  2  IS
+  3  BEGIN
+  4  Y:=X*X*X;
+  5  END;
+  6  /
+
+OUTPUT:
+SQL> EXECUTE SPCUBE(10);
+ERROR at line 1:
+PLS-00306: wrong number or types of arguments in call to 'SPCUBE'
+
+	- To overcome the above problem then we need to follow the following 3 steps are,
+
+step1: Declare a referenced / bind variables for OUT parameters:
+===================================================
+syntax:
+======
+var[iable] <ref. bind variable> <datatype>[size];
+
+step2: Adding this ref. bind variables to a stored procedure:
+================================================
+syntax:
+======
+execute <pname>(value1,value2,........,:<ref.bind variable name1>,.............);
+
+step3: Print ref. bind variables:
+==========================
+syntax:
+======
+print <ref. bind variable name>;
+
+Calling SP for OUT parameters:
+==========================
+SQL> VAR r NUMBER;
+SQL> EXECUTE  SPCUBE(10,:r);
+SQL> PRINT r;
+
+         R
+------------------
+      1000
+
+EX:
+create a SP to input EMPNO and return that employee Provident Fund and Professional Tax
+with 3%,2% on their basic salary?
+SQL> CREATE OR REPLACE PROCEDURE SPEMPLOYEE(p_EMPNO IN NUMBER,PF OUT NUMBER,PT OUT NUMBER)
+  2  IS
+  3  v_BSAL NUMBER(8,2);
+  4  BEGIN
+  5  SELECT SAL INTO v_BSAL FROM EMP WHERE EMPNO=p_EMPNO;
+  6  PF:=v_BSAL*0.03;
+  7  PT:=v_BSAL*0.02;
+  8  END;
+  9  /
+
+OUTPUT:
+SQL> VAR rPF NUMBER;
+SQL> VAR rPT NUMBER;
+SQL> EXECUTE SPEMPLOYEE(7788,:rPF,:rPT);
+SQL> PRINT rPF rPT;
+       RPF
+----------------
+        90
+
+       RPT
+-----------------
+        60
+
+NOTE:
+=====
+	- if we want to view subblock objects(procedure/function/trigger) in oracle database 
+then use a datadictionary is "user_objects".
+
+EX:
+SQL> DESC USER_OBJECTS;
+SQL> SELECT OBJECT_NAME FROM USER_OBJECTS WHERE OBJECT_TYPE='PROCEDURE';
+
+NOTE:
+=====
+	- if we want to view code(text) of a subblock object(procedure/function/trigger) in 
+oracle database then use a datadictionary is "user_source";
+
+EX:
+SQL> DESC USER_SOURCE;
+SQL> SELECT TEXT FROM USER_SOURCE WHERE NAME='SPCUBE';
+
+How to drop a stored procedure:
+============================
+syntax:
+=======
+drop procedure <pname>;
+
+EX:
+SQL> DROP PROCEDURE SPCUBE;
+==============================================================================
+STORED FUNCTIONS:
+==================
+	- Function is a block code to perform some task and must return a value.
+	- Stored functions are created by user in database.so that these functions are called 
+    	as "user defined functions" in oracle.
+syntax:
+======
+create [or replace] function <fname>(<parameter name1> <datatype>,..................)
+return <return variable DATATYPE>
+as
+<declare variables>;
+begin
+<function body>;
+return <return variable NAME>;
+end;
+/
+
+How to call a stored function:
+=========================
+syntax:
+=======
+select <fname>(values) from dual;
+
+EX:
+create a SF to input EMPNO and return NAME of the employee?
+SQL> CREATE OR REPLACE FUNCTION SF1(p_EMPNO NUMBER)
+  2  RETURN VARCHAR2
+  3  AS
+  4  v_ENAME VARCHAR2(10);
+  5  BEGIN
+  6  SELECT ENAME INTO v_ENAME FROM EMP WHERE EMPNO=p_EMPNO;
+  7  RETURN v_ENAME;
+  8  END;
+  9  /
+
+OUTPUT:
+========
+SQL> SELECT SF1(7566) FROM DUAL;
+JONES
+
+EX:
+create a SF to return the total expenditure of the given department name?
+SQL> CREATE OR REPLACE FUNCTION SF2(p_DNAME VARCHAR2)
+  2  RETURN NUMBER
+  3  AS
+  4  v_TOTEXP NUMBER(8,2);
+  5  BEGIN
+  6  SELECT SUM(SAL) INTO v_TOTEXP FROM EMP E JOIN DEPT D ON E.DEPTNO=D.DEPTNO
+  7  WHERE DNAME=p_DNAME;
+  8  RETURN v_TOTEXP;
+  9  END;
+ 10  /
+
+OUTPUT:
+SQL> SELECT SF2('SALES') FROM DUAL;
+         9400
+
+EX:
+create a SF to return no.of employees are joined in between the given two dates?
+SQL> CREATE OR REPLACE FUNCTION SF2(S_HIREDATE DATE,E_HIREDATE DATE)
+  2  RETURN NUMBER
+  3  AS
+  4  V_TOTAL NUMBER(5);
+  5  BEGIN
+  6  SELECT COUNT(*) INTO V_TOTAL FROM EMP WHERE HIREDATE BETWEEN S_HIREDATE AND E_HIREDATE;
+  7  RETURN V_TOTAL;
+  8  END;
+  9  /
+
+OUTPUT:
+SQL> SELECT SF2('01-JAN-1981','31-DEC-1981')FROM DUAL;                             
+          10
+
+EX:
+create a SF into EMPNO and return that employee gross salary based on the following conditions
+	i) HRA	- 5%
+	ii) DA	- 10%
+	iii) PF	- 3%
+	iv) PT	- 2%
+	v) ESI	- 2% on basic salary?
+
+SQL> CREATE OR REPLACE FUNCTION SF3(p_empno number)
+  2  return number
+  3  as
+  4  GROSS_SALARY NUMBER(8,2);
+  5  BEGIN
+  6  SELECT SAL + (SAL*0.05) +  (SAL*0.1) +  (SAL*0.03) +  (SAL*0.02) +  (SAL*0.02)
+  7  INTO GROSS_SALARY FROM EMP WHERE EMPNO = P_EMPNO;
+  8  RETURN GROSS_SALARY;
+  9  END;
+ 10  /
+
+OUTPUT
+=========
+SQL> SELECT SF3(7788) AS GROSS_SALARY FROM DUAL; 
+          3660
+
+EX:
+create a SF to input EMPNO and return NET SALARY by the above conditions?
+SQL> CREATE OR REPLACE FUNCTION SF6(P_EMPNO NUMBER)
+  2  RETURN NUMBER
+  3  AS
+  4  V_NETSAL NUMBER(8,2);
+  5  BEGIN
+  6  SELECT (SAL+(SAL*0.05)+(SAL*0.1)+(SAL*0.03)+(SAL*0.02)+(SAL*0.02))-((SAL*0.03)+(SAL*0.02)+(SAL*0.02)) INTO V_NETSAL FROM EMP WHERE EMPNO=P_EMPNO;
+  7  RETURN V_NETSAL;
+  8  END;
+  9  /
+
+OUTPUT
+========
+SQL> SELECT SF6(7788) AS NETSAL FROM DUAL;
+         3450
+
+To view all stored functions in oracle:
+===============================
+SQL> SELECT OBJECT_NAME FROM USER_OBJECTS WHERE OBJECT_TYPE='FUNCTION';
+
+To view the source code of a stored function:
+======================================
+SQL> SELECT TEXT FROM USER_SOURCE WHERE NAME='SF1';
+
+How to drop a stored function:
+==========================
+syntax:
+=======
+drop function <fname>;
+
+EX:
+SQL> DROP FUNCTION SF1;
+==============================================================================
+TRIGGERS:
+==========
+	- it is named object which will execute by the system automatically whenever 
+we perform DML,DDL operations on a specific table / on a specific database.
+	- the main advantages of trigger is raising alerts,impmenting business logical 
+condition,validating data,..........etc.
+	- Oracle supports the following two types of triggers.
+		1. DML triggers
+		2. DDL triggers(DB triggers)
+1. DML triggers:
+==============
+	- when we create a trigger object based on DML commands.
+	- these triggers are executed by the system by default when user perform DML 
+operations on a specific table.
+
+syntax:
+=======
+create [or replace] trigger <trigger name>
+before / after insert or update or delete on <table name / object name>
+[ for each row ]
+begin
+<trigger body>;
+end;
+/
+
+Trigger Events:
+=============
+	- there are two events in trigger.
+		i) Before event:
+		==============
+			- when we created a trigger object with "BEFORE" event.
+				First : Trigger body(logic) executed.
+				Later : DML command will execute.
+
+		i) After event:
+		==============
+			- when we created a trigger object with "AFTER" event.
+				First : DML command  is executed.
+				Later : Trigger body will execute.
+NOTE:
+=====
+	- Both events are providing same result.
+
+Bind variables:
+=============
+	- these variables are working just like normal variables in database.
+	- there are two types of bind variables.
+		i) :NEW :
+		========
+			- it will store value when we insert.
+		syntax:
+		======
+			:NEW.<column name>
+
+		ii) :OLD :
+		========
+			- it will store value when we delete.
+		syntax:
+		======
+			:OLD.<column name>
+
+NOTE:
+======
+	- the combination of :NEW and :OLD bind variable will perform UPDATE operation.
+	- these bind variables are used along with "for each row" statement.
+
+EX:
+create a trigger to raise a security alert on DML operations?
+SQL> CREATE OR REPLACE TRIGGER TRALERT
+  2  AFTER INSERT OR UPDATE OR DELETE ON DEPT
+  3  BEGIN
+  4  RAISE_APPLICATION_ERROR(-20456,'Alert!!!Someone is performing DML operation on your table.pl check it!!!');
+  5  END;
+  6  /
+
+TESTING:
+SQL> DELETE FROM DEPT WHERE DEPTNO=10;-----NOT ALLOWED
+ERROR at line 1:
+ORA-20456: Alert!!!Someone is performing DML operation on your table.pl check it!!!
+
+EX:
+create a trigger to control dml operations on a table on every weekends(sat,sun)?
+SQL> CREATE OR REPLACE TRIGGER TRWEEKENDS
+  2  AFTER INSERT OR UPDATE OR DELETE ON DEPT
+  3  BEGIN
+  4  IF TO_CHAR(SYSDATE,'DY')IN('SAT','SUN') THEN
+  5  RAISE_APPLICATION_ERROR(-20354,'You cannot perform dml operations on weekends.Try later!!');
+  6  END IF;
+  7  END;
+  8  /
+
+TESTING:
+SQL> DELETE FROM DEPT WHERE DEPTNO=20;
+ERROR at line 1:
+ORA-20354: You cannot perform dml operations on weekends.Try later!!
+
+EX:
+create a trigger to control all dml operations on a table in between 10am to 4pm?
+
+Logic:
+======
+		24hrs format 
+		===========
+		10am 	= 10:00:00am to 10:59:59am ------> comes under 10 o clock.
+		4pm(16)	= 04:00:00pm to 04:59:59pm -------> up to 5 o clock
+		3pm(15)	= 03:00:00pm to 03:59:59pm -------> up to 4 o clock
+
+
+SQL> CREATE OR REPLACE TRIGGER TRTIME
+  2  AFTER INSERT OR UPDATE OR DELETE ON DEPT
+  3  BEGIN
+  4  IF TO_CHAR(SYSDATE,'HH24')BETWEEN 10 AND 15 THEN
+  5  RAISE_APPLICATION_ERROR(-20569,'INVALID TIME.TRY LATER');
+  6  END IF;
+  7  END;
+  8  /
+
+TESTING:
+SQL> DELETE FROM DEPT WHERE DEPTNO=10;
+ERROR:
+ORA-20569: INVALID TIME.TRY LATER
+
+EX:
+create trigger to validate INSERT operation on a table.if new salary is more than to 5000?
+SQL> CREATE OR REPLACE TRIGGER TRSAL
+  2  BEFORE INSERT ON EMPLOYEE
+  3  FOR EACH ROW
+  4  BEGIN
+  5  IF :NEW.SAL>5000 THEN
+  6  RAISE_APPLICATION_ERROR(-20369,'NEW SALARY SHOULD NOT BE MORE THAN TO 5000!!!');
+  7  END IF;
+  8  END;
+  9  /
+
+TESTING
+SQL> INSERT INTO EMPLOYEE VALUES(1122,'YUVIN',6000);------NOT ALLOWED
+SQL> INSERT INTO EMPLOYEE VALUES(1122,'YUVIN',4000);-----ALLOWED
+
+EX:
+create a trigger to validate DELETE operation on a table.if we try to delete the employee
+"SCOTT" details from a table?
+SQL> CREATE OR REPLACE TRIGGER TRENAME
+  2  BEFORE DELETE ON EMPLOYEE
+  3  FOR EACH ROW
+  4  BEGIN
+  5  IF :OLD.ENAME='SCOTT' THEN
+  6  RAISE_APPLICATION_ERROR(-20589,'NOT ALLOWED');
+  7  END IF;
+  8  END;
+  9  /
+
+TESTING:
+SQL> DELETE FROM EMPLOYEE WHERE ENAME='MILLER';------ALLOWED
+SQL> DELETE FROM EMPLOYEE WHERE ENAME='SCOTT';------NOT ALLOWED
+
+EX:
+create a trigger to valiadte UPDATE operation on a table if new salary is more than to old salary?
+SQL> CREATE OR REPLACE TRIGGER TRUPDATE
+  2  BEFORE UPDATE ON EMPLOYEE
+  3  FOR EACH ROW
+  4  BEGIN
+  5  IF :NEW.SAL>:OLD.SAL THEN
+  6  RAISE_APPLICATION_ERROR(-20698,'NEW SAL SHOULD NOT BE MORE THAN TO OLD SAL!!');
+  7  END IF;
+  8  END;
+  9  /
+
+TESTING:
+SQL> UPDATE EMPLOYEE SET SAL=4000 WHERE SAL=1250;-----NOT ALLOWED
+SQL> UPDATE EMPLOYEE SET SAL=1000 WHERE SAL=1250;----ALLOWED
+
+2. DDL triggers:
+==============
+	- when we create a trigger object based on DDL commands
+	(CREATE,ALTER,RENAME,DROP).
+	- these triggers are executed by the system by default when user perform 
+DDL operations on a specific database.so that these trigger are also called as DB triggers.
+
+syntax:
+=======
+create [or replace] trigger <trigger name>
+before / after create or alter or rename or drop  on <database name / user name>.schema
+[ for each row ]
+begin
+<trigger body>;
+end;
+/
+
+EX:
+create a trigger to raise a security alert on DDL operations?
+SQL> CREATE OR REPLACE TRIGGER TRDDL
+  2  AFTER CREATE OR ALTER OR RENAME OR DROP ON MYDB9AM.SCHEMA
+  3  BEGIN
+  4  RAISE_APPLICATION_ERROR(-20789,'YOU CANNOT PERFORM DDL OPERATIONS ON MYDB9AM DATABASE');
+  5  END;
+  6  /
+
+TESTING:
+SQL> CREATE TABLE TEST100(SNO NUMBER(2));-----> NOT ALLOWED
+
+NOTE:
+======
+	- Generally DDL triggers are handling by DBA in real time.
+
+To view all triggers in oracle:
+==========================
+SQL> SELECT OBJECT_NAME FROM USER_OBJECTS WHERE OBJECT_TYPE='TRIGGER';
+
+To view the source code of a trigger:
+===============================
+SQL> SELECT TEXT FROM USER_SOURCE WHERE NAME='TRDDL';
+
+How to drop a trigger:
+===================
+syntax:
+=======
+drop trigger <trigger name>;
+
+EX:
+SQL> DROP TRIGGER TRDDL;
+
+			mail_id : sudhakarsqldvp@gmail.com
+
+================================= THE END =================================================
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	- UPDATE
+	- DELETE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

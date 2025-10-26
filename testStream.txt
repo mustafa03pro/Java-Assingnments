@@ -1,0 +1,57 @@
+SortAndReverse_List
+Write a Java program to store a list of student names in an ArrayList.
+Sort them in ascending order using Collections.sort().
+Then sort them in descending order using a Comparator.
+Input Example:
+ ["Ravi", "Amit", "Sneha", "Pooja", "Kiran"]
+Expected Output (Ascending):
+[Amit, Kiran, Pooja, Ravi, Sneha]
+Expected Output (Descending):
+[Sneha, Ravi, Pooja, Kiran, Amit]
+Sample Input
+ ["Ravi", "Amit", "Sneha", "Pooja", "Kiran"]
+Sample Output
+[Amit, Kiran, Pooja, Ravi, Sneha]
+[Sneha, Ravi, Pooja, Kiran, Amit]
+
+
+
+
+StreamAPI_Demo
+Stream API
+Given a list of integers, write a program to:
+1.	Remove duplicates
+2.	Filter only even numbers
+3.	Sort them in descending order
+4.	Collect them into a List
+Sample Input
+[10, 15, 8, 49, 25, 98, 32, 15, 8]
+Sample Output
+[98, 32, 10, 8]
+
+
+
+
+
+Frequency_Count
+Write a program that takes a sentence as input and counts the frequency of each word using a HashMap.
+Finally, print the words and their counts in insertion order using LinkedHashMap.
+Using Map & Frequency Count.
+Input Example:
+text
+"I love Java and I love coding"
+Expected Output:
+I -> 2  
+love -> 2  
+Java -> 1  
+and -> 1  
+coding -> 1
+Sample Input
+I love Java and I love coding
+Sample Output
+I -> 2  
+love -> 2  
+Java -> 1  
+and -> 1  
+coding -> 1
+Explanation

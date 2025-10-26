@@ -1,0 +1,198 @@
+
+                              FUNCTION
+                            ===========
+
+   Function is an named pl/sql block which is used to solve particular
+task and also function must return a value.
+
+      in oracle function having 2 parts. These are
+1.function specification
+2.function body
+
+     in function specification we are specifying name of the function
+and type of the parameters. Whereas in function body we are solving
+actual task.
+
+syntax:-
+========     
+create [or replace] function functionname(formal parameters)
+return datatype
+    is/as
+variable declaration, cursor, user defined exception;
+ begin
+ -----
+ -----
+return expression;
+ [exception]
+ -----
+ -----
+end [functionname];
+
+Executing a function:-
+=====================
+Method1:-(by using select statement)
+===================================
+     
+       in oracle when a function having all parameters are in
+parameters or when a function does not have any parameters then those
+type of functions are allowed to execute by using select stmt.
+
+syntax:-
+========
+select functionname(actual parameters) from dual;
+
+--------------------------------------------------------------------------
+
+
+1.Write a PL/SQL stored function for passing number as a parameter
+  then return a message either even or odd based on passed number
+
+ANS:
+============
+  1  CREATE OR REPLACE FUNCTION F1(A NUMBER)
+  2  RETURN VARCHAR2
+  3  AS
+  4  BEGIN
+  5  IF MOD(A,2)=0 THEN
+  6  RETURN 'EVEN';
+  7  ELSE
+  8  RETURN 'ODD';
+  9  END IF;
+ 10* END;
+ 11  /
+
+Function created.
+
+SQL> SELECT F1(3) FROM DUAL;
+
+F1(3)
+--------------------------------------------------------------------------------
+ODD
+
+--------------------------------------------------------------------------
+
+2.Write a PL/SQL stored function to display balance of customer based 
+  on passed ACCNO
+
+                    (OR)
+
+
+Write a PL/SQL function that takes an account number as input and returns the balance for that account.
+
+
+SQL>SELECT * FROM BANK;
+
+ACCNO          NAME          BAL
+------        -------     ---------
+1001          SUBBARAO       3000
+1002          GOWTHAM        4000
+
+
+ANS:
+=====
+SQL> CREATE OR REPLACE FUNCTION F2(V_ACCNO IN NUMBER)
+  2  RETURN NUMBER
+  3  AS
+  4  V_BAL NUMBER(8,2);
+  5  BEGIN
+  6  SELECT BAL INTO V_BAL FROM BANK WHERE ACCN=V_ACCNO;
+  7  RETURN V_BAL;
+  8  END;
+  9  /
+
+Function created.
+
+SQL> SELECT F2(1001) FROM DUAL;
+
+  F2(1001)
+----------
+      2400
+
+--------------------------------------------------------------------------
+evaluating expressions:-
+=========================
+  in all relational databases if we want to evaluate expressions
+then we must use functions.
+
+
+3.Write a pl/sql stored function for passing salary as a parameter then
+  calculate bonus based on following condition.(This question is not 
+  from emp table outside data)
+
+1.if salary<1000 then bonus is 5% of the salary
+2.if salary>=1000 then salary<2000 then bonus is 10% of the salary
+3.if salary>=2000 and salary<3000 then bonus is 20% of the salary
+4.if salary>=3000 and salary<5000 then bonus is 30% of the salary 
+5.else bonus is 40% of the salary
+
+
+ANS:
+=====
+
+  1  CREATE OR REPLACE FUNCTION F3(SALARY NUMBER)
+  2  RETURN NUMBER
+  3  AS
+  4  GROSS_SALARY NUMBER(8,2);
+  5  BEGIN
+  6  IF SALARY<=1000 THEN
+  7  GROSS_SALARY:=SALARY+(SALARY*0.05);
+  8  ELSIF SALARY>1000 AND SALARY<2000 THEN
+  9  GROSS_SALARY:=SALARY+(SALARY*0.1);
+ 10  ELSIF SALARY>=2000 AND SALARY<3000 THEN
+ 11  GROSS_SALARY:=SALARY+(SALARY*0.2);
+ 12  ELSIF SALARY>=3000 AND SALARY<5000 THEN
+ 13  GROSS_SALARY:=SALARY+(SALARY*0.3);
+ 14  ELSE
+ 15  GROSS_SALARY:=SALARY+(SALARY*0.4);
+ 16  END IF;
+ 17  RETURN GROSS_SALARY;
+ 18* END;
+SQL> /
+
+Function created.
+
+SQL> SELECT F3(3000)FROM DUAL;
+
+  F3(3000)
+----------
+      3900
+
+
+--------------------------------------------------------------------------
+
+4.write a PL/SQL stored function that calculates the work experience of an
+  employee based on their hire date.
+
+NOTE:- The function should take the employee number (empno) as input,
+-----  fetch the corresponding  hiredate from the emp table, 
+       and return the experience in years.
+ANS:
+=====
+
+SQL> CREATE OR REPLACE FUNCTION F4(V_EMPNO NUMBER)
+  2  RETURN NUMBER
+  3  AS
+  4  V_HIREDATE DATE;
+  5  BEGIN
+  6  SELECT HIREDATE INTO V_HIREDATE FROM EMP WHERE EMPNO=V_EMPNO;
+  7  RETURN TRUNC((SYSDATE-V_HIREDATE)/365);
+  8  END;
+  9  /
+
+Function created.
+
+SQL> SELECT F4(7788) FROM DUAL;
+
+  F4(7788)
+----------
+        42
+-------------------------------------------------------------------------
+ *
+*** What are the differences b/w procedure and function ?
+ *
+
+
+
+
+
+
