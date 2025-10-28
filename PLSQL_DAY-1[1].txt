@@ -1,0 +1,207 @@
+                                 PL/SQL
+                              ============
+
+PL/SQL is an procedure language extension for SQL. oracle 6.0
+ introduced PL/SQL.
+
+Basically pl/sql is an block structure programming language.
+
+
+1.declaring a variable
+======================
+
+  in declare section of pl/sql block by using following syntax
+
+syntax:-
+=======
+variablename datatype(size);
+
+a number(10);
+
+
+
+2.storing a value into variable:-
+================================
+
+   By using assignment operator(:=) we can also store a value
+into variable.
+
+
+syntax:-
+=======
+     variablename:=value;
+
+   we can also use this assignment operator(:=) either in declare
+section or in executable section in pl/sql block.
+
+EX:-
+===
+declare
+a number(10);
+begin
+a:=80;
+end;
+/
+
+3.Display a message (or) variable value:-
+======================================
+
+   In pl/sql if we want to display a message or variable value then
+we are using following syntax.
+
+syntax:-
+=======
+dbms_output.put_line('message');
+
+dbms_output.put_line(variablename);
+    |          |
+package      procedure
+name         name
+
+   This package is used in either in executable section or in exception
+section of the pl/sql block.
+
+eg:-
+===
+begin
+dbms_output.put_line('welcome');
+end;
+/
+
+PL/SQL procedure successfully completed
+
+  In pl/sql whenever we are passing any data into dbms_output package 
+then that package internally automatically creates a buffer and also passed data automatically stored in buffer but this buffer data does not visible in sqlplus client tool.To overcome this problem then we must set serveroutput environment variable by using following syntax at sql prompt. 
+
+syntax:-
+=======
+SQL<set serveroutput on;
+SQL>/
+welcome
+
+
+ *
+*** select....into clause:- 
+ *  ======================
+
+   Select.... into clause is used to retrieve data from table then that 
+data is storing into pl/sql variable.
+
+  select.... into clause always returns single record or single value
+at a time from a table.
+
+syntax:-
+=======
+select col1,col2....into varname1,varname2.....
+from tablename
+where condition;
+
+ This clause is used in executable section of the pl/sql block.
+
+
+--------------------------------------------------------------------------
+
+
+
+1.Write a PL/SQL program to print a message 'WELCOME TO PL/SQL  
+  CLASSES FOR MY DEAR WONDERFULL BATACH39' on screen?
+
+
+
+NOTE:-To avoid of displaying old and new parameters set verify off as
+      following
+
+SQL>set verify off;
+
+
+--------------------------------------------------------------------------
+
+2.Write a PL/SQL program to add 2 numbers. And two numbers are 
+  enter from runtime ?
+  ANS:    DECLARE A NUMBER(10);
+  2  B NUMBER(10);
+  3  C NUMBER(10);
+  4  BEGIN
+  5  A:=&A;
+  6  B:=&B;
+  7  C:=A+B;
+  8   DBMS_OUTPUT.PUT_LINE(C);
+  9  END;
+ 10  /
+Enter value for a: 12
+Enter value for b: 12
+24
+
+
+--------------------------------------------------------------------------
+
+3.Write a PL/SQL program for user entered employee number then display
+  name of the employee and his salary from emp table?
+
+--------------------------------------------------------------------------
+
+4.Write a PL/SQL program which is used to retrieve maximum salary
+      from emp table and store it into PL/SQL variable
+              and display maximum salary?
+   ANS:  
+SQL> DECLARE V_SAL NUMBER(8,2);
+  2  BEGIN
+  3  SELECT MAX(SAL) INTO V_SAL FROM EMP ;
+  4  DBMS_OUTPUT.PUT_LINE(V_SAL);
+  5  END;
+  6  /
+5000
+
+
+--------------------------------------------------------------------------
+
+5.Write a PL/SQL program to find maximum number from 2 numbers
+  and store it into another variable?
+
+note:-in pl/sql expressions we are not allowed to use group functions,
+===== decode conversion functions. But we are allowed to use number
+      functions, character functions, date  functions in pl/sql 
+      expressions
+
+
+ANS:  SQL> DECLARE
+  2  A NUMBER(10):=&A;
+  3  B NUMBER(10):=&B;
+  4  C NUMBER(10);
+  5  BEGIN
+  6  C:=GREATEST(A,B);
+  7  DBMS_OUTPUT.PUT_LINE(C);
+  8  END;
+  9  /
+Enter value for a: 23
+Enter value for b: 45
+45
+
+
+--------------------------------------------------------------------------
+
+
+6.Write a PL/SQL program for user entered empno then display 
+      all details of employee from emp table by using 
+               row level attributes?
+
+EG:-
+===
+declare                 particular cell you want(.notation)
+i emp%rowtype;          /
+                    i.ename              i.hiredate  i.sal
+    i                /                        /       /
+  -----     empno  ename    job     mgr   hiredate   sal  comm  deptno
+  | . |---->7902   FORD   ANALYST   7566  03-DEC-81  4900        20
+  -----
+   ANS:    
+  1  declare
+  2  i emp%rowtype;
+  3  begin
+  4  SELECT *  INTO i FROM EMP where EMPNO=7788 ;
+  5  DBMS_OUTPUT.PUT_LINE(i.EMPNO||','||i.ENAME||','||i.SAL||','||i.HIREDATE);
+  6* END;
+SQL> /
+7788,SCOTT,3000,09-DEC-82
+
+

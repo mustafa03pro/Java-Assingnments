@@ -1,0 +1,113 @@
+                                SEQUENCE
+                              ===========
+
+     Sequence is an database object which is used to 
+generates Sequence of numbers automatically. 
+
+      Generally sequences are used to generates Primary key values
+automatically. Generally sequence is an independent database object.
+That's why Once a sequence has been created then number of users
+simultaneously access that sequence.
+
+   in oracle if we want to generate first sequence number then
+we must use nextval pseudo column because currval pseudo column
+returns current value of sequence session if sequence session
+already having a value
+
+syntax:-
+=======
+select sequencename.nextval from dual;
+
+
+
+1.What is Sequence ? What is main purpose of Sequence?
+
+
+
+2.Create a sequence ?Sequence stat with 5 and generate values
+  upto 10
+
+
+
+ *
+***Generating primary key values automatically(Auto-increment):-
+ * ===========================================================
+
+     In all relational databases generating primary key values
+automatically is called auto-increment concept.in oracle we are
+implementing auto-increment concept by using sequence database 
+object.
+
+3.Genarate the primary key values for the following column sno
+  by using sequence.
+
+
+
+
+SQL>create table test12(sno number(10) primary key,name varchar2(10));
+
+---->create a sequence first 
+---->create the table test12 table as shown in above
+---->insert into test12(sno,name)values(s1.nextval,'&name');
+---->only we are proving the values to name column.by using
+     sequence pseudo column nextval we are generating values 
+     automatically to sno column.
+
+
+---->after inserting the records add RNO column
+---->alter table test12 add rollno number(10);
+
+XSNO      NAME        RNO
+---     ------     --------
+1        GOWTHAM     
+2        SUBBARAO  
+3        RAJU        
+4        KIRAN  
+
+---->create one more sequence s2 and stating value is 73     
+
+---->by using one update command with sequence pseudo 
+     column(nextval) generate the output as follows
+
+SNO      NAME       RNO
+---     ------     --------
+1        GOWTHAM     73
+2        SUBBARAO    74
+3        RAJU        75
+4        KIRAN       76
+
+
+
+4.NOTE:-Oracle 12c onwards we can also use sequence pseudo columns
+        with in default clause
+
+syntax:-
+=======
+columnname number(size) default sequencename.nextval primary key
+
+--->Create a sequence first and sequence start with 1001
+--->Create table BANK123 with ACCNO column by using above syntax
+    and NAME,BAL columns
+--->Insert the values only NAME,BAL columns by using 
+    skipping columns method
+--->And observe the output and beauty of sequence
+
+NOTE:-This kind of EXAMPLE is very useful in Advance Java JDBC
+
+
+5.Can we alter sequence parameter values ?
+
+create a sequence with
+--->start with 5
+--->increment by 1
+--->minvalue 4
+--->maxvalue 100
+
+Then generate 5 sequence values.after generating sequence values,
+alter sequence parameter value increment by -1
+then again generate the values.see the output
+
+         
+6.What is cache ? what is default size of cache?
+
+         
