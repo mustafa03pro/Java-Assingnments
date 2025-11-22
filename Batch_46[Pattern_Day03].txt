@@ -1,0 +1,190 @@
+Que-1
+___________
+1 
+3   2
+6   5  4
+10  9  8  7
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  int n;
+  printf("Enter n value : ");
+  scanf("%d",&n);
+  
+  int x = 1;
+  for(int i = 1;i<=n;i++) {
+      x = x+i;
+      int a = x;
+      for(int j = 1;j<=i;j++) {
+          printf("%d ",--a);
+      }
+      printf("\n");
+  }
+    
+
+    return 0;
+}
+_________________________________
+Que-2
+____________
+1
+3  5
+7  9  11
+13 15 17 19
+21 23 25 27 29
+_________________________________
+Que-3
+____________   
+1
+2  1
+3  2  1
+4  3  2  1
+5  4  3  2  1
+_________________________________
+Que-4
+_____________
+1   2   3   4    5
+10  9   8   7    6
+11 12  13  14   15
+20 19  18  17   16
+21 22  23  24   25
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  int n;
+  printf("Enter n value : ");
+  scanf("%d",&n);
+  
+  int x = 1;
+  for(int i = 1;i<=n;i++) {
+     
+      for(int j = 1;j<=n;j++) {
+        if(i%2!=0) {
+            printf("%3d",x++);
+        }else {
+            printf("%3d",--x);
+        }
+      }
+      x+=n;
+      printf("\n");
+  }
+    
+
+    return 0;
+}
+_________________________________
+Que-5
+____________
+1   2   3   4   5
+2   3   4   5   5
+3   4   5   5   5
+4   5   5   5   5
+5   5   5   5   5
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  int n;
+  printf("Enter n value : ");
+  scanf("%d",&n);
+  
+  for(int i = 1;i<=n;i++) {
+  int x = i;
+     
+      for(int j = 1;j<=n;j++) {
+        if(i+j<n+1) {
+            printf("%3d",x++);
+        }else {
+            printf("%3d",n);
+        }
+      }
+      printf("\n");
+  }
+    
+
+    return 0;
+}
+__________________________________
+Que-6
+____________
+2   3   5   7   11
+13  17  19  23  29
+31  37  41  43  47
+53  59  61  67  71
+73  79  83  89  97
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  int n;
+  printf("Enter n value : ");
+  scanf("%d",&n);
+  int num = 2;
+  for(int i = 1;i<=n;i++) {
+   int count = n;
+   while(count!=0) {
+       int c = 0;
+       for(int j = 2;j<=num/2;j++) {
+           if(num%j==0) {
+               c++;
+           }
+       }
+       if(c==0) {
+           printf("%3d",num);
+           count--;
+       }
+       num++;
+   }
+      printf("\n");
+  }
+    
+
+    return 0;
+}
+__________________________________
+Que-7
+___________
+1 
+1  2  1
+1  2  3  2  1
+1  2  3  4  3  2  1
+1  2  3  4  5  4  3  2  1
+___________________________________
+Que-8
+_____________
+* 2 3 4 *
+1 * 3 * 5
+1 2 * 4 5
+1 * 3 * 5
+* 2 3 4 *
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  int n;
+  printf("Enter n value : ");
+  scanf("%d",&n);
+  
+  for(int i = 1;i<=n;i++) {
+      for(int j = 1;j<=n;j++) {
+        if(i+j==n+1 || i==j) {
+            printf("* ");
+        }else {
+            printf("%d ",j);
+        }
+      }
+      printf("\n");
+  }
+    
+
+    return 0;
+}
+           
